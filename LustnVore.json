@@ -2064,7 +2064,88 @@
 		
 	],
 	"condition": [
-		
+		{
+			"name": "Defeated",
+			"source": "LustVore",
+			"entries": [
+				"These rules purposefully contain many options to non-lethally subdue a foe. A live squirming prey to gulp down is far more interesting than a dead or unconscious one after all! For this purpose, a new incapacitated state is added: {@i The Defeated State}.",
+				"When a foe is brought to 0 HP by a player character through any means (including lewd damage, range damage, spells, and so forth) instead of being unconscious or killed, they may instead be put into the {@i Defeated} state. Defeated foes follow all the same rules as being unconscious: They are {@condition incapacitated}, it drops whatever its holding and falls {@condition prone}, it fails its Dexterity and Strength checks, all attacks vs it gain advantage, and attacks within 5 feet are critical hits.",
+				"However, defeated foes are still considered conscious. They cannot move in any significant amount, but they can weakly speak and struggle until they regain 1HP. If left alone, they may be able to crawl at a rate of 5’ per turn at DM’s discretion."
+			]
+		},
+		{
+			"name": "Devouring",
+			"source": "LustVore",
+			"entries": [
+				"Also colloquially referred to as the “nomming” condition, this condition simply means you are in the process of devouring someone through a devour contest or being devoured by someone else. So long as you remain in a devour contest either as predator or prey, you suffer the following effects from the devour contest condition:",
+				{
+					"type": "list",
+					"items": [
+						"You are {@condition restrained}, and {@condition grappled} if you are prey.",
+						"You are locked into a devour contest, either as predator or prey. Keep track of successes per the devouring rules for both pred and prey."
+					]
+				}
+			]
+		},
+		{
+			"name": "Lewded",
+			"source": "LustVore",
+			"entries": [
+				{
+					"type": "list",
+					"items": [
+						"The {@i lewded} condition lasts until the end of your next turn, though at your and the DM's discretion may last longer.",
+						"A {@i lewded} creature automatically fails any contested roll against the source of their lewding.",
+						"A {@i lewded} creature has disadvantage to all checks, saves, and attack rolls made until the condition ends.",
+						"Once after combat (with DM permission), a character who was {@i Lewded} may recover up to a third of their health rounded down. This recovery can only be done once regardless of how many times the condition is triggered, and if it is not taken after the combat is over the potential recovery is lost. This is usually flavored as a rush of energy following an exciting situation, but may be flavored as you like."
+					]
+				}
+			]
+		},
+		{
+			"name": "Swallowed",
+			"source": "LustVore",
+			"entries": [
+				"When a predator succeeds on a devour contest vs a creature, that creature gains the new {@i Swallowed} condition.",
+				{
+					"type": "list",
+					"items": [
+						"You have disadvantage on all skill checks.",
+						"You are {@condition restrained}.",
+						"You have total cover from outside effects and cannot see outside of the creature and stomach you are within.",
+						"You automatically move where a predator does and are considered to be in the predator's same square, and adjacent for the purposes of ranged attacks.",
+						"You must successfully make a concentration check vs the predator's stomach AC before casting a spell. If you fail, you do not cast the spell, but you do not lose the spell slot or other resource.",
+						"If you are concentrating on a spell and the creature your swallowed by takes damage, you must make a concentration check at DC 10 or ½ the damage, whichever is higher."
+					]
+				}
+			]
+		},
+		{
+			"name": "Willing",
+			"source": "LustVore",
+			"entries": [
+				"In these rules, there are many spells and effects that refer to a creatures “willingness” to be devoured. If a creature is {@i willing}, it means they are perfectly ok with being devoured by select creatures, likely due to thinking of them as trusted allies or lovers, and may have the new {@i Willing} condition upon them.",
+				"Outside of effects that specify a creature’s willingness (often as part of charm effects), it is always the creature's right to decide if they are {@i willing} or {@i unwilling}. Generally, all creatures are considered to be {@i unwilling}, unless otherwise specified by them or an ability, and thus all normal vore rules apply to them.. This is also done on a case by case basis. A creature can be willing to be devoured by one predator, but not another. A creature can, at any point as a free action on or outside of their turn, declare if they are willing or not willing to be devoured by another creature.",
+				"The {@i willing} condition has the following effects:",
+				{
+					"type": "list",
+					"items": [
+						"A predator no longer needs to grapple you in order to initiate a {@condition devouring|LustVore|devour contest}.",
+						"You are considered to auto-fail all {@condition devouring|LustVore|devour contest} checks"
+					]
+				},
+				{
+					"type": "insert",
+					"name": "A note on willing condition and being charmed:",
+					"entries": [
+						"Being {@condition charmed} in relation to vore is a difficult thing to determine. There are many factors to consider, such as how the world views vore, how dangerous it is, and so forth. These rules should be adapted depending on the universal context. However in general, charms should be considered as follows:",
+						"Charm effects generally cause creatures to act as a friendly acquaintance, or a trusted friend. As such, due to the often dangers of vore, most charmed creatures will still resist being eaten, and consider being devoured as a hostile action on par with someone attempting to strike them with a sword.",
+						"Due to this, charmed creatures are never willing targets unless directly specified by the spell or effect. The GM can overrule this when it makes sense.",
+						"Thus when a creature does not consider devouring as a hostile action due to an effect but is not a willing target, they may still resist being eaten. If a predator continues trying to devour an unwilling target, the GM may rule that it breaks the effect of the charm as it suddenly becomes a hostile action."
+					]
+				}
+			]
+		}
 	],
 	"item": [
 		
