@@ -5,7 +5,7 @@
 				"json": "LustVore",
 				"abbreviation": "L&V",
 				"full": "Lust & Vore",
-				"version": "0.0",
+				"version": "0.01",
 				"convertedBy": [
 					"PetraSaru9"
 				],
@@ -2070,7 +2070,7 @@
 			"entries": [
 				"These rules purposefully contain many options to non-lethally subdue a foe. A live squirming prey to gulp down is far more interesting than a dead or unconscious one after all! For this purpose, a new incapacitated state is added: {@i The Defeated State}.",
 				"When a foe is brought to 0 HP by a player character through any means (including lewd damage, range damage, spells, and so forth) instead of being unconscious or killed, they may instead be put into the {@i Defeated} state. Defeated foes follow all the same rules as being unconscious: They are {@condition incapacitated}, it drops whatever its holding and falls {@condition prone}, it fails its Dexterity and Strength checks, all attacks vs it gain advantage, and attacks within 5 feet are critical hits.",
-				"However, defeated foes are still considered conscious. They cannot move in any significant amount, but they can weakly speak and struggle until they regain 1HP. If left alone, they may be able to crawl at a rate of 5’ per turn at DM’s discretion."
+				"However, defeated foes are still considered conscious. They cannot move in any significant amount, but they can weakly speak and struggle until they regain 1HP. If left alone, they may be able to crawl at a rate of 5 feet per turn at DM’s discretion."
 			]
 		},
 		{
@@ -2134,16 +2134,11 @@
 						"You are considered to auto-fail all {@condition devouring|LustVore|devour contest} checks"
 					]
 				},
-				{
-					"type": "insert",
-					"name": "A note on willing condition and being charmed:",
-					"entries": [
-						"Being {@condition charmed} in relation to vore is a difficult thing to determine. There are many factors to consider, such as how the world views vore, how dangerous it is, and so forth. These rules should be adapted depending on the universal context. However in general, charms should be considered as follows:",
-						"Charm effects generally cause creatures to act as a friendly acquaintance, or a trusted friend. As such, due to the often dangers of vore, most charmed creatures will still resist being eaten, and consider being devoured as a hostile action on par with someone attempting to strike them with a sword.",
-						"Due to this, charmed creatures are never willing targets unless directly specified by the spell or effect. The GM can overrule this when it makes sense.",
-						"Thus when a creature does not consider devouring as a hostile action due to an effect but is not a willing target, they may still resist being eaten. If a predator continues trying to devour an unwilling target, the GM may rule that it breaks the effect of the charm as it suddenly becomes a hostile action."
-					]
-				}
+				"{@b A note on willing condition and being charmed:}",
+				"Being {@condition charmed} in relation to vore is a difficult thing to determine. There are many factors to consider, such as how the world views vore, how dangerous it is, and so forth. These rules should be adapted depending on the universal context. However in general, charms should be considered as follows:",
+				"Charm effects generally cause creatures to act as a friendly acquaintance, or a trusted friend. As such, due to the often dangers of vore, most charmed creatures will still resist being eaten, and consider being devoured as a hostile action on par with someone attempting to strike them with a sword.",
+				"Due to this, charmed creatures are never willing targets unless directly specified by the spell or effect. The GM can overrule this when it makes sense.",
+				"Thus when a creature does not consider devouring as a hostile action due to an effect but is not a willing target, they may still resist being eaten. If a predator continues trying to devour an unwilling target, the GM may rule that it breaks the effect of the charm as it suddenly becomes a hostile action."
 			]
 		}
 	],
@@ -2279,7 +2274,36 @@
 		
 	],
 	"variantrule": [
-		
+		{
+        "name": "Lewd Damage",
+        "source": "LustVore",
+        "ruleType": "V",
+        "entries": [
+            "These rules are designed around players being voracious and often lewd creatures. As such, A new damage type is added; Lewd damage. This damage is done solely by various “lewd” attacks. Inanimate objects are considered immune to lewd damage.",
+			"Attacks that deal lewd damage reflect them doing various lewd things to their opponent: Fondling breasts, licking and caressing curves, nibbling or blowing on their ear, spanking their ass, penetration, hip-checks, and so forth. The damage represents your opponents will crumbling before the face of your pleasurable strikes and actions, until they climax or otherwise give in.",
+			"In addition, upon bringing an opponent to 0 HP with a lewd strike, they must make a Constitution saving throw equal to ½ the amount of lewd damage they suffered beyond 0 HP or DC 10 (whichever is higher) or suffer a powerful orgasm that gives them one level of {@condition exhaustion}. Regardless of if they pass or fail, the opponent is always brought to the {@condition defeated|LustVore} state: They cannot be chosen to be killed or knocked out. This exhaustion cannot exceed 5 levels of exhaustion for any reason.",
+			"Some weapons and effects may do lewd damage. In addition, upon GM approval, pre-existing spells and effects that deal damage can be fluffed to do lewd damage instead.",
+			"In addition, all players gain a new unarmed attack that is based off of their Charisma modifier to hit and that they are considered proficient in.",
+			{
+				"type": "abilityGeneric",
+				"name": "Unarmed Lewd Strike",
+				"text": "1d4 + your",
+				"attributes": [
+					"cha"
+				]
+			},
+			"{@i Note: It's recommended you allow based unarmed damage to be equal to:}",
+			{
+				"type": "abilityGeneric",
+				"name": "Unarmed Strike",
+				"text": "1d4 + your",
+				"attributes": [
+					"str"
+				]
+			},
+			"{@i as to make it up to par.}"
+        ]
+    }
 	],
 	"table": [
 		
