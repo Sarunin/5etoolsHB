@@ -2422,84 +2422,84 @@
 									]
 								}
 							]
-						},
-						{
-							"type": "entries",
-							"name": "Digestion",
-							"entries": [
-								"text",
-								{
-									"type": "insert",
-									"name": "Suppressing Digestion",
-									"entries": [
-										"text"
-									]
-								}
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Absorption",
-							"entries": [
-								"text"
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Prey Actions",
-							"entries": [
-								"text"
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Capacity",
-							"entries": [
-								"text",
-								{
-									"type": "entries",
-									"name": "Capacity by Size",
-									"entries": [
-										"text"
-									]
-								},
-								{
-									"type": "entries",
-									"name": "Bulk",
-									"entries": [
-										"text"
-									]
-								}
-							]
-						},
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Digestion",
+					"entries": [
+						"text",
 						{
 							"type": "insert",
-							"name": "Alternative Methods of Consumption",
-							"entries": [
-								"text"
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Disposal",
-							"entries": [
-								"text"
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Regurgitation and Escaping",
-							"entries": [
-								"text"
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Reformation",
+							"name": "Suppressing Digestion",
 							"entries": [
 								"text"
 							]
 						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Absorption",
+					"entries": [
+						"text"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Prey Actions",
+					"entries": [
+						"text"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Capacity",
+					"entries": [
+						"text",
+						{
+							"type": "entries",
+							"name": "Capacity by Size",
+							"entries": [
+								"text"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Bulk",
+							"entries": [
+								"text"
+							]
+						}
+					]
+				},
+				{
+					"type": "insert",
+					"name": "Alternative Methods of Consumption",
+					"entries": [
+						"text"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Disposal",
+					"entries": [
+						"text"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Regurgitation and Escaping",
+					"entries": [
+						"text"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Reformation",
+					"entries": [
+						"text"
 					]
 				}
 			]
