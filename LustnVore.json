@@ -2084,7 +2084,7 @@
 			"source": "LustVore",
 			"name": "Force-Feed",
 			"entries": [
-				"You may try to force-feed yourself to another creature. As an {@action Attack}, when you are {@condition grappled} or grappling a creature, or in devour contest against another creature with you as prey, you may attempt to force yourself into the creature. If they are unwilling, they may roll to resist the devour contest as if they were predator. On a success or if they are {@condition|LustVore willing}, the predator gains one devour success against you."
+				"You may try to force-feed yourself to another creature. As an {@action Attack}, when you are {@condition grappled} or grappling a creature, or in devour contest against another creature with you as prey, you may attempt to force yourself into the creature. If they are unwilling, they may roll to resist the devour contest as if they were predator. On a success or if they are {@condition willing|LustVore}, the predator gains one devour success against you."
 			],
 			"time": [
 				{
