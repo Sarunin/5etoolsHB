@@ -2429,12 +2429,25 @@
 					"type": "entries",
 					"name": "Digestion",
 					"entries": [
-						"text",
+						"Once a predator successfully devours a target, Digestion may begin. Although referenced as digestion, in combat this digestion is considered more to be a suppressing combination of pressing stomach muscles and acids that weaken prey and saps their strength, hampering their ability to meaningfully fight back.",
+						"At the end of their turn, a creature may inflict 1d6 + Constitution modifier digestion damage to all creatures in 1 or more digestive organs of their choosing inside of them. This digestion damage is considered acid damage, unless otherwise specified.",
+						"Digestion damage improves at later levels, to {@dice 2d6} at 5th level, {@dice 3d6} at 10th level, and {@dice 4d6} at 15th level, and {@dice 5d6} at 20th level.",
+						"The predator always has the choice whether or not to digest all targets within their stomach or other organ, and can theoretically hold onto prey inside them for as long as they can hold them with little ill effects (beyond food!). A creature cannot selectively choose which targets to digest in a stomach or organ; It's all or nothing.",
+						"A creature reduced to 0 HP by digestion is considered {@condition defeated|LustVore} and cannot take any further digestion damage and does not take death saving throws unless damaged by a non-digestive source. However, defeat is not the end. It takes a long time to process meal. if a predator is forced to release their {@condition defeated|LustVore} prey during combat or before they are absorbed, they are spit out in a stable state.",
 						{
-							"type": "insert",
+							"type": "inset",
 							"name": "Suppressing Digestion",
 							"entries": [
-								"text"
+								"Predators can control their digestion to carry allies or prisoners within their organs (stomach, womb, balls, etc). While it is relatively easy to do, it does require a bit of effort to do so.",
+								{
+									"type": "list",
+									"items": [
+										"When a predator takes damage while not digesting their prey, they must make a constitution saving throw equal to half the damage dealt + ¼ of the total bulk of the creatures in the organ to a minimum of 10 + ¼ of the total bulk of creatures in the organ.",
+										"On a failure, all prey inside of the creature immediately take digestion damage of their predator according to their level or CR. You can only fail this saving throw once per turn.",
+										"Magical features or effects that give perfect control over a creature's digestion (such as Favored Prey Protection) can allow someone to bypass this saving throw.",
+										"Self damage (like from the orgasmic rager or blood hunter) does not trigger this save."
+									]
+								}
 							]
 						}
 					]
@@ -2443,63 +2456,206 @@
 					"type": "entries",
 					"name": "Absorption",
 					"entries": [
-						"text"
+						"Once combat ends and the prey is at 0 hit points (or otherwise unable to resist further), the prey is at the predator's mercy, and may be put into the {@i absorbing} state at any point they wish to begin fully processing them. In general, a prey will live for ¼ of the digestion time before truly expiring, and if spit out during this time they are considered to be in stable condition.",
+						"Depending on the size of the meal, it may take shorter or longer for the predator to completely process and absorb their prey's nutrients into their body. Refer to the digestion table below for the time it takes to pack on the pounds.",
+						{
+							"type": "table",
+							"caption": "Absorbtion Time",
+							"colLabels": [
+								"Meal Size",
+								"Absorbtion Time",
+								"Nutrition (in days)"
+							],
+							"colStyles": [
+								"col-5",
+								"col-3-5 text-center",
+								"col-3-5 text-center"
+							],
+							"rows": [
+								[
+									"Below ½ capacity",
+									"<4 hours",
+									"<3"
+								],
+								[
+									"½ capacity to full capacity",
+									"8 hours",
+									"7"
+								],
+								[
+									"Above capacity",
+									"16 hours",
+									"14"
+								],
+								[
+									"Maximum capacity (and above)",
+									"24+ hours",
+									">28"
+								]
+							]
+						},
+						"In addition, you are considered fed for a number of days equal to the {@i nutrition} of the meal.",
+						"In general this table is meant as a generalization, and may be altered as the DM and group see fit for particular situations."
 					]
 				},
 				{
 					"type": "entries",
 					"name": "Prey Actions",
 					"entries": [
-						"text"
+						"While a character has been swallowed, it may continue to take actions on its turn. It may do one of the following:",
+						{
+							"type": "entries",
+							"name": "Attack",
+							"entries": [
+								"A prey can always attempt to attack the stomach walls with any weapons they were swallowed with, or any natural weapons or unarmed strikes they possess to try to cause painful indigestion to the predator. This follows normal attack rules, though prey are likely {@condition restrained} and have disadvantage. If the predator reaches 0 hit points through this damage, they are considered {@condition defeated|LustVore}."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Cast a Spell",
+							"entries": [
+								" A swallowed prey can attempt to cast spells from inside their opponent's stomach. To cast a spell inside a stomach, make a concentration check vs the predators Stomach AC as the DC. Failure indicates you are too distracted to cast the spell, although you do not lose the spell slot or other spell resource.",
+								"If you are concentrating on a spell and the creature you are in takes damage, you must make a Constitution saving throw to maintain your concentration. The DC equals 10 or half the damage the creature took, whichever number is higher."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Escape",
+							"entries": [
+								"A swallowed prey can attempt to escape from a mouth or stomach as an action. The prey rolls Strength({@skill Athletics}) or Dexterity({@skill Acrobatics}) vs the predators Strength({@skill Athletics}) or Dexterity({@skill Acrobatics}) check (This is at disadvantage due to {@condition swallowed|LustVore} condition). If their check is successful, the prey is considered to be in an escape contest with one success with the predator. This functions identically to the devour contest, including causing both predator and prey to suffer the {@condition devouring|LustVore|Devour Contest} condition, except the predator needs to get a number of devour successes equal to the number of prey’s successful escapes in order to swallow them back down."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Struggle/Massage",
+							"entries": [
+								"When all else fails, a prey can thrash around as violently as possible to upset their opponent's stomach or arouse them. They may roll a Strength({@skill Athletics}) or Dexterity({@skill Acrobatics}) vs the predators Strength({@skill Athletics}) or Dexterity({@skill Acrobatics}) check (likely at a disadvantage due to {@condition swallowed|LustVore} condition). If their check is successful, the predator has disadvantage on their next attack or skill check until the end of their next turn as they are distracted by the thrashing or massaging, and move at ½ speed."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Special",
+							"entries": [
+								"Most actions should fall into the above categories. If it does not, or if it a special feature that can be done while swallowed, it may be able to be done as a prey action."
+							]
+						}
 					]
 				},
 				{
 					"type": "entries",
 					"name": "Capacity",
 					"entries": [
-						"text",
+						"A creature's {@i capacity} depends on its size, and defines how many prey it can comfortably fit inside its stomach. As a creature's capacity increases, so too does their strength and body in order to hold prey relatively unencumbered. A higher capacity also indicates a quicker digestion time, and also makes them require increasingly large amounts of food to sate their exponentially increasing metabolism. Certain creatures may have special traits that allow them to defy these rules, and certain spells may affect capacity.",
+						"A creature's {@b Maximum Capacity} is equal to twice its Capacity. A creature can attempt to devour a creature that would bring it past its maximum capacity if it can somehow reach it and successfully grapple it.",
+						"To calculate how full you are, add up the bulk of every creature currently in your stomach, and compare it to your own capacity. This does not include creatures inside of other creatures (as they already have calculated them into their own bulk!)",
 						{
 							"type": "entries",
 							"name": "Capacity by Size",
 							"entries": [
-								"text"
+								{
+									"type": "table",
+									"colLabels": [
+										"Size",
+										"Capacity"
+									],
+									"colStyles": [
+										"col-8 text-center",
+										"col-4 text-center"
+									],
+									"rows": [
+										[
+											"Smaller than Tiny",
+											"½"
+										],
+										[
+											"Tiny",
+											"1"
+										],
+										[
+											"Small",
+											"2"
+										],
+										[
+											"Medium",
+											"4"
+										],
+										[
+											"Large",
+											"8"
+										],
+										[
+											"Huge",
+											"16"
+										],
+										[
+											"Gargantuan",
+											"32"
+										],
+										[
+											"Larger then Gargantuan",
+											"64+"
+										]
+									]
+								},
+								"If a creature were to ever get a capacity that’s larger than {@i Larger than Gargantuan} capacity, it doubles its capacity, and may do so for every step of capacity more than larger than gargantuan.",
+								"Similarly, if a creature ever gets a capacity that’s smaller than {@i Smaller than Tiny}, it reduces its capacity is halved.",
+								"When over capacity, a creature's speed is reduced by half. They also have Disadvantage on {@skill Stealth} and {@skill Acrobatics} checks, as well as Dexterity Saving Throws. In addition, all attacks gain advantage against them.",
+								"If a creature is ever over maximum capacity, it suffers all the effects of being over capacity and is also considered {@condition restrained} until it is no longer over maximum capacity.",
+								"Once a creature is put into the absorbing state, they continue to count towards a predator's capacity until they have been fully processed per the digestion time chart."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "Bulk",
 							"entries": [
-								"text"
+								"Your bulk determines how large you are, and how difficult it is for other predators to eat you. For most creatures, bulk is equal to their size, but some creatures are larger than most their size or otherwise harder to devour. In addition, as predators get more filled, it becomes harder and harder to consume them.",
+								"You calculate your Bulk as the following:",
+								{
+									"type": "abilityGeneric",
+									"name": "Base Bulk",
+									"text": "base Capacity for your Size + special Bulk modifiers"
+								},
+								{
+									"type": "abilityGeneric",
+									"name": "Your Bulk",
+									"text": "your Base Bulk + Bulk of all creatures and objects inside you"
+								},
+								"When your total bulk matches or exceeds the base bulk of a larger size category, increase your {@i effective size} to the size of that creature. You are as large of a creature as your effective size for purposes of being grappled, devoured, and other resistances, but no other purposes - you aren't actually a creature of that size, you just take up that much space."
 							]
 						}
 					]
 				},
 				{
-					"type": "insert",
+					"type": "inset",
 					"name": "Alternative Methods of Consumption",
 					"entries": [
-						"text"
+						"Sometimes you want to consume a prey with a different orifice than just your mouth, such as with your cock, ass, breasts, tail, pussy, etc.",
+						"In all cases, treat the rules the same. The target must be {@condition grappled}, and then a devour check is initiated by the predator. Then, the predator declares what orifice they are attempting to devour them with. If they are successful, the end location will likely be different from oral vore.",
+						"Each location will follow the same rules for digestion, but with obviously different effects (sexual locations may result in cum digestion, or milkification. Tail Vore leads to the stomach, while Anal Vore to the intestines.). Player groups may decide certain places are incapable of true digestion, although they should still be able to deal digestion damage to allow predators to suppress their prey. Player groups might also decide against certain types of alternative vore.",
+						"No matter the location, each prey still counts towards overall maximum capacity. However, each location can decide to digest or not digest independently. For example, a predator could choose not to digest the girl in her womb, while also choosing to digest her meals in her stomach."
 					]
 				},
 				{
 					"type": "entries",
 					"name": "Disposal",
 					"entries": [
-						"text"
+						"Once a creature has been completely digested and processed, their entire bodies is assumed to have been absorbed into the predator, bones and all. However, some harder materials may make their way through the digestive tract, such as metals, stones, and so forth.",
+						"Some groups may decide on different disposal preferences, such as bones not being digested and so on. However these rules will not deal with any mechanical implications of the “aftermath”."
 					]
 				},
 				{
 					"type": "entries",
 					"name": "Regurgitation and Escaping",
 					"entries": [
-						"text"
+						"At any time, a Predator can use their action to {@i Regurgitate} a single occupant. A regurgitated occupant appears {@condition prone} in an adjacent location of the predators choosing.",
+						"If a predator is slain or knocked {@condition unconscious}, occupants can escape by using their action and entire movement, exiting {@condition prone}."
 					]
 				},
 				{
 					"type": "entries",
 					"name": "Reformation",
 					"entries": [
-						"text"
+						"On reformation the character comes back with some health. They recover back to half their maximum hit points (rounded up) and in addition may gain the benefits of the rest that they were reformed during."
 					]
 				}
 			]
