@@ -2068,7 +2068,6 @@
 				"When you want to swallow a creature, you can use the {@action Attack} action to make a Special melee Attack, a Devour. If you’re able to make multiple attacks with the Attack action, this Attack replaces one of them. A creature must be {@condition grappled}, {@condition restrained}, or otherwise unable to move or have a moment speed of 0 to target them with this attack.",
 				"You must make a Strength({@skill Athletics}) or Dexterity({@skill Acrobatics}) check contested by the target's Strength({@skill Athletics}) or Dexterity({@skill Acrobatics}) check (the target chooses the ability to use). The prey may choose to be willing and automatically fail this test. If you succeed, you and the target enter a Devour Contest, and you gain a single success on the devour contest.",
 				"{@i Note: Like the {@action Grapple} and {@action Shove} actions, you can replace only one of your attacks that are part of your attack action with devour attacks. If you have multiple attack actions (such as fighter’s action surge) you can replace one attack with a devour on both attack actions.}",
-				" ",
 				"{@b Devour Action and incapacitated creatures}",
 				"The devour action assumes you are attempting to devour unwilling and conscious creatures. If the creature is unable or unwilling to resist, you do not need to grapple them first in order to start a devour contest. To specify when this is commonly applicable:",
 				"You do not need to grapple creatures that automatically fail ability checks, or strength and dexterity saving throws in order to start a devour contest. This includes but is not limited to: {@condition blinded}, {@condition unconscious}, {@condition paralyzed}, {@condition petrified}, and {@condition stunned}."
@@ -2084,7 +2083,8 @@
 			"source": "LustVore",
 			"name": "Force-Feed",
 			"entries": [
-				"You may try to force-feed yourself to another creature. As an {@action Attack}, when you are {@condition grappled} or grappling a creature, or in devour contest against another creature with you as prey, you may attempt to force yourself into the creature. If they are unwilling, they may roll to resist the devour contest as if they were predator. On a success or if they are {@condition willing|LustVore}, the predator gains one devour success against you."
+				"You may try to force-feed yourself to another creature. As an {@action Attack}, when you are {@condition grappled} or grappling a creature, or in devour contest against another creature with you as prey, you may attempt to force yourself into the creature. If they are unwilling, they may roll to resist the devour contest as if they were predator. On a success or if they are {@condition willing|LustVore}, the predator gains one devour success against you.",
+				"more text??"
 			],
 			"time": [
 				{
