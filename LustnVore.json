@@ -2061,7 +2061,64 @@
 		
 	],
 	"action": [
-		
+		{
+			"source": "LustVore",
+			"name": "Devour",
+			"entries": [
+				"When you want to swallow a creature, you can use the {@action Attack} action to make a Special melee Attack, a Devour. If you’re able to make multiple attacks with the Attack action, this Attack replaces one of them. A creature must be {@condition grappled}, {@condition restrained}, or otherwise unable to move or have a moment speed of 0 to target them with this attack.",
+				"You must make a Strength({@skill Athletics}) or Dexterity({@skill Acrobatics}) check contested by the target's Strength({@skill Athletics}) or Dexterity({@skill Acrobatics}) check (the target chooses the ability to use). The prey may choose to be willing and automatically fail this test. If you succeed, you and the target enter a Devour Contest, and you gain a single success on the devour contest.",
+				"{@i Note: Like the {@action Grapple} and {@action Shove} actions, you can replace only one of your attacks that are part of your attack action with devour attacks. If you have multiple attack actions (such as fighter’s action surge) you can replace one attack with a devour on both attack actions.}"
+				" ",
+				"{@b Devour Action and incapacitated creatures}",
+				"The devour action assumes you are attempting to devour unwilling and conscious creatures. If the creature is unable or unwilling to resist, you do not need to grapple them first in order to start a devour contest. To specify when this is commonly applicable:",
+				"You do not need to grapple creatures that automatically fail ability checks, or strength and dexterity saving throws in order to start a devour contest. This includes but is not limited to: {@condition blinded}, {@condition unconscious}, {@condition paralyzed}, {@condition petrified}, and {@condition stunned}."
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			]
+		},
+		{
+			"source": "LustVore",
+			"name": "Force-Feed",
+			"entries": [
+				"You may try to force-feed yourself to another creature. As an {@action Attack}, when you are {@condition grappled} or grappling a creature, or in devour contest against another creature with you as prey, you may attempt to force yourself into the creature. If they are unwilling, they may roll to resist the devour contest as if they were predator. On a success or if they are {@condition|LustVore willing}, the predator gains one devour success against you."
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			]
+		},
+		{
+			"source": "LustVore",
+			"name": "Rub",
+			"entries": [
+				"All creatures now have access to the following attack, Rub.",
+				"You may only target rub against a creature with at least one or more creature inside of it. This attack automatically hits one creature inside the target creature and deals lewd or bludgeoning damage equal to:",
+				{
+					{
+					"type": "abilityGeneric",
+					"name": "Rub",
+					"text": "1d4 + ",
+					"attributes": [
+						"str",
+						"dex",
+						"cha"
+					]
+				},
+				}
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			]
+		}
 	],
 	"condition": [
 		{
@@ -2275,35 +2332,62 @@
 	],
 	"variantrule": [
 		{
-        "name": "Lewd Damage",
-        "source": "LustVore",
-        "ruleType": "V",
-        "entries": [
-            "These rules are designed around players being voracious and often lewd creatures. As such, A new damage type is added; Lewd damage. This damage is done solely by various “lewd” attacks. Inanimate objects are considered immune to lewd damage.",
-			"Attacks that deal lewd damage reflect them doing various lewd things to their opponent: Fondling breasts, licking and caressing curves, nibbling or blowing on their ear, spanking their ass, penetration, hip-checks, and so forth. The damage represents your opponents will crumbling before the face of your pleasurable strikes and actions, until they climax or otherwise give in.",
-			"In addition, upon bringing an opponent to 0 HP with a lewd strike, they must make a Constitution saving throw equal to ½ the amount of lewd damage they suffered beyond 0 HP or DC 10 (whichever is higher) or suffer a powerful orgasm that gives them one level of {@condition exhaustion}. Regardless of if they pass or fail, the opponent is always brought to the {@condition defeated|LustVore} state: They cannot be chosen to be killed or knocked out. This exhaustion cannot exceed 5 levels of exhaustion for any reason.",
-			"Some weapons and effects may do lewd damage. In addition, upon GM approval, pre-existing spells and effects that deal damage can be fluffed to do lewd damage instead.",
-			"In addition, all players gain a new unarmed attack that is based off of their Charisma modifier to hit and that they are considered proficient in.",
-			{
-				"type": "abilityGeneric",
-				"name": "Unarmed Lewd Strike",
-				"text": "1d4 + your",
-				"attributes": [
-					"cha"
-				]
-			},
-			"{@i Note: It's recommended you allow based unarmed damage to be equal to:}",
-			{
-				"type": "abilityGeneric",
-				"name": "Unarmed Strike",
-				"text": "1d4 + your",
-				"attributes": [
-					"str"
-				]
-			},
-			"{@i as to make it up to par.}"
-        ]
-    }
+			"name": "Lewd Damage",
+			"source": "LustVore",
+			"ruleType": "C",
+			"entries": [
+				"These rules are designed around players being voracious and often lewd creatures. As such, A new damage type is added; Lewd damage. This damage is done solely by various “lewd” attacks. Inanimate objects are considered immune to lewd damage.",
+				"Attacks that deal lewd damage reflect them doing various lewd things to their opponent: Fondling breasts, licking and caressing curves, nibbling or blowing on their ear, spanking their ass, penetration, hip-checks, and so forth. The damage represents your opponents will crumbling before the face of your pleasurable strikes and actions, until they climax or otherwise give in.",
+				"In addition, upon bringing an opponent to 0 HP with a lewd strike, they must make a Constitution saving throw equal to ½ the amount of lewd damage they suffered beyond 0 HP or DC 10 (whichever is higher) or suffer a powerful orgasm that gives them one level of {@condition exhaustion}. Regardless of if they pass or fail, the opponent is always brought to the {@condition defeated|LustVore} state: They cannot be chosen to be killed or knocked out. This exhaustion cannot exceed 5 levels of exhaustion for any reason.",
+				"Some weapons and effects may do lewd damage. In addition, upon GM approval, pre-existing spells and effects that deal damage can be fluffed to do lewd damage instead.",
+				"In addition, all players gain a new unarmed attack that is based off of their Charisma modifier to hit and that they are considered proficient in.",
+				{
+					"type": "abilityGeneric",
+					"name": "Unarmed Lewd Strike",
+					"text": "1d4 + your",
+					"attributes": [
+						"cha"
+					]
+				},
+				"{@i Note: It's recommended you allow based unarmed damage to be equal to:}",
+				{
+					"type": "abilityGeneric",
+					"name": "Unarmed Strike",
+					"text": "1d4 + your",
+					"attributes": [
+						"str"
+					]
+				},
+				"{@i as to make it up to par.}"
+			]
+		},
+		{
+			"name": "Stomach Armor Class",
+			"source": "LustVore",
+			"ruleType": "C",
+			"entries": [
+				"Some actions may reference Stomach AC. When attempting to attack while stuck inside a creature, you may need to roll against the creature's stomach AC. Stomach AC is calculated as the following:",
+				{
+					"type": "abilityGeneric",
+					"name": "Unarmed Lewd Strike",
+					"text": "10 + Proficiency Bonus +",
+					"attributes": [
+						"con"
+					]
+				}
+			]
+		},
+		{
+			"name": "Grappling (Sizes and Skill)",
+			"source": "LustVore",
+			"ruleType": "V",
+			"entries": [
+				"Per RAW, a creature can never grapple a creature larger than one size larger than itself, meaning a medium sized creature could *technically* never grapple and devour a huge size creature. Because this means many devour-focused characters essentially become useless as they become unable to grapple to devour their opponents, the grapple rules are changed to the following:",
+				"A creature can attempt to grapple creatures up to one size larger than itself with no penalties. A creature may attempt to grapple creatures that are 2 or more sizes greater than itself, but suffers disadvantage on its grapple checks. When you are grappling a creature that is 2 sizes or larger than yourself (when you get disadvantage currently), you cannot move with that creature at all.",
+				"With {@feat mobile predator|LustVore}, you can move at half speed at 2 sizes larger, but cannot move if they're 3 sizes larger.",
+				"When you are attempting to grapple you may now use either {@skill Acrobatics} or {@skill Athletics} while you are the grappler instead of only being able to use {@skill Athletics}."
+			]
+		}
 	],
 	"table": [
 		
