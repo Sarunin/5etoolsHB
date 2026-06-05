@@ -2083,8 +2083,8 @@
 			"source": "LustVore",
 			"name": "Force-Feed",
 			"entries": [
-				"You may try to force-feed yourself to another creature. As an {@action Attack}, when you are {@condition grappled} or grappling a creature, or in devour contest against another creature with you as prey, you may attempt to force yourself into the creature. If they are unwilling, they may roll to resist the devour contest as if they were predator. On a success or if they are {@condition willing|LustVore}, the predator gains one devour success against you.",
-				"more text??"
+				"You may try to force-feed yourself to another creature. As an {@action Attack}, when you are {@condition grappled} or grappling a creature, or in devour contest against another creature with you as prey, you may attempt to force yourself into the creature.",
+				"If they are unwilling, they may roll to resist the devour contest as if they were predator. On a success or if they are {@condition willing|LustVore}, the predator gains one devour success against you."
 			],
 			"time": [
 				{
@@ -2384,6 +2384,47 @@
 				"A creature can attempt to grapple creatures up to one size larger than itself with no penalties. A creature may attempt to grapple creatures that are 2 or more sizes greater than itself, but suffers disadvantage on its grapple checks. When you are grappling a creature that is 2 sizes or larger than yourself (when you get disadvantage currently), you cannot move with that creature at all.",
 				"With {@feat mobile predator|LustVore}, you can move at half speed at 2 sizes larger, but cannot move if they're 3 sizes larger.",
 				"When you are attempting to grapple you may now use either {@skill Acrobatics} or {@skill Athletics} while you are the grappler instead of only being able to use {@skill Athletics}."
+			]
+		},
+		{
+			"name": "Devour Contest",
+			"source": "LustVore",
+			"ruleType": "C",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Devour Contest",
+					"entries": [
+						"During a Devour Contest, you continue the grapple (or start one, with predator as grappler) and both you and the target are {@condition restrained} as you attempt to overcome the prey. During this contest, you can use the {@action Devour|LustVore} attack again on the same target on subsequent attacks and turn. If you succeed, you can mark a single Success.",
+						"These successes represent how close the predator is to consuming the prey, or how close the prey is to escaping. The predator can choose to end the contest at any time, releasing the devour contest (but not the grapple if they are also grappled).",
+						"On the prey's turn, they can take their turn normally, or use their action to {@b Escape} the devour contest. They make a Strength({@condition Athletics}) or Dexterity({@condition Acrobatics}) check (their choice) contested by the predators Strength({@condition Athletics}) or Dexterity({@condition Acrobatics}) check (the target chooses the ability to use). If they succeed, they can mark a single Success.",
+						"The number of successes a predator needs to devour prey of the same size is 3. For every size category the prey is above or below the prey is compared to the predators base size (not bulk size!), the number of successes increases or decreases by 1. The number of successes needed can never drop below 1.",
+						"To successfully escape a predator, the prey needs to gain successes equal to the predator’s current successes. If they ever reach equal successes, the prey escapes.",
+						"This does mean if a large prey is attempting to devour a prey with a small bulk size, the small prey may not even get a chance to escape as they gain the first success and instantly devour the prey. Once the requisite number of successes are reached, the prey is swallowed and gains the {@condition swallowed|LustVore} condition.",
+						"It is technically possible for multiple devour contests to be ongoing using multiple orifices (or other abilities). In this case, treat each one separately. If attempting to devour multiple prey using the same orifice, use one roll vs all targets in that orifice.",
+						"{@i Note: In order to counterbalance the disadvantage a small character is at in a devour contests, creatures that are small size and lower gain 10 feet to their walking speed up to a maximum of 40 feet including racial bonuses. Other effects can stack on top of this after like feats or class bonuses.}",
+						{
+							"type": "inset",
+							"name": "Devouring Flow:",
+							"entries": [
+								"Below is the step-by-step instructions for devouring and digesting a creature:",
+								{
+									"type": "list",
+									"style": "list-decimal",
+									"items": [
+										"Predator must successfully grapple prey creature. If a Predator has a feature that allows them to devour a creature without grappling, skip step 1.",
+										"Once creature is {@condition grappled} (or if you have a feature that allows you to devour without grappling), you may attempt a devour attack. Upon a successful devour, you gain 1 (or more) successes and are now locked into a devour contest.",
+										"Predator must reach required successes to swallow prey. Usually, this is 3 for a creature of a bulk size equal to the predator’s base size, but can be raised, lowered, or changed based on size difference or features. Alternatively, prey may reach required successes (3) before the predator does, and escape the grapple and devour, or predator may be knocked out/killed to immediately end the devour contest.",
+										"Once predator reaches the required successes in the devour contest, prey is {@condition swallowed|LustVore}. Predator may now deal digestion damage at the end of their turns, and prey may only take prey actions.",
+										"Once prey is brought to 0 HP, they are put into the {@condition defeated|LustVore} state.",
+										"Once combat is over, the predator may begin digesting and processing their meal according to the digestion table.",
+										"Once their meal is fully digested and processed, the prey no longer takes up capacity and they gain the appropriate benefits for digestion according to the “benefits to a healthy diet” table."
+									]
+								}
+							]
+						}
+					]
+				}
 			]
 		}
 	],
