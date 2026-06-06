@@ -13,13 +13,6 @@
 				"colorNight": "ff96ff"
 			}
 		],
-		"spellSchools": {
-			"LV": {
-				"full": "Kinkmancy",
-				"short": "Kink.",
-				"color": "ff96ff"
-			}
-		},
 		"featCategories": {
 			"LV": "Kink"
 		}
@@ -2202,7 +2195,487 @@
 	],
 	"spell": [
 		{
-			"name": "Arousing Enchancement",
+			"name": "Absorb Power",
+			"source": "LustVore",
+			"level": 3,
+			"school": "V",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Choose one creature inside of you. They must roll a Constitution saving throw. On a failure, they take {@damage 3d6} force damage or half as much on a success, and you gain an equal amount of bonus damage to your next melee, ranged, or spell damage roll within the next minute. If this is an attack that affects multiple targets, you only add the bonus damage to the first target damaged."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@dice 1d6} for each slot level above 4th."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Acidify",
+			"source": "LustVore",
+			"level": 1,
+			"school": "C",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a vial of stomach acid"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You touch a predator with creatures in their stomach, filling their belly with acid. All living creatures in the stomach must take a Constitution saving throw or suffer {@damage 4d10} acid damage or half as much on a success."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 1d10} for each slot level above 2nd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Amplify Acids",
+			"source": "LustVore",
+			"level": 3,
+			"school": "T",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a vial of acid"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"The target creature's gastric acids magically intensify, quickly melting any devoured creatures to sludge. For the duration of the spell, the target creature's digestion deals an additional {@damage 2d8} damage, and they digest meals in half the time."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a 5th level spell slot, the damage increases to {@dice 3d8}. When you cast this spell using a 7th level spell slot, the damage increases to {@dice 4d8}."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Anti-Acid Shell",
+			"source": "LustVore",
+			"level": 0,
+			"school": "T",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You briefly turn your skin into a smooth, digestion resistant shell, gaining resistance to all non-magical digestion damage, and all acid damage for one minute."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Arcane Digestion",
+			"source": "LustVore",
+			"level": 1,
+			"school": "V",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Choose one damage type between acid, fire, lightning, cold, or thunder. For the duration of this spell, your digestion deals that type of magical damage, and gains an additional {@damage 1d6} damage."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 1d6} for each slot level above 1st."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Arcane Jaws",
+			"source": "LustVore",
+			"level": 0,
+			"school": "V",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Your maw (or body part) is imbued with magical ravenous energy, stretching to attempt to swallow your unfortunate prey! You make a melee spellcasting attack roll against your target. On a success, you deal {@damage 1d4} force damage, you are considered to have started a devour contest against the creature with one success.",
+				"You may continue this devour contest on subsequent turns, and can use your spellcasting ability modifier in place of your strength or dexterity score for the checks in this contest.",
+				"{@b Cantrip Upgrade.} This damage increases by {@dice 1d4} when you reach 5th level ({@damage 2d4}), 11th level ({@damage 3d4}), and 17th level ({@damage 4d4})."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Arcane Leash",
+			"source": "LustVore",
+			"level": 2,
+			"school": "C",
+			"subschools": [
+				"Voremancy",
+				"Kinkmancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"A bright cord of energy whips between two targets, binding them together. Target must make a Dexterity saving throw to avoid being tethered. Once tethered, the target may make a Strength saving throw as an action to break the leash.",
+				"Once leashed, the two targets cannot move away from each other. The creature that has higher bulk can drag the other creature with them if they move; if both creatures have the same bulk, it results in either one being able to drag, but with only half your movement speed. When casting, you can opt to make one of the two targets yourself.",
+				"When leashed, any target (including yourself) has disadvantage on all devour checks to resist being eaten or {@condition swallowed|LustVore} by a predator swallowing the leash. Anyone who can grab the leash can make a contested Strength check as a bonus action to try to pull the leashed target towards themselves up to 30 feett per pull."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Arousing Touch",
 			"source": "LustVore",
 			"level": 0,
 			"school": "E",
@@ -2218,7 +2691,7 @@
 			"range": {
 				"type": "point",
 				"distance": {
-					"type": "self"
+					"type": "touch"
 				}
 			},
 			"components": {
@@ -2231,19 +2704,114 @@
 				}
 			],
 			"entries": [
-				"You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the attack's normal effects. If the attack deals damage, it can be Lewd damage or the weapon's normal damage type (your choice). Creatures hit by this attack receive a{@dice  1d4} penalty on their next saving throw made before the end of your next turn.",
-				{
-					"type": "entries",
-					"name": "Cantrip Upgrade",
-					"entries": [
-						"The attack deals extra Lewd damage when you reach levels 5 ({@dice 1d6}), 11 ({@dice 2d6}), and 17 ({@dice 3d6})."
-					]
-				}
+				"You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the attack's normal effects. If the attack deals damage, it can be Lewd damage or the weapon's normal damage type (your choice). Creatures hit by this attack receive a {@dice 1d4} penalty on their next saving throw made before the end of your next turn.",
+				"{@b Cantrip Upgrade.} Whether you deal Lewd damage or the weapon's normal damage type, the attack deals extra Lewd damage when you reach 5th level ({@damage 1d6}), 11th level ({@damage 2d6}), and 17th level ({@damage 3d6})."
 			],
 			"classes": {
 				"fromClassList": [
 					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
 						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Aura of Lust",
+			"source": "LustVore",
+			"level": 4,
+			"school": "E",
+			"subschools": [
+				"Seduction"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"An unnatural haze of magical pheromonal lust surrounds the caster for one minute, so strong that it blocks out all thoughts but those of sexual congress. Creatures who start their turn or move into the area within 10 feet of you must roll a Wisdom saving throw (max one test per turn). Failure means they are considered {@condition charmed} by you, and submit to their lustful desires, and immediately look for someone or something to fulfill their desires. A creature affected this way can do nothing but lewd actions and attacks. If two or more people are affected by the aura, they will look to satisfy their desires upon each other.",
+				"Creatures affected may roll another Wisdom saving throw to break out of the spell if they start their turn farther than 10 feet from you, upon taking non-lewd damage, or being subject to some potentially dangerous action (such as being eaten)"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Belch",
+			"source": "LustVore",
+			"level": 0,
+			"school": "V",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You release a tremorous wave of air, capable of knocking a creature off balance with sheer force. A creature within range that you can see must make a Strength saving throw. Upon a failure, they take {@damage 1d8} thunder damage and your next attack made against the creature is made with advantage until the end of your next turn. The damage becomes {@dice 1d10} if you currently have prey inside your stomach.",
+				"{@b Cantrip Upgrade.} This damage increases by {@dice 1d8} (or {@dice 1d10}) when you reach 5th level ({@damage 2d8} (or {@dice 2d10})), 11th level ({@damage 3d8} (or {@dice 3d10})), and 17th level ({@damage 4d8} (or {@dice 4d10}))."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
 						"source": "PHB"
 					},
 					{
@@ -2255,22 +2823,75 @@
 						"source": "PHB"
 					},
 					{
-						"name": "Wizard",
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
 						"source": "PHB"
 					}
 				]
-			},
-			"damageInflict": [
-				"lewd"
-			]
+			}
 		},
 		{
-			"name": "Bellyport Ally",
+			"name": "Belly Fortune Telling",
 			"source": "LustVore",
-			"level": 4,
+			"level": 5,
+			"school": "D",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "stomach acid"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"While you are inside a belly, you can look into the gurgling acids surrounding you to see a portent of the future. You can ask one question to your deity or your divine proxy.",
+				"You are provided with a vision of your predator in relation to your question, always shown with the enhanced curves they would look like after digesting you. This vision portrays a scene relating to your question.",
+				"For example if you asked {@i “What is the greatest danger today?”}, you might receive a vision of your predator with busty curves fighting off an unknown ambush in the city streets. Or if your predator is untrustworthy, it might simply be a vision of them rubbing their chubby and digesting gut.",
+				"If you ask a question that cannot possibly relate to your predator, you receive nothing but gurgles. If you ask something that’s too unclear, you might simply receive a vision of your predator with enhanced curves."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Bellyport",
+			"source": "LustVore",
+			"level": 5,
 			"school": "C",
 			"subschools": [
-				"Kinkmancy"
+				"Voremancy"
 			],
 			"time": [
 				{
@@ -2285,24 +2906,81 @@
 					"amount": 120
 				}
 			},
+			"components": {
+				"v": true,
+				"s": true
+			},
 			"duration": [
 				{
 					"type": "instant"
 				}
 			],
-			"components": {
-				"v": true,
-				"s": true,
-				"m": "a handful of crumbs"
-			},
 			"entries": [
-				"Sometimes the best way to save someone is to put them inside your own belly, or that of an ally. You can pluck one willing ally (including yourself) you can see or otherwise know the exact location of from a troublesome location and materialize them fully swallowed inside your own body, or that of an ally within 120 feet.",
-				"If your ally is already inside an enemy’s stomach, the enemy creature must succeed on a Dexterity saving throw as an aura of bright light surrounds their belly. Should they succeed on their saving throw, the spell fails."
+				"Target a creature you can see in range of the spell, and one creature to be the recipient. The target, and the recipient (if they are unwilling) must make a Wisdom saving throw as a bright flash of light erupts around them. On a failure, the target creature is teleported directly into the stomach of the recipient."
 			],
 			"classes": {
 				"fromClassList": [
 					{
-						"name": "Bard",
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Bellyport Ally",
+			"source": "LustVore",
+			"level": 4,
+			"school": "C",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "A handful of crumbs"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Sometimes the best way to save someone is to put them inside your own belly, or that of an ally. You can pluck one {@condition willing|LustVore} ally (including yourself) you can see or otherwise know the exact location of from a troublesome location and materialize them fully {@condition swallowed|LustVore} inside your own body, or that of an ally within 120 feet. If your ally is already inside an enemy’s stomach, the enemy creature must succeed on a Dexterity saving throw as an aura of bright light surrounds their belly. Should they succeed on their saving throw, the spell fails."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
 						"source": "PHB"
 					},
 					{
@@ -2318,15 +2996,4602 @@
 						"source": "PHB"
 					},
 					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Bodypouch",
+			"source": "LustVore",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "turn",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Upon casting, choose one object you can hold in your hands. Your skin becomes malleable to that object and allows you to slip that object anywhere into your body as if your skin was water, making it nearly impossible to spot. For the duration of the spell, you are able to secretly draw and store the object on your body as a bonus action."
+			],
+			"classes": {
+				"fromClassList": [
+					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Bottomless Hunger",
+			"source": "LustVore",
+			"level": 7,
+			"school": "T",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Touch a {@condition willing|LustVore} creature. For the duration of the spell, that creature has an unlimited capacity, is considered to be two sizes larger for the purposes of devour checks, and may devour creatures without grappling them first."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Come to Me",
+			"source": "LustVore",
+			"level": 5,
+			"school": "E",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "plane"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Choose a creature whom you know their face and name, that’s also on the same plane of existence. The creature hears your voice and knows it's you summoning them. Provided they are {@condition willing|LustVore}, they are then instantly teleported to you (or inside you!).",
+				"If the creature is inside another creature, the enemy creature must succeed on a Dexterity saving throw as an aura of bright light surrounds their belly. Should they succeed on their saving throw, the spell fails. ",
+				"This spell only works if both you and the target are in a location that allows for it. For example, this spell cannot be cast if you or the target are in an antimagic field, are in a special area that does not allow for dimensional teleportation, etc."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Compress",
+			"source": "LustVore",
+			"level": 3,
+			"school": "T",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"You touch one creature with at least one creature inside of them. For the duration of the spell, their body compresses itself until it appears that they have no creatures inside of them.",
+				"The target still suffers the normal effects of capacity penalties. In addition, particularly astute eyes can spot the slight bulges and unnatural look of the belly with an active DC 25 {@skill Perception} check."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 4th."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Cursed Orgasm",
+			"source": "LustVore",
+			"level": 3,
+			"school": "E",
+			"subschools": [
+				"Kinkmancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a drop of sexual fluid mixed with a drop of weak acid"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You weave a magical pleasurable curse upon your target. The next time that the subject achieves orgasm, they are wracked with mind-breaking pleasure that causes {@damage 12d6} lewd damage. If this brings them to 0 hit points or lower, they are knocked {@condition unconscious} for {@dice 2d4} hours rather than {@condition defeated|LustVore}."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@dice 2d6} for each slot level above 3rd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Devouring Smite",
+			"source": "LustVore",
+			"level": 2,
+			"school": "V",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"The next time you hit with a melee weapon attack or unarmed attack during this spell's duration, your attack deals an extra {@damage 1d6} force damage. Additionally, if the target is a creature, it must make a Strength saving throw. On a fail, you start a devour contest as if you had just successfully taken the devour action. Regardless of the result, the spell immediately ends."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@dice 1d6} for each slot level above 2nd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Digestive Barrier",
+			"source": "LustVore",
+			"level": 2,
+			"school": "A",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a small strip of cloth"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Choose a creature within range that is just about to be {@condition swallowed|LustVore}. For the duration of this spell, the target is immune to non-magical digestion damage. You may also cast this spell on your turn as a bonus action."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a spell slot of 3rd level or higher, the duration increases by 1 minute for every slot level above 2nd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Dimensional Stomach",
+			"source": "LustVore",
+			"level": 6,
+			"school": "C",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a small leather pouch"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Your touch alters a creature's stomach, turning it into its own demiplane. Touch a {@condition willing|LustVore} creature. For the duration, that creature's capacity is considered to be infinite.",
+				"Additionally, the creature is unburdened by the weight of their occupants, and their stomach appears as flat as when it is empty."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 7th level or higher, the duration increases by 8 hours for every spell slot above 6th level."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Disrobe",
+			"source": "LustVore",
+			"level": 2,
+			"school": "E",
+			"subschools": [
+				"Kinkmancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Choose a creature in range. The creature's clothing, including undergarments, belts, footwear, jewelry and other non-magical items not held, loosen and slide off as if covered in grease.",
+				"If the creature is wearing armor, they may make a Dexterity saving throw to keep their armor. Success indicates they manage to clutch their armor and keep it on. Failure means it too slides off, causing them to lose any armor AC bonus they may have.",
+				"Any items the creature is clutching or grasping , as well as magical items worn, do not slide off, and remain in their grasp and on their person.",
+				"It takes an action for a character to quickly re-don their clothing, and another action to re-don their armor. (a creature can re-don their armor without re-donning clothing first, although it might be quite uncomfortable!)"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			},
+			"conditionInflict": [
+				"swallowed|lustvore"
+			]
+		},
+		{
+			"name": "Divine Mark",
+			"source": "LustVore",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You inscribe a personal magical mark upon another creature by touching their bare skin in some way, often through biting, a teasing flash of fingers, and so forth, and can potentially be done without the target's knowledge. This personal mark can take any form, but often is a hickey or some other possessive mark. This mark is visible unless covered up by clothing, makeup, etc.",
+				"For the duration of the spell, you always know the “rough” area that the target is in by knowing the direction they are from you, and a feeling of how close or near they are {@i (usually by one's loins or chest growing hotter the closer you are together)}."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the mark lasts for an additional 24 hours for each slot level above the 1st."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Elastify/Constrict",
+			"source": "LustVore",
+			"level": 2,
+			"school": "T",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"You increase or decrease the elasticity and hunger of a predator. Choose one creature you can see within range. If the target is unwilling, it can make a Constitution saving throw. On a success, the spell has no effect.",
+				"{@i {@b Elastify}}. The predator counts as one size larger for the purpose of determining capacity.",
+				"{@i {@b Constrict}}. The predator counts as one size smaller for the purpose of determining capacity."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			},
+			"conditionInflict": [
+				"swallowed|lustvore"
+			]
+		},
+		{
+			"name": "Elemental Fist",
+			"source": "LustVore",
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Your fist overflows with elemental power. Choose an element between lightning, cold, fire, or acid, and make a melee spell attack roll against your target. On a hit, you deal {@damage 3d10} damage of your chosen element."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 1d10} for each slot level above 1st."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Empower Body",
+			"source": "LustVore",
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"As an action, you infuse your body with magical strength. You gain 20 temporary hit points. Then you then choose one of the following effects to gain for the duration of the spell:",
+				"{@b {@i Power:}} Gain advantage on all Strength ability checks and saving throws, deal {@damage 1d6} extra damage on Strength based attacks",
+				"{@b {@i Grace:}} Gain advantage on all Dexterity ability checks and saving throws, deal {@damage 1d6} extra damage on Dexterity based attacks",
+				"{@b {@i Resilience:}} Gain advantage on all Constitution ability checks and saving throws, and gain an additional {@dice 4d6} temporary hit points."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Enhance/Reduce Assets",
+			"source": "LustVore",
+			"level": 1,
+			"school": "T",
+			"subschools": [
+				"Kinkmancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"As an action, select a body part of a {@condition willing|LustVore} creature. That body part swells or reduces to a size of your choosing {@i (so long as it's not so large as to increase your size from Medium to Large and so forth!)}. This can be used to increase/decrease ass size, cock size, breast size, belly size, etc."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 3rd level or higher, the duration becomes 24 hours. If you cast this spell using a spell slot of 5th level or higher, the duration becomes permanent."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Entice",
+			"source": "LustVore",
+			"level": 4,
+			"school": "T",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a fragrant meal"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You give one creature within range an irresistible scent. All predators within 30 feet of the creature must make a Wisdom saving throw. A target automatically succeeds on this saving throw if it can't be {@condition charmed}. On a failed save, the predators are affected by the spell, and must spend their turn attempting to consume the target creature. While under the effects of the spell, each affected predator has advantage on devour attacks made to {@action Devour} the target. ",
+				"Whenever an affected creature takes damage, it gets to repeat the saving throw. When the target has been successfully {@condition swallowed|LustVore}, the predator who devoured the target becomes the new target of the spell, and all predators within 30 feet must pass the same Wisdom saving throw or repeat the process."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Erotic Dance",
+			"source": "LustVore",
+			"level": 1,
+			"school": "E",
+			"subschools": [
+				"Kinkmancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Your body's movements flow with magic sensuality, with your movements rippling across your target's body as if you were dancing against them.",
+				"Your target must make a Charisma saving throw. On a failure, they are {@condition charmed} until the end of your next turn, and you deal {@damage 3d8} lewd damage. On a success, they take half the damage and are not {@condition charmed}. If the target is adjacent, you can instead make a melee spellcasting attack roll."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 1d8} for each slot level above 1st."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Favored Prey Protection",
+			"source": "LustVore",
+			"level": 1,
+			"school": "A",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"You infuse a creature’s guts to tell friend from foe. As part of this spell cast, you touch a creature. For the spell’s duration, the chosen creature can make any number of creatures or objects inside of them immune to digestion damage as a bonus action, and may revoke the protection with another bonus action."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Flavor/Disgust",
+			"source": "LustVore",
+			"level": 1,
+			"school": "T",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "any herb or spice"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You point at a creature within range, altering its natural flavor.",
+				"{@i {@b Flavor}}. A creature of your choice within range must make a Dexterity saving throw or become irresistibly delicious to any predator. All creatures gain advantage on devour tests against the target, and predators may be tempted to consume them over other options.",
+				"{@i {@b Disgust}}. A creature of your choice within range becomes disgusting in flavor and scent to any predator. Whenever a predator attempts a devour check against them, they must make a Wisdom saving throw. On a fail, they cannot attempt to consume them, and waste their action or attack. On a success, they are immune to further disgust effects from this spell until its next rest."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, you may select one additional target for each slot level above the 1st."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Form Maw",
+			"source": "LustVore",
+			"level": 2,
+			"school": "A",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Touch a surface. Upon that surface, up to a 10 feet diameter circle, forms a magic maw into a black abyss. This maw is magically linked to your gullet, and whatever the maw swallows, you swallow. Whenever anything touches the magic maw, you may roll a devour attack as a reaction, and may use your actions to start or continue ongoing devour tests for anything touching the magic maw as if you were adjacent to the creature yourself. When a creature becomes fully {@condition swallowed|LustVore}, they slide through the magic maw and down your throat, regardless of distance."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the diameter improves by 5 feet for every two levels above 2nd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			},
+			"conditionInflict": [
+				"swallowed|lustvore",
+				"swallowed|lustvore"
+			]
+		},
+		{
+			"name": "Frog’s Tongue",
+			"source": "LustVore",
+			"level": 1,
+			"school": "T",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "a tongue of a frog"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Your tongue flies out like a whip, entangling and dragging a creature towards you. Choose a creature you can see within range. They must make a Strength saving throw or be pulled up to 60 feet towards the spellcaster. If the creature is moved within 5 feet of you, they become {@condition grappled} and you may immediately make a {@action Devour|LustVore} attack as part of the same spell cast."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Genderbend",
+			"source": "LustVore",
+			"level": 2,
+			"school": "T",
+			"subschools": [
+				"Kinkmancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a pinch of dust"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You are able to change the sex of any {@condition willing|LustVore} target. Upon casting, declare what sex you wish them to be {@i (female, intersex, male, etc.)}. Their body changes quickly in a flash of magic light. They will appear almost like an identical twin, save with slightly different body structure {@i (or very little difference, if change is only contained to genitalia)}.",
+				"When they next take a long rest, or after 24 hours, the spell reverts them back into their original gender. This spell can become permanent if the caster provides 100 gp, which the spell consumes, and takes at least 10 minutes to cast."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Greater Belch",
+			"source": "LustVore",
+			"level": 3,
+			"school": "V",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"While you are filled with at least one prey of any size, you release a prodigious belch, echoing with enough force to lay waste to your enemies. Creatures inside the cone must make a Constitution saving throw or take {@dice 6d8} points of thunder damage and be knocked {@condition prone}. On a success, they take half as much damage and are not knocked {@condition prone}."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"prone"
+			]
+		},
+		{
+			"name": "Healing Massage",
+			"source": "LustVore",
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"As an action, you channel healing magic through your fingertips (or through your body). While this spell is active, as a bonus action you can massage a creature to restore {@dice 1d6} + your spellcasting modifier hit points. Can only be used during combat (DM decides what counts as combat)"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Heart of the Dragon",
+			"source": "LustVore",
+			"level": 2,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You channel the spirit of draconic magic. While the spell is active, if you or an ally within 30 feet becomes {@condition frightened}, {@condition charmed}, {@condition paralyzed}, or {@condition stunned}, you may use your reaction to have the creature reroll the saving throw. On a pass, the effect immediately ends. You may also use your bonus action to choose an ally to reroll on your turn, and on a pass the effect immediately ends."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th level or higher, the duration improves to 1 hour."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Heave",
+			"source": "LustVore",
+			"level": 2,
+			"school": "E",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a piece of rotten or moldy food"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Your magic forces a predator to disgorge their prey. When you cast this spell against a target that has prey in its stomach, the target must make a Constitution saving throw. On a failure, they use their next action to regurgitate one creature, chosen randomly. If the target has not {@condition swallowed|LustVore} any prey, they are instead {@condition poisoned} until the start of your next turn."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Hoard Gullet",
+			"source": "LustVore",
+			"level": 1,
+			"school": "T",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "an empty leather sachetel"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You move your hands to your throat, chanting in low murmurs as you trace an imaginary line from your lower jaw down to your abdomen. You gain a magical second stomach, which can be used to transport objects and creatures securely. Dragons often use this spell to transport their treasure hoards safely, but it is equally useful to those who would loot such hoards.",
+				"You can safely swallow and transport anything you could normally swallow, including creatures. The capacity of your hoard gullet is 500lbs. or 8 points of capacity. Due to the nature of the magic, this stomach is not capable of digestion.",
+				"You can't remove individual items or creatures from your hoard gullet, but as an action, you can expel its entire contents into your square or into your stomach.",
+				"At the end of the spell's duration, anything still in your hoard gullet is immediately squished into your main stomach.",
+				"This magical gut can only be damaged from the inside. Should it take a single point of damage, the spell instantly collapses, making it inefficient to transport hostile entities."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the limit increases by 500lbs. or 8 points of capacity for every level above the 1st."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Homunculi Food",
+			"source": "LustVore",
+			"level": 2,
+			"school": "C",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"You create a living homunculus clone of yourself that looks very similar but has some marks or inaccurate features that make it easily distinguishable from you. This homunculi has the stats of a {@creature Commoner}, and although it shares similar traits and personality to you, it is not very intelligent and desires to be eaten. It also cannot make attacks or attack rolls.",
+				"At the end of the duration, if the homunculi has not been digested, the homunculi disappears."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 3rd level or higher, the number of homunculi created increases by one for each spell slot level above 2nd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Inanimate Prison",
+			"source": "LustVore",
+			"level": 3,
+			"school": "E",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You touch one creature that is either {@condition willing|LustVore} to be transformed, {@condition defeated|LustVore}, or {@condition unconscious}, and magically transform their body. If they have 1 hit point or more, they may choose to roll a Wisdom saving throw to resist. On a failed save or if they are below 1 hit point, this transformation can turn them into any object from tiny size up to their size. This can be something from a rock, to panties, to a statue recreation of them. The transformed creature retains their sentience and are still aware of their surroundings, to an extent, although they do not have any ability to move, speak, gesture, etc.",
+				"If the object is broken or otherwise destroyed, the creature immediately regains its normal form where the object was destroyed.",
+				"You may recast Inanimate Prison upon a creature under the effects of inanimate prison. Doing so extends the remaining duration up to the maximum duration of the spell slot used to recast it (cannot be used to expand it past the spell's normal maximum duration)."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 5th level or higher, the duration increases by 24 hours.",
+						"In addition, if the cast using a spell slot of 7th level or higher and using 250 gp, which the spell consumes, the spell becomes permanent."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Inhale",
+			"source": "LustVore",
+			"level": 5,
+			"school": "V",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 20
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Your mouth widens and a gale-force wind draws in nearby prey. On the turn you cast this spell you inhale a vortex of air. All creatures in the cone must make a Strength saving throw or be pulled up to 20 feet towards you, taking {@damage 5d8} bludgeoning damage. A creature that succeeds on this saving throw is not moved and takes half damage. All creatures that start their movement inside this gale or move into it are considered to be moving in difficult terrain until the end of their turn. A creature reduced to 0 hit points or lower by this damage is instantly devoured by you.",
+				"Until this spell ends, you can use your action on subsequent turns to create another vortex of air."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a spell slot of 6th level or higher, the damage increases by {@dice 1d8} for every slot level above 5th."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Intensify Hunger",
+			"source": "LustVore",
+			"level": 1,
+			"school": "E",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Select a creature. Whenever that creature makes a grapple or devour attack, they may add {@dice 1d6} onto their roll."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Intoxicate",
+			"source": "LustVore",
+			"level": 3,
+			"school": "E",
+			"subschools": [
+				"Seduction"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a droplet of prefume"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You weave seductive magic over a target, making them less resistant to your hungry and lewd advances. The target must succeed on a wisdom saving throw or be Charmed by you for the duration. While {@condition charmed}, the target is sexually infatuated with you, and is {@condition willing|LustVore} to be {@condition swallowed|LustVore} and auto fails all tests made during a devour contest (Including resisting the attack and escape attempts).",
+				"The spell ends early if the target takes any damage, including digestion damage."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th level or higher, you may target one additional creature for every slot level above 3rd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"willing|lustvore",
+				"willing|lustvore"
+			]
+		},
+		{
+			"name": "Leeching Insides",
+			"source": "LustVore",
+			"level": 4,
+			"school": "N",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a fungus. which the spell consumes",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"For the duration of the spell, whenever you inflict digestion damage, you regain hit points equal to half the damage dealt."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 5th level, the duration of this spell becomes 10 minutes. When you cast this spell using a spell slot of 7th level, the duration becomes 1 hour."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Lewd Grasp",
+			"source": "LustVore",
+			"level": 0,
+			"school": "V",
+			"subschools": [
+				"Kinkmancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Your magically enhanced fingers race across your opponent’s body, sending ripples of pleasure through them! You make a melee spell attack against your target creature. On a success, you deal {@damage 1d8} lewd damage, and your target has disadvantage on the next attack they make.",
+				"{@b Cantrip Upgrade.} This damage increases by {@dice 1d8} when you reach 5th level ({@damage 2d8}), 11th level ({@damage 3d8}), and 17th level ({@damage 4d8})."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Lick",
+			"source": "LustVore",
+			"level": 0,
+			"school": "E",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You attempt to whet your appetite on the taste of a nearby creature. Make a melee spell attack against a creature of your choice within range. On a hit, the target takes {@damage 1d6} psychic damage, and the next devour attempt you make against the target within one minute is made with advantage.",
+				"{@b Cantrip Upgrade.} This damage increases by {@dice 1d6} when you reach 5th level ({@damage 2d6}), 11th level ({@damage 3d6}), and 17th level ({@damage 4d6})."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Lover’s Luncheon",
+			"source": "LustVore",
+			"level": 2,
+			"school": "E",
+			"subschools": [
+				"Seduction"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You touch a single target creature whose attitude is at least friendly towards you or is {@condition charmed} by you. The target rolls a Wisdom saving throw at disadvantage, on a failed save that target becomes {@condition charmed} and is {@condition willing|LustVore} to be {@condition swallowed|LustVore} by you. Whether they are eager or shyly reluctant depends upon their personality. This charm immediately ends if you or your allies take a hostile action (except {@condition devouring|LustVore}) towards them or their allies. Despite the name, the spell can be used on any target, not merely disappointing lovers on the morning after.",
+				"Once {@condition swallowed|LustVore}, the spell immediately ends. On a successful save, the target knows you attempted to charm them."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			},
+			"conditionInflict": [
+				"charmed",
+				"willing|lustvore",
+				"willing|lustvore"
+			]
+		},
+		{
+			"name": "Maddening Hunger",
+			"source": "LustVore",
+			"level": 3,
+			"school": "E",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "a pinch of fat"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You awaken a primal hunger within a creature, driving it to feed on whatever prey is closest. A creature of your choice within range must succeed on a Wisdom saving throw or be cursed by a ravenous appetite.",
+				"If the cursed creature is capable of vore, the cursed creature immediately seeks to sate its appetite. On each of its turns, it must use its action to attempt to {@action Grapple} or {@action Devour|LustVore} the nearest creature. If there are no creatures within reach, it moves towards the closest one that it considers possible prey, taking the safest and fastest route possible and dashing if it doesn’t end its movement in range of a creature.",
+				"If the cursed creature is not capable of vore, it immediately seeks out the nearest mundane food source (such as rations, berries, alcohol, etc.) and devours as much of it as it can in order to sate its hunger.",
+				"On any turn it is not able to take a devour action or grapple action or is unable to consume mundane food, it takes {@damage 3d6} psychic damage as it grapples with hunger pains.",
+				"The spell ends early if the target reaches Maximum Capacity. The target can make a Wisdom saving throw at the end of each of its turns it successfully swallows someone or something. On a success, the spell ends."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Mass Bellyport",
+			"source": "LustVore",
+			"level": 9,
+			"school": "C",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Target a creature you can see within the range of the spell. All creatures within a 30 feet radius of the target (excluding you) must make a Wisdom saving throw. On a fail, they are teleported into your stomach."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Maximize/Minimize",
+			"source": "LustVore",
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a bag of powdered iron"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You cause a creature or object you can see within range to grow much larger or smaller for the duration. Choose either a creature or an object that is neither worn nor carried. If the target is unwilling, it can make a Constitution saving throw. On a success, the spell has no effect. If the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once.",
+				"{@i {@b Maximize}}. The target's size quadruples in all dimensions, and its weight is multiplied by sixteen. This growth increases its size by two categories - from Medium to Huge, for example. If there isn't enough room for the target to adjust to its new size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength Checks and Strength saving throws. The target's weapons also grow to match its new size. While these weapons are enlarged, the target's attacks with them deals {@damage 2d6} extra damage.",
+				"{@i {@b Minimize.}} The target's size is quartered in all dimensions, and its weight is reduced to one-sixteenth of normal. This reduction decreases its size by one category - from Medium to Tiny, for example. Until the spell ends, the target also has disadvantage on Strength Checks and Strength saving throws. The target's weapons also shrink to match its new size. While these weapons are reduced, the target's attacks with them deal {@damage 2d6} less damage (this can't reduce the damage below 1)."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Meal of the Phoenix",
+			"source": "LustVore",
+			"level": 3,
+			"school": "N",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a feather from a phoenix"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You imbue reviving magic upon the creature, allowing them to be restored after death. If the creature is digested in the next 24 hours, they will be reborn upon the end of the next long rest or the next dawn in the place of their death (aka inside the creature they were just digested by), whichever comes first. If this is not possible for whatever reason, they will be reborn as close as possible to the place of their digestion.",
+				"This spell does not work for any other type of death."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th level or higher, the effects switch to being short rest instead of long rest."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Medicinal Acids",
+			"source": "LustVore",
+			"level": 3,
+			"school": "T",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "medicinal herbs or a healing potion"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You touch a predator, granting them the ability to excrete healing fluids. The predator and each creature in the predator's stomach gain {@dice 1d6} + your Spellcasting modifier of hit points restored per round while the spell is in effect."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th level or higher, the duration of this spell increases by 1 minute per slot level above 3rd. Can only be used during combat (unless by special DM permission)."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Meltha’s Hidden Belly",
+			"source": "LustVore",
+			"level": 1,
+			"school": "I",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You reach out and touch a belly, causing onlookers to no longer notice it. Unlike other illusion spells that camouflage one's bulging gut, this simply convinces onlookers’ minds that the bulging gut does not exist at all and seems completely normal. Onlookers do not register the fact of the huge gut unless they are actively looking for it. In which case, they may instantly roll to spot past the disguise with advantage.",
+				"However, anytime something suspicious happens {@i (such as unusually loud muffled screams, unnaturally loud churning and gurgling, or them accidentally bumping into the gut)}, an observer may roll a Wisdom saving throw against your Spell save DC, gaining advantage if the predator has greater than capacity in their gut. Success means they notice it and may respond appropriately to it. Failure means they make some mental excuse and chalk it up to some natural other disturbance {@i (ex. Loud gurgling could be their own hungry gut, muffled screaming could be a problematic poltergeist, or they might mistake bumping into the gut as bumping into their side or into a chair accidentally)}."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Ooze Form",
+			"source": "LustVore",
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a small vial of jam"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You transform a {@condition willing|LustVore} creature you touch, along with everything it's wearing and carrying, into a slime-like form for the duration. The spell ends if the creature drops to 0 hit points. An ooze isn't affected.",
+				"While in this form, the target can occupy the same space as another creature, and move through spaces as narrow as 1 inch without squeezing.",
+				"Additionally, the target's unarmed attacks deal an additional {@damage 1d6} acid damage. If another creature ends its turn in the same square as the target, they must make a Strength({@skill Athletics}) check contested by the target's Strength({@skill Athletics}) check. The target has advantage on this check. On a failure, they take {@damage 3d6} acid damage.",
+				"While in this form, the target can't talk, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. The target can't cast spells while in this form."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a spell slot of 4th level or higher, the duration increases by 1 hour for every spell level above 3rd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Orgasmic Vibrations",
+			"source": "LustVore",
+			"level": 3,
+			"school": "E",
+			"subschools": [
+				"Kinkmancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"A grand, shuddering orgasm overwhelms your target, sending a constant pleasurable aftershock that makes {@status concentration||concentrating} on tasks difficult. Your target must make a Wisdom saving throw. On a fail the creature takes {@damage 6d6} lewd damage and is distracted for the duration of the spell. A target that makes its saving throw suffers half as much and is not distracted.",
+				"For the duration of the spell, attempting to cast spells or {@status concentration||concentrating} on spells during the duration of orgasmic vibrations requires a {@status concentration} check equal to your Spell save DC. If doing a {@status concentration} spell, they must roll the {@status concentration} check at the start of their turn. Using skills requiring patience and {@status concentration} requires a {@status concentration} check as well."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Perfect Form",
+			"source": "LustVore",
+			"level": 9,
+			"school": "E",
+			"subschools": [
+				"Seduction"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You enhance your form to that of a demi-god, becoming a near perfect being. During this time, you are irresistible in every way. Your words are honey, your body is that of a god (or goddess), your scent is heaven and your taste is euphoria.  Your body is enhanced and often gains some divine-like qualities, such as sprouting wings, a heavenly glow (or demonic glow), horns/halo/tail, etc.",
+				"All creatures within 120 feet who can see you, touch you, smell you, taste you, or feel you must roll a Wisdom saving throw when you first cast this spell, and at the end of any turn they fulfill one of those conditions. On a fail, they are {@condition charmed} by you, and remain {@condition charmed} as long as this spell continues. They regard you as someone to be worshipped and loved, and will fulfill any non-suicidal demands or requests you make of them. If you or your allies damage the {@condition charmed} creature, it may reroll the saving throw to break the charm. Otherwise, creatures affected by this charm cannot break the charm under normal conditions, although some magical effects or other abilities (such as a Paladin's Aura) may break it."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Power Word Consume",
+			"source": "LustVore",
+			"level": 7,
+			"school": "V",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You utter a word of power that teleports one creature within range to be teleported into your guts. If the creature you choose has 100 hit points or fewer, it is instantly teleported into your stomach. Otherwise, the spell has no effect."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Power Word Orgasm",
+			"source": "LustVore",
+			"level": 8,
+			"school": "E",
+			"subschools": [
+				"Kinkmancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You touch a creature and speak a word of power that overwhelms a creatures body and mind, causing them to instantly experience a mind-breaking orgasm that paralyzes their body. If the target is below 100 hit points, the target is {@condition paralyzed}. Otherwise, the spell has no effect.",
+				"The {@condition paralyzed} target must make a Constitution saving throw at the end of each of its turns. On a successful save, this stunning effect ends."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"paralyzed"
+			]
+		},
+		{
+			"name": "Promise of Pleasure",
+			"source": "LustVore",
+			"level": 3,
+			"school": "E",
+			"subschools": [
+				"Kinkmancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You touch a creature to send a ripple of pleasure down its spine as you whisper the dirty things you’ll do to them in its ear.",
+				"They must make a Wisdom saving throw or take {@damage 4d8} lewd damage and be {@condition charmed}, and half as much damage and not {@condition charmed} on a pass. During this time they are tempted by your eroticism and are sexually attracted to you, and do not regard lewd damage or lewd attacks as hostile. The spell lasts for the duration or until you or your allies do anything hostile towards it, such as {@condition devouring|LustVore} or dealing non-lewd damage.",
+				"Since the target creature does not regard lewd damage and attacks as hostile, they are able to do lewd strikes and other lewd abilities/attacks towards you."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@dice 1d8} for each slot level above 3rd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			},
+			"conditionInflict": [
+				"charmed"
+			]
+		},
+		{
+			"name": "Psychic Touch",
+			"source": "LustVore",
+			"level": 0,
+			"school": "I",
+			"subschools": [
+				"Seduction"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"As an action, you can cast psychic touch on one creature within 30 feet. While psychic touch’s duration is ongoing, you can manipulate the target's smell, touch, and taste sensations at will. Some examples of this include:",
+				{
+					"type": "list",
+					"items": [
+						"A sensual {@condition invisible} finger grazing along their thighs.",
+						"A heavenly aroma that blocks out everything else.",
+						"Making their taste buds believe the bland soup they’re eating is rich and delicious."
+					]
+				},
+				"You can only alter one sense at a time, and these effects cannot deal damage. Creative uses of Psychic Touch may provide advantage to interactions, or disadvantage to the targets.",
+				"However, should a target ever become suspicious that this is simply an illusion, the creature can determine that it is an illusion with a successful Intelligence({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, they are no longer affected by the psychic touch."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Rebirth",
+			"source": "LustVore",
+			"level": 5,
+			"school": "T",
+			"subschools": [
+				"Kinkmancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "300gp worth of holy water, which the spell consumes",
+					"consume": true,
+					"cost": 30000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"You touch a dead humanoid or piece of a dead humanoid, or touch a creature that has digested the humanoid. Provided that the humanoid has been dead for no longer than 10 days, you may choose one of the two following options:",
+				{
+					"type": "list",
+					"items": [
+						"Your body slowly constructs a new body for the creature in your womb, or other organ. For the duration of the spell, you cannot swallow any other creatures or objects into the reforming organ. After the spell ends, you give birth to the humanoid, fully formed and healthy. The reborn humanoid recalls its former life and experiences up to the point of its demise, and retains the capabilities it had in its original form.",
+						"You may choose a {@condition willing|LustVore} creature to deposit the creature's soul into. So long as you do so before the dead target passes the ten day mark, your partner's body slowly constructs a new body for the creature in their womb, or other organ. For the duration of the spell, they cannot swallow any other creatures or objects into the reforming organ. After the spell ends, they give birth to the humanoid, fully formed and healthy. The reborn humanoid recalls its former life and experiences up to the point of its demise, and retains the capabilities it had in its original form."
+					]
+				},
+				"In either case, if the soul is {@condition willing|LustVore}, the carrier may change the target's gender or appearance, and the target's race into their own."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Roil",
+			"source": "LustVore",
+			"level": 0,
+			"school": "T",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You touch a predator with at least one creature in their stomach. Each creature in their stomach must make a Constitution saving throw or take {@damage 1d12} digestion damage.",
+				"{@b Cantrip Upgrade.} This damage increases by {@dice 1d12} when you reach 5th level ({@damage 2d12}), 11th level ({@damage 3d12}), and 17th level ({@damage 4d12})."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Shape Flesh",
+			"source": "LustVore",
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"This spell is a minor transmutation that allows the caster to transmute flesh to their whim, to a small degree. You sculpt the flesh of the person you’re touching to do one of the following:",
+				{
+					"type": "list",
+					"items": [
+						"Increase/Decrease the size of someone’s breasts, ass, or cock for one minute (but no more than double their starting size)",
+						"Burn off 1% of their current excess body fat, down to their minimum healthy state.",
+						"Change facial features to provide advantage on all applicable disguise tests for one minute."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Share Sensation",
+			"source": "LustVore",
+			"level": 1,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"This spell targets one creature within sight or touch. It enables you to feel physical sensations just like your target feels. Although the caster feels pain and pleasure as the target does, you do not become wounded when the target takes damage nor healed when they are. This can situationally provide advantage or a bonus equal to your spellcasting ability to certain skill checks or Charisma checks as you are able to emphasize with them more and feel the condition of their body. This spell can be dispelled with an action from you."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 3rd level or higher, the duration increases to 8 hours."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Slime Tricks",
+			"source": "LustVore",
+			"level": 0,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"This spell is a minor magical trick that channels the power of slime through you. As a action, you create one of the following slime effects:",
+				{
+					"type": "list",
+					"items": [
+						"You create 1 cubic foot of tasteless jiggly slime. This slime disappears after 1 minute.",
+						"Acidic slime drips from your fingertips. This caustic slime can eat away at materials at a slow rate before disappearing, making it useful for etching messages into walls, dissolving small amounts of materials, or slowly breaking into stronger items such as metal locks. If used in combat, this acidic slime deals 1 damage.",
+						"You transmute one tiny non-magical object you can hold in your hands into an equal amount of slime.",
+						"You may manipulate up to 5 cubic feet of slime or other gelatinous substances to form any shape you desire almost instantly. It retains the shape for one hour, or until the slime disappears.",
+						"You may spread slime upon the ground in a 5 feet square adjacent to you. The next creature to walk over the slime must make a Dexterity saving throw vs your Spell save DC or fall {@condition prone}. A creature moving through the area at half speed doesn't need to make the saving throw. This slime disappears after 1 minute."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"prone"
+			]
+		},
+		{
+			"name": "Sophi's Ravenous Consumption",
+			"source": "LustVore",
+			"level": 2,
+			"school": "T",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a handful of crumbs"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"For a short duration, your target is possessed by an immense hunger that betrays their size. For the duration, they may make {@action Devour|LustVore} attacks without grappling targets."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Spice Touch",
+			"source": "LustVore",
+			"level": 0,
+			"school": "C",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "a pouch of the caster's favorite seasoning"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You flick your fingers at a creature, causing them to be coated in potent and mouth-watering spices. The target must make a Dexterity saving throw. On a fail, they are infused with delicious spices, and the next devour test against them may roll a {@dice 1d6} and add it to their ability check."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Summon Slimegirl",
+			"source": "LustVore",
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a slime queen's core worth at least 300gp",
+					"cost": 30000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"As an action, you call forth a {@creature Slimegirl|LustVore}! It manifests in an unoccupied space that you can see within range. When you cast the spell, you choose the form of the slime: {@i Chromatic}, {@i Honey}, or {@i Elemental}. The slimegirl disappears when it drops to 0 hit points or when the spell ends.",
+				"The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it attempts to attack and slime-ify the nearest non-slime and non-allied entity."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th level or higher, use the higher level wherever the spell's level appears in the stat block."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Teasing Flash",
+			"source": "LustVore",
+			"level": 0,
+			"school": "V",
+			"subschools": [
+				"Kinkmancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You swirl magic around your body, making you seem incredibly sexy to your target! The target must make a Wisdom saving throw. On a failure, they take {@damage 1d4} lewd damage and become {@condition charmed} towards you until the end of their next turn as they regard you with sexual infatuation. The charm effect ends early if you or your allies take a hostile action against them.",
+				"{@b Cantrip Upgrade.} This damage increases by {@dice 1d4} when you reach 5th level ({@damage 2d4}), 11th level ({@damage 3d4}), and 17th level ({@damage 4d4})."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Tongue Lash",
+			"source": "LustVore",
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You elongate your tongue and lash out at one creature of your choice that you can see within range. The target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take {@damage 1d8} bludgeoning damage. If the target is within 5 feet of you, you may then make a grapple attempt as part of the spell.",
+				"{@b Cantrip Upgrade.} This damage increases by {@dice 1d8} when you reach 5th level ({@damage 2d8}), 11th level ({@damage 3d8}), and 17th level ({@damage 4d8})."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Troll's Blood",
+			"source": "LustVore",
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You use magic to mend over your wounds. While this spell is active, you regain {@dice 1d6} hit points at the end of your turn."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "True Strike",
+			"source": "LustVore",
+			"level": 0,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "a weapon with which you have proficiency and that is worth 1+ CP"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Guided by a flash of magical insight, you make one attack with the weapon used in the spell's casting. The attack uses your spellcasting ability for the attack and damage rolls instead of using Strength or Dexterity. If the attack deals damage, it can be Radiant damage or the weapon's normal damage type (your choice).",
+				"{@b Cantrip Upgrade.} Whether you deal Radiant damage or the weapon's normal damage type, the attack deals extra Radiant damage when you reach 5th level ({@damage 1d6}), 11th level ({@damage 2d6}), and 17th level ({@damage 3d6})."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Vision of Exquisite Pleasure",
+			"source": "LustVore",
+			"level": 1,
+			"school": "E",
+			"subschools": [
+				"Seduction"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Images of tantalizing and overwhelming sexual pleasure consume the affected target, causing them to pause in their tracks and revel in the eroticism. The target creature must make a Wisdom saving throw or be {@condition stunned} until the end of their next turn. The target makes the save with advantage if they have taken any non-lewd damage since the end of their last turn."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"conditionInflict": [
+				"stunned"
+			]
+		},
+		{
+			"name": "Vorare's Primal Belch",
+			"source": "LustVore",
+			"level": 5,
+			"school": "V",
+			"subschools": [
+				"Voremancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You magically disrupt your digestive system, causing your guts to roil and release an earth-shattering belch covering a 60 ft cone. All creatures caught in the range of the cone must make a Strength saving throw. On a fail, each creature is knocked {@condition prone} and takes thunder damage depending on the initial creature's filled capacity. If you are equal or lower than ½ capacity, they take {@damage 6d8} thunder damage. If you are equal to or lower than capacity, they take {@damage 8d8} thunder damage. If you are above capacity, they take {@dice 10d8}. And if you are above maximum capacity, they take {@dice 12d8}.",
+				"Creatures take half damage on a success and are not knocked {@condition prone}."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 6th level or higher, the thunder damage increases by {@dice 1d8} for each slot level above 5th."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			},
+			"conditionInflict": [
+				"prone"
+			]
+		},
+		{
+			"name": "Wet Dreams",
+			"source": "LustVore",
+			"level": 1,
+			"school": "E",
+			"subschools": [
+				"Kinkmancy"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You weave a pleasant erotic dream for the target when they next fall to sleep, which protects the targeted creature from other influenced dreams, whether of mundane or magic origin such as a night hag haunting, or spells (or memories) that cause nightmares. The dream ensures they sleep for 8 hours and gain the benefits of a long rest and have disadvantage on all checks to wake up early."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Zanna's Speck of Dust",
+			"source": "LustVore",
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a pinch of dust"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"You touch a creature that is either {@condition willing|LustVore} to be shrunk, or is {@condition defeated|LustVore} or {@condition unconscious}. If they have 1 hit point or more and are {@condition willing|LustVore} or {@condition unconscious}, they may choose to roll a Wisdom saving throw to resist. On a failure or if they are below 1 hit point, they immediately shrink down to Tiny size, but their equipment and clothes do not shrink with them. They remain shrunk for the duration, and should they expire while shrunk, their remains stay shrunk."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 3rd level or higher, the duration increases by 24 hours for every spell level above 2nd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
 					}
 				]
 			}
 		}
 	],
 	"monster": [
-		
+		{
+			"name": "Slimegirl",
+			"source": "LustVore",
+			"summonedBySpell": "Summon Undead|TCE",
+			"summonedBySpellLevel": 3,
+			"size": [
+				"M"
+			],
+			"type": "ooze",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "30 + 15 for each spell level above 3rd"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 15,
+			"int": 8,
+			"wis": 10,
+			"cha": 12,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Amorphous (All Slimes)",
+					"entries": [
+						"The slimegirl can move through a space as narrow as 1 inch wide without squeezing. The slimegirl counts as three sizes larger for the purposes of determining its bulk while it has 1 or more hit points."
+					]
+				},
+				{
+					"name": "Entrancing Scent (Honey Only)",
+					"entries": [
+						"When any creature starts its turn within 5 feet of the slimegirl, they must succeed on a Wisdom saving throw against your Spell save DC or be {@condition charmed} by the slimegirl until the end of its next turn. A creature {@condition charmed} in this way must use their action to attempt to devour the slimegirl."
+					]
+				},
+				{
+					"name": "Elemental Nature (Elemental Only)",
+					"entries": [
+						"Upon creating a elemental slimegirl, choose a element between fire, lightning, cold, and acid. The slimegirl has immunity to that type of damage, and deals that type of damage for digestion and their attacks. In addition, any creature {@condition grappled} by the slimegirl takes 1d10 damage of the slimegirl's elemental type at the end of the slimegirls turn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The spirit makes a number of attacks equal to half this spell's level (rounded down)."
+					]
+				},
+				{
+					"name": "Slime Touch (Chromatic and Honey Only)",
+					"entries": [
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one creature. {@h}{@damage 1d8 + 3 + summonSpellLevel} bludgeoning damage. The creature must succeed on a Dexterity saving throw or become {@condition grappled} until the end of their next turn as they get stuck in slime."
+					]
+				},
+				{
+					"name": "Elemental Touch (Elemental Only)",
+					"entries": [
+						"{@atk mw} {@hitYourSpellAttack} to hit, range 5 ft., one creature. {@h}{@damage 1d8 + 3 + summonSpellLevel} bludgeoning damage, and {@damage 1d6} damage of the slimegirls elemental type."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Sticky Slime (Chromatic Only)",
+					"entries": [
+						"When an adjacent creature attacks or touches the slimegirl, the slime may use its reaction to force the creature to make a Dexterity saving throw against your Spell save DC. On a fail, the attacker becomes {@condition restrained} until the end of its next turn."
+					]
+				},
+				{
+					"name": "Elemental Form (Elemental Only)",
+					"entries": [
+						"When an adjacent creature attacks or touches the slimegirl, the slimegirl may use its reaction to deal {@damage 1d10} damage of its elemental type to its attacker."
+					]
+				}
+			],
+			"tokenCustom": false,
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": false,
+			"_versions": [
+				{
+					"name": "Slimegirl (Chromatic)",
+					"source": "LustVore",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Amorphous (All Slimes)",
+									"with": "Amorphous"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": [
+									"Entrancing Scent (Honey Only)",
+									"Elemental Nature (Elemental Only)"
+								]
+							}
+						],
+						"action": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Slime Touch (Chromatic and Honey Only)",
+									"with": "Slime Touch"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": "Elemental Touch (Elemental Only)"
+							}
+						],
+						"reaction": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Sticky Slime (Chromatic Only)",
+									"with": "Sticky Slime"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": "Elemental Form (Elemental Only)"
+							}
+						]
+					}
+				},
+				{
+					"name": "Slimegirl (Honey)",
+					"source": "LustVore",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Amorphous (All Slimes)",
+									"with": "Amorphous"
+								}
+							},
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Entrancing Scent (Honey Only)",
+									"with": "Entrancing Scent"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": "Entrancing Scent (Honey Only)"
+							}
+						],
+						"action": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Slime Touch (Chromatic and Honey Only)",
+									"with": "Slime Touch"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": "Elemental Touch (Elemental Only)"
+							}
+						],
+						"reaction": null
+					}
+				},
+				{
+					"name": "Slimegirl (Elemental)",
+					"source": "LustVore",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Amorphous (All Slimes)",
+									"with": "Amorphous"
+								}
+							},
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Elemental Nature (Elemental Only)",
+									"with": "Elemental Nature"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": "Entrancing Scent (Honey Only)"
+							}
+						],
+						"action": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Elemental Touch (Elemental Only)",
+									"with": "Elemental Touch"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": "Slime Touch (Chromatic and Honey Only)"
+							}
+						],
+						"reaction": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Elemental Form (Elemental Only)",
+									"with": "Elemental Form"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": "Sticky Slime (Chromatic Only)"
+							}
+						]
+					}
+				}
+			]
+		}
 	],
 	"variantrule": [
 		{
@@ -2659,9 +7924,304 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Reduced Penalty for leaving downed Pred",
+			"source": "LustVore",
+			"ruleType": "O",
+			"entries": [
+				"Instead of taking both your action and all of your movement we offer up this other option that is less penalizing towards the players having some fun.",
+				"If a predator is slain or knocked {@condition unconscious}, occupants can escape by using half of their movement exiting the predator {@condition prone}."
+			]
+		},
+		{
+			"name": "Critical Vore",
+			"source": "LustVore",
+			"ruleType": "O",
+			"entries": [
+				"When using these vore rules, devouring becomes another core form of combat. But per RAW, skill checks cannot crit. However, this makes for a bit boring 1’s and 20’s when attempting to devour prey! To make this more exciting, use the following rules:",
+				"{@action Devour|LustVore} checks can crit upon rolling a natural 20, or critically fail upon rolling a natural 1. Upon a predator rolling a critical failure in a devour check, the test always fails! On a critical success, the predator always succeeds and gains one additional devour success.",
+				"For the prey, on a critical failure roll on a devour resist check, the prey always fails. On a critical success, they always succeed and gain one additional escape success.",
+				"Should both parties critically succeed or critically fail, nothing happens as they remain locked in a stalemate.",
+				"Just like attacking an {@condition unconscious} or {@condition defeated|LustVore} creature, devouring an {@condition unconscious} or {@condition defeated|LustVore} creature is considered a critical success, and the predator gains one additional devour success."
+			]
+		},
+		{
+			"name": "Additional Fetish Feats",
+			"source": "LustVore",
+			"ruleType": "O",
+			"entries": [
+				"People are likely playing with a vore module to engage in vore and other fetish behavior, and thus should be encouraged. The Nekomancer recommends the following rule:",
+				"At character creation, all characters gain a fetish feat. Characters receive fetish feats as they increase in level. Whenever a character gains an ability score improvement, they also receive an additional fetish feat alongside the ability score improvement. {@i (this means most characters gain a free fetish feat at 4th, 8th, 12th, 16th, and 19th level, but some classes like Fighter and Rogue may gain more fetish feats than others due to having more ability score improvements. This also means that a character could spend their ability score improvement on a fetish feat alongside the free fetish feat they gain.)}",
+				"If a group is looking for something different, groups could instead decide to make fetish feats rewards for impressive acts of gluttony, such as devouring special bosses, huge meals, becoming a meal, etc. Groups may also be interested in creating their own progression system for fetish feats, giving them out less or more frequently."
+			]
+		},
+		{
+			"name": "Companion Feats",
+			"source": "LustVore",
+			"ruleType": "O",
+			"entries": [
+				"In this system, we offer a few buffs to help allied summons like these perform a bit better as predators should they want to. This is for summons that are designed to be class companions that level up for you. This is for ones like Drakewarden's Drake that gain strength as you level up, and (in most cases) have no time limit of how long they can be summoned.",
+				{
+					"type": "list",
+					"items": [
+						"Your companion may gain proficiency in devouring ONLY if you yourself have proficiency in vore (either {@skill Athletics} OR {@skill Acrobatics}). If you have proficiency, your summon may as well (your choice of {@skill Athletics} or {@skill Acrobatics}). If you have expertise, your companion may share this - but gets no other benefits from your skill proficiencies unless noted on their statblock. When adding proficiency, your proficiency bonus is used for the calculation.",
+						"Your companion's digestion damage equals the number of levels you have in the class. i.e a 5th level Drakewarden's drake has 2d6 + 2 digestion damage, but a 4th level Drakewarden/1st level Rogue's multiclass drake has 1d6 + 2 digestion damage.",
+						"Your companion's internal AC is calculated as 10 + their Constitution modifier + your Proficiency Bonus",
+						"You may optionally choose to give a vore feat to your companion. If you do this, however, only your companion can benefit from it - you gain no buff from the feat unless you use another feat slot to take it again for yourself.",
+						"Features like {@feat Soul Absorption|LustVore} that state 'when you die' will function if your summon dies, meaning summons now can make death saves if needed. Class features that can summon them at full health work as normal, however, when resummoned in this way any gained charges are reset and any living prey they may have are released in an unobstructed space as close to where the summon was before being resummoned."
+					]
+				}
+			]
 		}
 	],
 	"table": [
-		
+		{
+			"name": "Chaos Magic Table",
+			"source": "LustVore",
+			"colLabels": [
+				"d100",
+				"Effect"
+			],
+			"colStyles": [
+				"col-2 text-center",
+				"col-10 text-left"
+			],
+			"rows": [
+				["1", "text"],
+				["2", "text"],
+				["3", "text"],
+				["4", "text"],
+				["5", "text"],
+				["6", "text"],
+				["7", "text"],
+				["8", "text"],
+				["9", "text"],
+				["10", "text"],
+				["11", "text"],
+				["12", "text"],
+				["13", "text"],
+				["14", "text"],
+				["15", "text"],
+				["16", "text"],
+				["17", "text"],
+				["18", "text"],
+				["19", "text"],
+				["20", "text"],
+				["21", "text"],
+				["22", "text"],
+				["23", "text"],
+				["24", "text"],
+				["25", "text"],
+				["26", "text"],
+				["27", "text"],
+				["28", "text"],
+				["29", "text"],
+				["30", "text"],
+				["31", "text"],
+				["32", "text"],
+				["33", "text"],
+				["34", "text"],
+				["35", "text"],
+				["36", "text"],
+				["37", "text"],
+				["38", "text"],
+				["39", "text"],
+				["40", "text"],
+				["41", "text"],
+				["42", "text"],
+				["43", "text"],
+				["44", "text"],
+				["45", "text"],
+				["46", "text"],
+				["47", "text"],
+				["48", "text"],
+				["49", "text"],
+				["50", "text"],
+				["51", "text"],
+				["52", "text"],
+				["53", "text"],
+				["54", "text"],
+				["55", "text"],
+				["56", "text"],
+				["57", "text"],
+				["58", "text"],
+				["59", "text"],
+				["60", "text"],
+				["61", "text"],
+				["62", "text"],
+				["63", "text"],
+				["64", "text"],
+				["65", "text"],
+				["66", "text"],
+				["67", "text"],
+				["68", "text"],
+				["69", "text"],
+				["70", "text"],
+				["71", "text"],
+				["72", "text"],
+				["73", "text"],
+				["74", "text"],
+				["75", "text"],
+				["76", "text"],
+				["77", "text"],
+				["78", "text"],
+				["79", "text"],
+				["80", "text"],
+				["81", "text"],
+				["82", "text"],
+				["83", "text"],
+				["84", "text"],
+				["85", "text"],
+				["86", "text"],
+				["87", "text"],
+				["88", "text"],
+				["89", "text"],
+				["90", "text"],
+				["91", "text"],
+				["92", "text"],
+				["93", "text"],
+				["94", "text"],
+				["95", "text"],
+				["96", "text"],
+				["97", "text"],
+				["98", "text"],
+				["99", "text"],
+				["100", "text"]
+			]
+		},
+		{
+			"name": "Petra's Chaos Magic Table",
+			"source": "LustVore",
+			"colLabels": [
+				"d100",
+				"Lewd Effect",
+				"Mundane Effect"
+			],
+			"colStyles": [
+				"col-2 text-center",
+				"col-5 text-left",
+				"col-5 text-left"
+			],
+			"rows": [
+				["1", "text", "text"],
+				["2", "text", "text"],
+				["3", "text", "text"],
+				["4", "text", "text"],
+				["5", "text", "text"],
+				["6", "text", "text"],
+				["7", "text", "text"],
+				["8", "text", "text"],
+				["9", "text", "text"],
+				["10", "text", "text"],
+				["11", "text", "text"],
+				["12", "text", "text"],
+				["13", "text", "text"],
+				["14", "text", "text"],
+				["15", "text", "text"],
+				["16", "text", "text"],
+				["17", "text", "text"],
+				["18", "text", "text"],
+				["19", "text", "text"],
+				["20", "text", "text"],
+				["21", "text", "text"],
+				["22", "text", "text"],
+				["23", "text", "text"],
+				["24", "text", "text"],
+				["25", "text", "text"],
+				["26", "text", "text"],
+				["27", "text", "text"],
+				["28", "text", "text"],
+				["29", "text", "text"],
+				["30", "text", "text"],
+				["31", "text", "text"],
+				["32", "text", "text"],
+				["33", "text", "text"],
+				["34", "text", "text"],
+				["35", "text", "text"],
+				["36", "text", "text"],
+				["37", "text", "text"],
+				["38", "text", "text"],
+				["39", "text", "text"],
+				["40", "text", "text"],
+				["41", "text", "text"],
+				["42", "text", "text"],
+				["43", "text", "text"],
+				["44", "text", "text"],
+				["45", "text", "text"],
+				["46", "text", "text"],
+				["47", "text", "text"],
+				["48", "text", "text"],
+				["49", "text", "text"],
+				["50", "text", "text"],
+				["51", "text", "text"],
+				["52", "text", "text"],
+				["53", "text", "text"],
+				["54", "text", "text"],
+				["55", "text", "text"],
+				["56", "text", "text"],
+				["57", "text", "text"],
+				["58", "text", "text"],
+				["59", "text", "text"],
+				["60", "text", "text"],
+				["61", "text", "text"],
+				["62", "text", "text"],
+				["63", "text", "text"],
+				["64", "text", "text"],
+				["65", "text", "text"],
+				["66", "text", "text"],
+				["67", "text", "text"],
+				["68", "text", "text"],
+				["69", "text", "text"],
+				["70", "text", "text"],
+				["71", "text", "text"],
+				["72", "text", "text"],
+				["73", "text", "text"],
+				["74", "text", "text"],
+				["75", "text", "text"],
+				["76", "text", "text"],
+				["77", "text", "text"],
+				["78", "text", "text"],
+				["79", "text", "text"],
+				["80", "text", "text"],
+				["81", "text", "text"],
+				["82", "text", "text"],
+				["83", "text", "text"],
+				["84", "text", "text"],
+				["85", "text", "text"],
+				["86", "text", "text"],
+				["87", "text", "text"],
+				["88", "text", "text"],
+				["89", "text", "text"],
+				["90", "text", "text"],
+				["91", "text", "text"],
+				["92", "text", "text"],
+				["93", "text", "text"],
+				["94", "text", "text"],
+				["95", "text", "text"],
+				["96", "text", "text"],
+				["97", "text", "text"],
+				["98", "text", "text"],
+				["99", "text", "text"],
+				["100", "text", "text"]
+			],
+			"footnotes": [
+				"Chaos DC is equal to your Spell save DC and Spellcasting bonus unless you don't have spellcasting feature, then it is equal to:",
+				{
+					"type": "abilityDc",
+					"name": "Chaos DC",
+					"attributes": [
+						"cha"
+					]
+				},
+				{
+					"type": "abilityAttackMod",
+					"name": "Chaos Spellcasting",
+					"attributes": [
+						"cha"
+					]
+				}
+			]
+		}
 	]
 }
