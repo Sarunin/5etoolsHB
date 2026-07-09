@@ -11561,7 +11561,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Belly Arcanist",
 			"subclassSource": "LustVore",
-			"level": 1,
+			"level": 2,
 			"entries": [
 				"Make yourself at home inside of another creature, and buff them in combat.",
 				{
@@ -11660,7 +11660,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Belly Summoner",
 			"subclassSource": "LustVore",
-			"level": 1,
+			"level": 2,
 			"entries": [
 				"There are those conjurers and summoners that decide to entirely specialize upon the summoning of creatures. To this end, many quickly realize the most efficient way to summon them is to summon them within themselves.",
 				"Belly Summoners are often maternal and possessive wizards, who love and care for their summons as if they were their own children or cherished pets. After all, in being magically linked, they are intrinsically able to feel their presence, including their pleasure and pain. Many Belly Summoners even treat their friends and companions as their pets, and even go so far as to gulp them down and bind them permanently.",
@@ -11783,7 +11783,7 @@
 			"classSource": "PHB",
 			"subclassShortName": "Witch",
 			"subclassSource": "LustVore",
-			"level": 1,
+			"level": 2,
 			"entries": [
 				"Use the mastery of your hex’s to control the fate of those who cross you.",
 				{
