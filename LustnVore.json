@@ -2337,6 +2337,395 @@
 				"Stroke of Luck|Rogue||20|LustVore"
 			],
 			"subclassTitle": "Roguish Archetype"
+		},
+		{
+			"name": "Warlock (L&V Changes)",
+			"source": "LustVore",
+			"hd": {
+				"number": 1,
+				"faces": 8
+			},
+			"proficiency": [
+				"wis",
+				"cha"
+			],
+			"spellcastingAbility": "cha",
+			"casterProgression": "pact",
+			"cantripProgression": [
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4
+			],
+			"spellsKnownProgression": [
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				10,
+				11,
+				11,
+				12,
+				12,
+				13,
+				13,
+				14,
+				14,
+				15,
+				15
+			],
+			"spellsKnownProgressionFixedByLevel": {
+				"11": {
+					"6": 1
+				},
+				"13": {
+					"7": 1
+				},
+				"15": {
+					"8": 1
+				},
+				"17": {
+					"9": 1
+				}
+			},
+			"optionalfeatureProgression": [
+				{
+					"name": "Eldritch Invocations",
+					"featureType": [
+						"EI"
+					],
+					"progression": [
+						0,
+						2,
+						2,
+						2,
+						3,
+						3,
+						4,
+						4,
+						5,
+						5,
+						5,
+						6,
+						6,
+						6,
+						7,
+						7,
+						7,
+						8,
+						8,
+						8
+					]
+				},
+				{
+					"name": "Pact Boon",
+					"featureType": [
+						"PB"
+					],
+					"progression": {
+						"3": 1
+					}
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"light"
+				],
+				"weapons": [
+					"simple"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"arcana",
+								"deception",
+								"history",
+								"intimidation",
+								"investigation",
+								"nature",
+								"religion"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
+					"(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
+					"(a) a {@item scholar's pack|phb} or (b) a {@item dungeoneer's pack|phb}",
+					"{@item Leather armor|phb}, any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}, and two {@item dagger|phb|daggers}"
+				],
+				"goldAlternative": "{@dice 4d4 × 10|4d4 × 10|Starting Gold}",
+				"defaultData": [
+					{
+						"a": [
+							"light crossbow|phb",
+							"crossbow bolts (20)|phb"
+						],
+						"b": [
+							{
+								"equipmentType": "weaponSimple"
+							}
+						]
+					},
+					{
+						"a": [
+							"component pouch|phb"
+						],
+						"b": [
+							{
+								"equipmentType": "focusSpellcastingArcane"
+							}
+						]
+					},
+					{
+						"a": [
+							"scholar's pack|phb"
+						],
+						"b": [
+							"dungeoneer's pack|phb"
+						]
+					},
+					{
+						"_": [
+							"leather armor|phb",
+							{
+								"equipmentType": "weaponSimple"
+							},
+							{
+								"item": "dagger|phb",
+								"quantity": 2
+							}
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"requirements": {
+					"cha": 13
+				},
+				"proficienciesGained": {
+					"armor": [
+						"light"
+					],
+					"weapons": [
+						"simple"
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"{@filter Cantrips Known|spells|level=0|class=Warlock}",
+						"{@filter Spells Known|spells|class=Warlock}",
+						"Spell Slots",
+						"Slot Level",
+						"{@filter Invocations Known|optionalfeatures|feature type=ei}"
+					],
+					"rows": [
+						[
+							2,
+							2,
+							1,
+							"{@filter 1st|spells|level=1|class=Warlock}",
+							0
+						],
+						[
+							2,
+							3,
+							2,
+							"{@filter 1st|spells|level=1|class=Warlock}",
+							2
+						],
+						[
+							2,
+							4,
+							2,
+							"{@filter 2nd|spells|level=2|class=Warlock}",
+							2
+						],
+						[
+							3,
+							5,
+							2,
+							"{@filter 2nd|spells|level=2|class=Warlock}",
+							2
+						],
+						[
+							3,
+							6,
+							2,
+							"{@filter 3rd|spells|level=3|class=Warlock}",
+							3
+						],
+						[
+							3,
+							7,
+							2,
+							"{@filter 3rd|spells|level=3|class=Warlock}",
+							3
+						],
+						[
+							3,
+							8,
+							2,
+							"{@filter 4th|spells|level=4|class=Warlock}",
+							4
+						],
+						[
+							3,
+							9,
+							2,
+							"{@filter 4th|spells|level=4|class=Warlock}",
+							4
+						],
+						[
+							3,
+							10,
+							2,
+							"{@filter 5th|spells|level=5|class=Warlock}",
+							5
+						],
+						[
+							4,
+							10,
+							2,
+							"{@filter 5th|spells|level=5|class=Warlock}",
+							5
+						],
+						[
+							4,
+							11,
+							3,
+							"{@filter 5th|spells|level=5|class=Warlock}",
+							5
+						],
+						[
+							4,
+							11,
+							3,
+							"{@filter 5th|spells|level=5|class=Warlock}",
+							6
+						],
+						[
+							4,
+							12,
+							3,
+							"{@filter 5th|spells|level=5|class=Warlock}",
+							6
+						],
+						[
+							4,
+							12,
+							3,
+							"{@filter 5th|spells|level=5|class=Warlock}",
+							6
+						],
+						[
+							4,
+							13,
+							3,
+							"{@filter 5th|spells|level=5|class=Warlock}",
+							7
+						],
+						[
+							4,
+							13,
+							3,
+							"{@filter 5th|spells|level=5|class=Warlock}",
+							7
+						],
+						[
+							4,
+							14,
+							4,
+							"{@filter 5th|spells|level=5|class=Warlock}",
+							7
+						],
+						[
+							4,
+							14,
+							4,
+							"{@filter 5th|spells|level=5|class=Warlock}",
+							8
+						],
+						[
+							4,
+							15,
+							4,
+							"{@filter 5th|spells|level=5|class=Warlock}",
+							8
+						],
+						[
+							4,
+							15,
+							4,
+							"{@filter 5th|spells|level=5|class=Warlock}",
+							8
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"L&V Changes|Druid||1|LustVore",
+				"Pact Magic|Warlock||1",
+				"Additional Spells|Warlock||1|LustVore",
+				{
+					"classFeature": "Otherworldly Patron|Warlock||1",
+					"gainSubclassFeature": true
+				},
+				"Eldritch Invocations|Warlock||2",
+				"Pact Boon|Warlock||3",
+				"Ability Score Improvement|Warlock||4",
+				"Eldritch Versatility|Warlock||4|TCE",
+				{
+					"classFeature": "Otherworldly Patron feature|Warlock||6",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Warlock||8",
+				{
+					"classFeature": "Otherworldly Patron feature|Warlock||10",
+					"gainSubclassFeature": true
+				},
+				"Mystic Arcanum (6th level)|Warlock||11",
+				"Ability Score Improvement|Warlock||12",
+				"Mystic Arcanum (7th level)|Warlock||13",
+				{
+					"classFeature": "Otherworldly Patron feature|Warlock||14",
+					"gainSubclassFeature": true
+				},
+				"Mystic Arcanum (8th level)|Warlock||15",
+				"Ability Score Improvement|Warlock||16",
+				"Mystic Arcanum (9th level)|Warlock||17",
+				"Ability Score Improvement|Warlock||19",
+				"Eldritch Master|Warlock||20"
+			],
+			"subclassTitle": "Otherworldly Patron"
 		}
 	],
 	"classFeature": [
@@ -4868,6 +5257,329 @@
 				"At 20th level, you have an uncanny knack for succeeding when you need to. If your attack misses a target within range, you can turn the miss into a hit. Alternatively, if you fail an ability check, you can treat the {@dice d20} roll as a 20.",
 				"Once you use this feature, you can't use it again until you finish a short or long rest."
 			]
+		},
+		{
+			"name": "Otherworldly Patron",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"At 1st level, you have struck a bargain with an otherworldly being chosen from the list of available patrons. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level."
+			]
+		},
+		{
+			"name": "Additional Spells",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"You learn the additional spells provided to you from your first level Otherworldly Patron feature's Expanded Spell list. Each of these spells counts as a warlock spell for you, but it doesn't count against the number of warlock spells you know."
+			]
+		},
+		{
+			"name": "Pact Magic",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"Your arcane research and the magic bestowed on you by your patron have given you facility with spells. See {@book chapter 10|PHB|10} for the general rules of spellcasting and {@book chapter 11|PHB|11} for the {@filter warlock spell list|spells|class=warlock}.",
+				{
+					"type": "entries",
+					"name": "Cantrips",
+					"entries": [
+						"You know two cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spell Slots",
+					"entries": [
+						"The Warlock table shows how many spell slots you have to cast your {@filter warlock spells|spells|class=warlock} of 1st through 5th level. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.",
+						"For example, when you are 5th level, you have two 3rd-level spell slots. To cast the 1st-level spell {@spell witch bolt}, you must spend one of those slots, and you cast it as a 3rd-level spell."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spells Known of 1st Level and Higher",
+					"entries": [
+						"At 1st level, you know two 1st-level spells of your choice from the warlock spell list.",
+						"The Spells Known column of the Warlock table shows when you learn more warlock spells of your choice of 1st level and higher. A spell you choose must be of a level no higher than what's shown in the table's Slot Level column for your level. When you reach 6th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level.",
+						"Additionally, when you gain a level in this class, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spellcasting Ability",
+					"entries": [
+						"Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.",
+						{
+							"type": "abilityDc",
+							"name": "Spell",
+							"attributes": [
+								"cha"
+							]
+						},
+						{
+							"type": "abilityAttackMod",
+							"name": "Spell",
+							"attributes": [
+								"cha"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spellcasting Focus",
+					"entries": [
+						"You can use an {@item arcane focus|phb} as a spellcasting focus for your warlock spells."
+					]
+				}
+			]
+		},
+		{
+			"name": "Eldritch Invocations",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 2,
+			"entries": [
+				"In your study of occult lore, you have unearthed eldritch invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability.",
+				"At 2nd level, you gain two eldritch invocations of your choice. A list of the available options can be found on the {@filter Optional Features|optionalfeatures|Feature Type=EI} page. When you gain certain warlock levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Warlock table.",
+				"Additionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level.",
+				"If an eldritch invocation has prerequisites, you must meet them to learn it. You can learn the invocation at the same time that you meet its prerequisites. A level prerequisite refers to your level in this class."
+			]
+		},
+		{
+			"name": "Pact Boon",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 3,
+			"entries": [
+				"At 3rd level, your otherworldly patron bestows a gift upon you for your loyal service. You gain one of the following features of your choice.",
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Pact of the Chain"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Pact of the Blade"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Pact of the Tome"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Pact of the Talisman|TCE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 4,
+			"entries": [
+				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Eldritch Versatility",
+			"source": "TCE",
+			"page": 70,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 4,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 4th-level warlock {@variantrule optional class features|tce|optional feature}}",
+				"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change of focus in your occult studies:",
+				{
+					"type": "list",
+					"items": [
+						"Replace one cantrip you learned from this class's Pact Magic feature with another cantrip from the {@filter warlock spell list|spells|level=0|class=Warlock}.",
+						"Replace the option you chose for the Pact Boon feature with one of that feature's other options.",
+						"If you're 12th level or higher, replace one spell from your Mystic Arcanum feature with another warlock spell of the same level."
+					]
+				},
+				"If this change makes you ineligible for any of your Eldritch Invocations, you must also replace them now, choosing invocations for which you qualify."
+			]
+		},
+		{
+			"name": "Otherworldly Patron feature",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 6,
+			"entries": [
+				"At 6th level, you gain a feature granted by your Otherworldly Patron."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 8,
+			"entries": [
+				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Otherworldly Patron feature",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 10,
+			"entries": [
+				"At 10th level, you gain a feature granted by your Otherworldly Patron."
+			]
+		},
+		{
+			"name": "Mystic Arcanum (6th level)",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 11,
+			"entries": [
+				"At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one {@filter 6th-level spell from the warlock spell list|spells|level=6|class=Warlock} as this arcanum.",
+				"You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.",
+				"At higher levels, you gain more warlock spells of your choice that can be cast in this way: one 7th-level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Mystic Arcanum when you finish a long rest."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 12,
+			"entries": [
+				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Mystic Arcanum (7th level)",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 13,
+			"entries": [
+				"At 13th level, your patron bestows upon you a magical secret called an arcanum. Choose one {@filter 7th-level spell from the warlock spell list|spells|level=7|class=Warlock} as this arcanum.",
+				"You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again."
+			]
+		},
+		{
+			"name": "Otherworldly Patron feature",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 14,
+			"entries": [
+				"At 14th level, you gain a feature granted by your Otherworldly Patron."
+			]
+		},
+		{
+			"name": "Mystic Arcanum (8th level)",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 15,
+			"entries": [
+				"At 15th level, your patron bestows upon you a magical secret called an arcanum. Choose one {@filter 8th-level spell from the warlock spell list|spells|level=8|class=Warlock} as this arcanum.",
+				"You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 16,
+			"entries": [
+				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Mystic Arcanum (9th level)",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 17,
+			"entries": [
+				"At 17th level, your patron bestows upon you a magical secret called an arcanum. Choose one {@filter 9th-level spell from the warlock spell list|spells|level=9|class=Warlock} as this arcanum.",
+				"You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 19,
+			"entries": [
+				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Eldritch Master",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 20,
+			"entries": [
+				"At 20th level, you can draw on your inner reserve of mystical power while entreating your patron to regain expended spell slots. You can spend 1 minute entreating your patron for aid to regain all your expended spell slots from your Pact Magic feature. Once you regain spell slots with this feature, you must finish a long rest before you can do so again."
+			]
 		}
 	],
 	"subclass": [
@@ -5414,9 +6126,48 @@
 			"classSource": "PHB",
 			"page": 82,
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"Oath of Indulgence|Paladin||Indulgence|LustVore|3",
+				"|Paladin||Indulgence|LustVore|7",
+				"|Paladin||Indulgence|LustVore|15",
+				"|Paladin||Indulgence|LustVore|20"
+			],
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"Flavor/Disgust|LustVore",
+							"Goodberry"
+						],
+						"5": [
+							"Elastify/Constrict|LustVore",
+							"Sophi's Ravenous Consumption|LustVore"
+						],
+						"9": [
+							"Intoxicate|LustVore",
+							"Maddening Hunger|LustVore"
+						],
+						"13": [
+							"Aura of Lust|LustVore",
+							"Entice|LustVore"
+						],
+						"17": [
+							"Bellyport|LustVore",
+							"Inhale|LustVore"
+						]
+					}
+				}
+			],
+			"subclassSpells": [
+				"Flavor/Disgust|LustVore",
+				"Goodberry",
+				"Elastify/Constrict|LustVore",
+				"Sophi's Ravenous Consumption|LustVore",
+				"Intoxicate|LustVore",
+				"Maddening Hunger|LustVore",
+				"Aura of Lust|LustVore",
+				"Entice|LustVore",
+				"Bellyport|LustVore",
+				"Inhale|LustVore"
 			]
 		},
 		{
@@ -5427,9 +6178,48 @@
 			"classSource": "PHB",
 			"page": 82,
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"Oath of the Maid|Paladin||Maid|LustVore|3",
+				"Aura of Assistance|Paladin||Maid|LustVore|7",
+				"A Maids Duty|Paladin||Maid|LustVore|15",
+				"Avatar of the Divine Maid|Paladin||Maid|LustVore|20"
+			],
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"bless",
+							"cure wounds"
+						],
+						"5": [
+							"digestive barrier|lustvore",
+							"healing massage|lustvore"
+						],
+						"9": [
+							"meal of the phoenix|lustvore",
+							"remove curse"
+						],
+						"13": [
+							"bellyport ally|lustvore",
+							"find greater steed"
+						],
+						"17": [
+							"holy weapon",
+							"rebirth|lustvore"
+						]
+					}
+				}
+			],
+			"subclassSpells": [
+				"bless",
+				"cure wounds",
+				"digestive barrier|lustvore",
+				"healing massage|lustvore",
+				"meal of the phoenix|lustvore",
+				"remove curse",
+				"bellyport ally|lustvore",
+				"find greater steed",
+				"holy weapon",
+				"rebirth|lustvore"
 			]
 		},
 		{
@@ -5440,9 +6230,48 @@
 			"classSource": "PHB",
 			"page": 82,
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"Oath of the Matron|Paladin||Matron|LustVore|3",
+				"Belly Glow|Paladin||Matron|LustVore|7",
+				"Protective Gulp|Paladin||Matron|LustVore|15",
+				"Disarming Love|Paladin||Matron|LustVore|20"
+			],
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"charm person",
+							"cure wounds"
+						],
+						"5": [
+							"digestive barrier|lustvore",
+							"healing massage|lustvore"
+						],
+						"9": [
+							"medicinal acids|lustvore",
+							"revivify"
+						],
+						"13": [
+							"bellyport ally|lustvore",
+							"locate creature"
+						],
+						"17": [
+							"come to me|lustvore",
+							"rebirth|lustvore"
+						]
+					}
+				}
+			],
+			"subclassSpells": [
+				"charm person",
+				"cure wounds",
+				"digestive barrier|lustvore",
+				"healing massage|lustvore",
+				"medicinal acids|lustvore",
+				"revivify",
+				"bellyport ally|lustvore",
+				"locate creature",
+				"come to me|lustvore",
+				"rebirth|lustvore"
 			]
 		},
 		{
@@ -5453,9 +6282,48 @@
 			"classSource": "PHB",
 			"page": 89,
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"Natural Cycle Conclave|Ranger||Natural Cycle|LustVore|3",
+				"Counterattack|Ranger||Natural Cycle|LustVore|7",
+				"Instinct of Predator and Prey|Ranger||Natural Cycle|LustVore|11",
+				"Master of the Food Chain|Ranger||Natural Cycle|LustVore|15"
+			],
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"intensify hunger|lustvore",
+							"entangle"
+						],
+						"5": [
+							"devouring smite|lustvore",
+							"invisibility"
+						],
+						"9": [
+							"absorb power|lustvore",
+							"slow"
+						],
+						"13": [
+							"leeching insides|lustvore",
+							"dimension door"
+						],
+						"17": [
+							"bellyport|lustvore",
+							"scrying"
+						]
+					}
+				}
+			],
+			"subclassSpells": [
+				"intensify hunger|lustvore",
+				"entangle",
+				"devouring smite|lustvore",
+				"invisibility",
+				"absorb power|lustvore",
+				"slow",
+				"leeching insides|lustvore",
+				"dimension door",
+				"bellyport|lustvore",
+				"scrying"
 			]
 		},
 		{
@@ -5466,9 +6334,10 @@
 			"classSource": "PHB",
 			"page": 94,
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"Doppelganger|Rogue||Doppelganger|LustVore|3",
+				"Body Manipulation|Rogue||Doppelganger|LustVore|9",
+				"False Hydra|Rogue||Doppelganger|LustVore|13",
+				"Life Possession|Rogue||Doppelganger|LustVore|17"
 			]
 		},
 		{
@@ -5479,9 +6348,10 @@
 			"classSource": "PHB",
 			"page": 94,
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"Gut Smuggler|Rogue||Gut Smuggler|LustVore|3",
+				"Magical Guts|Rogue||Gut Smuggler|LustVore|9",
+				"Permanent Imprisonment|Rogue||Gut Smuggler|LustVore|13",
+				"Smugglers Den|Rogue||Gut Smuggler|LustVore|17"
 			]
 		},
 		{
@@ -5492,9 +6362,10 @@
 			"classSource": "PHB",
 			"page": 94,
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"Parasite|Rogue||Parasite|LustVore|3",
+				"Stealthy Entry|Rogue||Parasite|LustVore|9",
+				"Greater Parasite|Rogue||Parasite|LustVore|13",
+				"Master Parasite|Rogue||Parasite|LustVore|17"
 			]
 		},
 		{
@@ -5505,9 +6376,10 @@
 			"classSource": "PHB",
 			"page": 94,
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"Silent Python|Rogue||Silent Python|LustVore|3",
+				"Powerful Swallow|Rogue||Silent Python|LustVore|9",
+				"Acid Blast|Rogue||Silent Python|LustVore|13",
+				"Assassins Gulp|Rogue||Silent Python|LustVore|17"
 			]
 		},
 		{
@@ -5518,9 +6390,48 @@
 			"classSource": "PHB",
 			"page": 99,
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"Flesh-Bonded Soul|Sorcerer||Flesh-Bonded|LustVore|1",
+				"Rooted Blasting|Sorcerer||Flesh-Bonded|LustVore|6",
+				"Soothe the Flesh|Sorcerer||Flesh-Bonded|LustVore|14",
+				"Mana Surge|Sorcerer||Flesh-Bonded|LustVore|18"
+			],
+			"additionalSpells": [
+				{
+					"known": {
+						"1": [
+							"absorb elements|xge",
+							"shield"
+						],
+						"3": [
+							"enlarge/reduce",
+							"disrobe|lustvore"
+						],
+						"5": [
+							"compress|lustvore",
+							"medicinal acids|lustvore"
+						],
+						"7": [
+							"leeching insides|lustvore",
+							"vitriolic sphere|xge"
+						],
+						"9": [
+							"cloudkill",
+							"maximize/minimize|lustvore"
+						]
+					}
+				}
+			],
+			"subclassSpells": [
+				"absorb elements|xge",
+				"shield",
+				"enlarge/reduce",
+				"disrobe|lustvore",
+				"compress|lustvore",
+				"medicinal acids|lustvore",
+				"leeching insides|lustvore",
+				"vitriolic sphere|xge",
+				"cloudkill",
+				"maximize/minimize|lustvore"
 			]
 		},
 		{
@@ -5531,9 +6442,48 @@
 			"classSource": "PHB",
 			"page": 99,
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"Succubus Bloodline|Sorcerer||Succubus|LustVore|1",
+				"Snake Charming|Sorcerer||Succubus|LustVore|6",
+				"Manipulative Fortitude|Sorcerer||Succubus|LustVore|14",
+				"Total Domination|Sorcerer||Succubus|LustVore|18"
+			],
+			"additionalSpells": [
+				{
+					"known": {
+						"1": [
+							"charm person",
+							"erotic dance|lustvore"
+						],
+						"3": [
+							"disrobe|lustvore",
+							"enthrall"
+						],
+						"5": [
+							"hypnotic pattern",
+							"promise of pleasure|lustvore"
+						],
+						"7": [
+							"charm monster|xge",
+							"compulsion"
+						],
+						"9": [
+							"bellyport|lustvore",
+							"mislead"
+						]
+					}
+				}
+			],
+			"subclassSpells": [
+				"charm person",
+				"erotic dance|lustvore",
+				"disrobe|lustvore",
+				"enthrall",
+				"hypnotic pattern",
+				"promise of pleasure|lustvore",
+				"charm monster|xge",
+				"compulsion",
+				"bellyport|lustvore",
+				"mislead"
 			]
 		},
 		{
@@ -5544,9 +6494,48 @@
 			"classSource": "PHB",
 			"page": 99,
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"Tarrasque Bloodline|Sorcerer||Tarrasque|LustVore|1",
+				"Monstrous Form|Sorcerer||Tarrasque|LustVore|6",
+				"Arcane Absorption|Sorcerer||Tarrasque|LustVore|14",
+				"Titan's Grasp|Sorcerer||Tarrasque|LustVore|18"
+			],
+			"additionalSpells": [
+				{
+					"known": {
+						"1": [
+							"arcane digestion|lustvore",
+							"intensify hunger|lustvore"
+						],
+						"3": [
+							"devouring smite|lustvore",
+							"troll's blood|lustvore"
+						],
+						"5": [
+							"amplify acids|lustvore",
+							"fear"
+						],
+						"7": [
+							"freedom of movement",
+							"leeching insides|lustvore"
+						],
+						"9": [
+							"empower body|lustvore",
+							"inhale|lustvore"
+						]
+					}
+				}
+			],
+			"subclassSpells": [
+				"arcane digestion|lustvore",
+				"intensify hunger|lustvore",
+				"devouring smite|lustvore",
+				"troll's blood|lustvore",
+				"amplify acids|lustvore",
+				"fear",
+				"freedom of movement",
+				"leeching insides|lustvore",
+				"empower body|lustvore",
+				"inhale|lustvore"
 			]
 		},
 		{
@@ -5556,10 +6545,37 @@
 			"className": "Warlock",
 			"classSource": "PHB",
 			"page": 105,
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s1": [
+							"chaos bolt",
+							"find familiar"
+						],
+						"s2": [
+							"blur",
+							"enlarge/reduce"
+						],
+						"s3": [
+							"blink",
+							"fireball"
+						],
+						"s4": [
+							"confusion",
+							"polymorph"
+						],
+						"s5": [
+							"animate objects",
+							"wall of force"
+						]
+					}
+				}
+			],
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"The Great Chaos Witch|Warlock||Chaos Witch|LustVore|1",
+				"Chaos Spell Transmutation|Warlock||Chaos Witch|LustVore|6",
+				"Witches Bargain|Warlock||Chaos Witch|LustVore|10",
+				"Master of Chaos|Warlock||Chaos Witch|LustVore|14"
 			]
 		},
 		{
@@ -5569,10 +6585,37 @@
 			"className": "Warlock",
 			"classSource": "PHB",
 			"page": 105,
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s1": [
+							"acidify|lustvore",
+							"hoard gullet|lustvore"
+						],
+						"s2": [
+							"devouring smite|lustvore",
+							"disrobe|lustvore"
+						],
+						"s3": [
+							"compress|lustvore",
+							"sleet storm"
+						],
+						"s4": [
+							"freedom of movement",
+							"leeching insides|lustvore"
+						],
+						"s5": [
+							"bigby's hand",
+							"inhale|lustvore"
+						]
+					}
+				}
+			],
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"The Great Devourer|Warlock||Devourer|LustVore|1",
+				"Mark of Prey|Warlock||Devourer|LustVore|6",
+				"Gluttonous Surge|Warlock||Devourer|LustVore|10",
+				"Aspect of the Great Devourer|Warlock||Devourer|LustVore|14"
 			]
 		},
 		{
@@ -5582,10 +6625,37 @@
 			"className": "Warlock",
 			"classSource": "PHB",
 			"page": 105,
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s1": [
+							"enhance/reduce assets|lustvore",
+							"divine mark|lustvore"
+						],
+						"s2": [
+							"disrobe|lustvore",
+							"genderbend|lustvore"
+						],
+						"s3": [
+							"fast friends|ai",
+							"meal of the phoenix|lustvore"
+						],
+						"s4": [
+							"aura of lust|lustvore",
+							"evard's black tentacles"
+						],
+						"s5": [
+							"come to me|lustvore",
+							"dominate person"
+						]
+					}
+				}
+			],
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"The Great Lewd One|Warlock||Lewd One|LustVore|1",
+				"Corrupted Influence|Warlock||Lewd One|LustVore|6",
+				"Cycle of Corruption|Warlock||Lewd One|LustVore|10",
+				"Corrupted Aura|Warlock||Lewd One|LustVore|14"
 			]
 		},
 		{
@@ -5595,10 +6665,37 @@
 			"className": "Warlock",
 			"classSource": "PHB",
 			"page": 105,
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s1": [
+							"body pouch|lustvore",
+							"grease"
+						],
+						"s2": [
+							"disrobe|lustvore",
+							"enlarge/reduce|lustvore"
+						],
+						"s3": [
+							"compress|lustvore",
+							"medicinal acids|lustvore"
+						],
+						"s4": [
+							"leeching insides|lustvore",
+							"vitriolic sphere|xge"
+						],
+						"s5": [
+							"cloudkill",
+							"maximize/minimize|lustvore"
+						]
+					}
+				}
+			],
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"The Great Ooze|Warlock||Ooze|LustVore|1",
+				"Engulf|Warlock||Ooze|LustVore|6",
+				"Viscous Body|Warlock||Ooze|LustVore|10",
+				"Shlick|Warlock||Ooze|LustVore|14"
 			]
 		},
 		{
@@ -5609,9 +6706,10 @@
 			"classSource": "PHB",
 			"page": 112,
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"School of Belly Arcanist|Wizard||Belly Arcanist|LustVore|2",
+				"Enhanced Concentration|Wizard||Belly Arcanist|LustVore|6",
+				"Bellyport Self|Wizard||Belly Arcanist|LustVore|10",
+				"Shared Burden|Wizard||Belly Arcanist|LustVore|14"
 			]
 		},
 		{
@@ -5622,9 +6720,10 @@
 			"classSource": "PHB",
 			"page": 112,
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"School of Belly Summoner|Wizard||Belly Summoner|LustVore|2",
+				"Summoning Ward|Wizard||Belly Summoner|LustVore|6",
+				"Full of Pets|Wizard||Belly Summoner|LustVore|10",
+				"Master Belly Summoner|Wizard||Belly Summoner|LustVore|14"
 			]
 		},
 		{
@@ -5635,9 +6734,10 @@
 			"classSource": "PHB",
 			"page": 112,
 			"subclassFeatures":[
-				"",
-				"",
-				""
+				"School of Witch|Wizard||Witch|LustVore|2",
+				"Magical Transformations|Wizard||Witch|LustVore|6",
+				"Witch's Curse|Wizard||Witch|LustVore|10",
+				"Witch's Boon|Wizard||Witch|LustVore|14"
 			]
 		}
 	],
@@ -8635,6 +9735,2127 @@
 				"At 17th level, infusing threads becomes second nature. Your Create Thread ability does not have a Ki cost, and you create 2 Ki Threads per attack.",
 				"In addition, your Ki Threads now last indefinitely instead of only one minute."
 			]
+		},
+		{
+			"name": "Oath of Indulgence",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Indulgence",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"Although many would see acts of debauchery and vore as sinful, there are those who realize such acts are not wicked, but rather a divine gift. How can feelings of pleasure and satisfaction be wrong? To those that nurture these feelings, they may end up, formally or informally, taking the Oath of Indulgence.",
+				"To those paladins that take up the oath of indulgence, they believe that debauchery is not merely a pleasant pastime: It’s a way of life. It is a divine gift that deserves to be spread to every corner of the world, and that one must experience to live life to its fullest.",
+				"Often those that take up the oath of indulgence are more self centered than other paladins, as they rely on what {@i feels} right rather that what might actually be morally right. If their gut feels good stuffed with squirming and digesting prey, who are they to deny it? If it feels wrong to watch their friends be digested, then they must act to save them! To the Oath of Indulgence, feelings and instincts are the wisdom of the heavens, and they are but their humble vessels.",
+				{
+					"type": "entries",
+					"entries": [
+						"{@b Example Tenets of Indulgence}",
+						"{@b {@i Accommodation.}} If you see one's desires unfulfilled, it is your duty to fulfill them.",
+						"{@b {@i Decadence.}} Life isn't worth living if you can't live luxuriously.",
+						"{@b {@i Instinct.}} If something feels wrong, it is wrong. If something feels right, it is right.",
+						"{@b {@i Pleasure.}} Pleasure and ecstasy is the gods reward for living to the fullest."
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Barbarian||Belly Smasher|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Oath of Indulgence Spells|Paladin||Indulgence|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Channel Divinity|Paladin||Indulgence|LustVore|3"
+				}
+			]
+		},
+		{
+			"name": "Oath of Indulgence Spells",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Indulgence",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				{
+					"type": "table",
+					"caption": "Oath of Indulgence Spells",
+					"colLabels": [
+						"Paladin Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10 text-left"
+					],
+					"rows": [
+						["3rd","{@spell flavor/disgust|lustvore}, {@spell goodberry}"],
+						["5th","{@spell elastify/constrict|lustvore}, {@spell sophi's ravenous consumption|lustvore}"],
+						["9th","{@spell intoxicate|lustvore}, {@spell maddening hunger|lustvore}"],
+						["13th","{@spell aura of lust|lustvore}, {@spell entice|lustvore}"],
+						["17th","{@spell bellyport|lustvore}, {@spell inhale|lustvore}"]
+					]
+				}
+			]
+		},
+		{
+			"name": "Channel Divinity",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Indulgence",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"When you take this oath at 3rd level, you gain the following Channel Divinity options:",
+				"{@b {@i Charming Presence.}} You can use your Channel Divinity to exude a feeling of contentment. As an action, you force each creature of your choice that you can see within 30 feet of you to make a Wisdom saving throw. Any creature that can't be {@condition charmed} succeeds on this saving throw automatically. On a failed save, a creature lowers their guard. For the next minute, the creature has disadvantage on all skill contests and devour contests. The creature can repeat this saving throw at the end of each of its turns, ending the effect on itself on a success.",
+				"{@b {@i Reward the Decadent.}} As a bonus action, you can reward predators and prey alike with your Channel Divinity. Each creature of your choice within 30 feet of you, that is inside of another creature or has another creature inside them gains the effects of the {@spell Bless} spell for the next minute. This blessing does not require {@status concentration}."
+			]
+		},
+		{
+			"name": "Aura of Corruption",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Indulgence",
+			"subclassSource": "LustVore",
+			"level": 7,
+			"entries": [
+				"Starting at 7th level, your indulgent nature begins to spread to those around you, rewarding them with enhanced pleasure and satisfaction from enjoying their indulgence. When you or any creature within 10 feet fully swallows another creature, brings a creature to 0 hit points through lewd damage, or spends 1 hour or a short rest engaging in a pleasurable vice such as sex, gluttony, etc. they gain temporary hit points equal to your Charisma modifier + your Paladin level.",
+				"This range extends to 30 feet at 18th level."
+			]
+		},
+		{
+			"name": "Voracious Vigilance",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Indulgence",
+			"subclassSource": "LustVore",
+			"level": 15,
+			"entries": [
+				"Starting at 15th level, when a creature within 5 feet of you makes an attack against a target other than you, you can use your reaction to make a {@action devour|lustvore} check against that creature. You do not need to be grappling the creature."
+			]
+		},
+		{
+			"name": "Avatar of Decadence",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Indulgence",
+			"subclassSource": "LustVore",
+			"level": 20,
+			"entries": [
+				"At 20th level, you can assume the form of a master of Decadence, taking on an appearance you choose. For example, your body could become thick and voluptuous, immaculately attractive, or dressed in the finest clothing.",
+				"Using your action, you undergo a transformation. For 1 minute, you gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"All of your attacks gain the benefits of {@spell Devouring Smite|lustvore}.",
+						"You count as 2 sizes larger for the purpose of determining capacity.",
+						"You deal an additional 2d6 acid damage when digesting."
+					]
+				},
+				"Once you use this feature, you can't use it again until you finish a long rest."
+			]
+		},
+		{
+			"name": "Oath of the Maid",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Maid",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"Also sometimes known as the Oath of the Butler for the male variety, Paladins who take up the oath of the maid pledge their lives in service of others. This can sometimes be unquestioning loyalty to a single individual, oath to a group, or an oath to their companions. Often, these “paladins” are sometimes rarely even considered paladins, and rather simply extremely competent servants!",
+				"Yet when push comes to shove, they are able to draw upon their oath to protect and serve their companions.",
+				{
+					"type": "entries",
+					"entries": [
+						"{@b Example Tenets of the Maid}",
+						"{@b {@i Accommodation.}} If you see one's desires unfulfilled, it is your duty to fulfill them.",
+						"{@b {@i Loyalty.}} Never make an oath you cannot keep, never break an oath you pledge to.",
+						"{@b {@i Protection.}} Protect your masters above all else, and lay down your life for them if need be.",
+						"{@b {@i Servitude.}} There is no greater purpose nor joy than to help your masters achieve their dreams."
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Barbarian||Belly Smasher|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Oath of the Maid Spells|Paladin||Maid|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Channel Divinity|Paladin||Maid|LustVore|3"
+				}
+			]
+		},
+		{
+			"name": "Oath of the Maid Spells",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Maid",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				{
+					"type": "table",
+					"caption": "Oath of the Maid Spells",
+					"colLabels": [
+						"Paladin Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10 text-left"
+					],
+					"rows": [
+						["3rd","{@spell bless}, {@spell cure wounds}"],
+						["5th","{@spell digestive barrier|lustvore}, {@spell healing massage|lustvore}"],
+						["9th","{@spell meal of the phoenix|lustvore}, {@spell remove curse}"],
+						["13th","{@spell bellyport ally|lustvore}, {@spell find greater steed}"],
+						["17th","{@spell holy weapon}, {@spell rebirth|lustvore}"]
+					]
+				}
+			]
+		},
+		{
+			"name": "Channel Divinity",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Maid",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"When you take this oath at 3rd level, you gain the following Channel Divinity options:",
+				"{@b {@i Swear Service.}} You renew your pledge to serve a companion in their hour of need. As an action, after choosing one ally within 60 feet, you immediately move to their side counting as your movement for this turn. For one minute and while you remain within 120 feet of your chosen ally, you gain the following effects:",
+				{
+					"type": "list",
+					"items": [
+						"Whenever your chosen ally finishes moving, you may choose to immediately move adjacent to them, so long as you are within 120 feet of them. Doing so expends your entire movement for your next turn. You ignore any difficult or dangerous terrain, so long as the way is not completely blocked or impassible.",
+						"You may take the help action as a bonus action, but only may aid your chosen ally. When you use the {@action help} action, they gain your Charisma modifier (minimum of 1) as a bonus on any damage roll, if there is a damage roll.",
+						"When your chosen ally is the target of an attack, you may choose to use your reaction to take the attack in their stead. This includes {@action grapple||grapples} and {@action devour|lustvore} attempts.",
+						"If your chosen ally would ever suffer instant death, and you are still conscious, you may choose to swap places, swap current health values (up to their maximum), and die in their stead."
+					]
+				},
+				"{@b {@i Maidly Image.}} Your maidly preparations and dignified presence protects and inspires the group to try as hard as you do! As an action, choose any number of allies up to your Charisma modifier within 60 feet. For one minute, they gain +2 to AC and all saving throws."
+			]
+		},
+		{
+			"name": "Aura of Assistance",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Maid",
+			"subclassSource": "LustVore",
+			"level": 7,
+			"entries": [
+				"Starting at 7th level, you are able to aid your allies around you. When an ally is attacked within 10 feet, as a reaction, you may move adjacent to them and provide disadvantage on the attack roll. When an ally within 10 feet is about to attack, as a reaction, you may move adjacent to them and provide advantage on the attack roll.",
+				"This extends to 30 feet at 18th level."
+			]
+		},
+		{
+			"name": "A Maids Duty",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Maid",
+			"subclassSource": "LustVore",
+			"level": 15,
+			"entries": [
+				"At 15th level, you are the perfect image of a dutiful maid, supporting your master but never outshining them.",
+				"You may cast {@spell detect magic}, {@spell create food and water}, {@spell find steed}, {@spell purify food and drink}, {@spell detect good and evil} as at will spells.",
+				"In addition, whenever you {@spell create food and water}, it is marvelously delicious!"
+			]
+		},
+		{
+			"name": "Avatar of the Divine Maid",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Maid",
+			"subclassSource": "LustVore",
+			"level": 20,
+			"entries": [
+				"At 20th level, you are able to channel your maid passion to channel the spirit of the Divine Maid. You gain the following effects for one minute.",
+				{
+					"type": "list",
+					"items": [
+						"You shine with a radiant dignified beauty in a 30 feet radius. When you or a friendly creature enters the effect's area for the first time on a turn or starts its turn there, they regain 10 hit points.",
+						"You gain an additional number of reactions equal to your Charisma modifier (minimum of 1)."
+					]
+				},
+				"Once you use this feature, you can't use it again until you finish a long rest."
+			]
+		},
+		{
+			"name": "Oath of the Matron",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Matron",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"To many, vore is a dangerous weapon used by cruel and uncaring predators that see others around them as nothing more than food. But those that have practiced the predatory art often can glimpse into another side of consumption, a matronly feeling of protection. To those that seek and nurture these feelings, they are able to channel those comforting abilities to a supernatural degree. Their bodies have become their temples, sacred places of rest, comfort, and love. And all are welcome inside.",
+				"A Oath of the Matron paladin is not necessarily devoted to any one god, as many paladins of the Matron take their divine strength from their usually protective and often possessive spirit.",
+				{
+					"type": "entries",
+					"entries": [
+						"{@b Example Tenets of the Matron}",
+						"{@b {@i Love.}} There is always room in your belly for friends and food.",
+						"{@b {@i Mother Knows Best.}} Sometimes others need to spend a little time gurgling in your gut to come to their better senses.",
+						"{@b {@i Protection.}} Keep those you love close. Never let them go.",
+						"{@b {@i Shelter.}} Your body is a place of rest for all."
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Barbarian||Belly Smasher|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Oath of the Matron Spells|Paladin||Matron|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Channel Divinity|Paladin||Matron|LustVore|3"
+				}
+			]
+		},
+		{
+			"name": "Oath of the Matron Spells",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Matron",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				{
+					"type": "table",
+					"caption": "Oath of the Matron Spells",
+					"colLabels": [
+						"Paladin Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10 text-left"
+					],
+					"rows": [
+						["3rd","{@spell charm person}, {@spell cure wounds}"],
+						["5th","{@spell digestive barrier|lustvore}, {@spell healing massage|lustvore}"],
+						["9th","{@spell medicinal acids|lustvore}, {@spell revivify}"],
+						["13th","{@spell bellyport ally|lustvore}, {@spell locate creature}"],
+						["17th","{@spell come to me|lustvore}, {@spell rebirth|lustvore}"]
+					]
+				}
+			]
+		},
+		{
+			"name": "Channel Divinity",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Matron",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"When you take this oath at 3rd level, you gain the following Channel Divinity options:",
+				"{@b {@i Calming Contractions.}} As an action, you may spend a channel divinity to gently contract and rub your belly, calming all those inside. Any targets of your choice inside your body must succeed on a Charisma saving throw, and may choose to fail. On a failure, they are calmed and soothed, and become {@condition charmed} and non-hostile towards you for 1 hour. You may spend a bonus action next turn to repeat this effect, continuing for up to a maximum of 1 minute or 10 continuous rounds of rubbing.",
+				"Creatures affected this way can roll to escape the effect if they take damage.",
+				"At the end of this effect, depending upon the predator's intentions or other factors, they may remain non-hostile or even friendly, or immediately return to struggling.",
+				"Your healing spells and abilities restore twice as much health to creatures {@condition charmed} in this way.",
+				"{@b {@i Charming Presence.}} You can use your Channel Divinity to exude a feeling of contentment. As an action, you force each creature of your choice that you can see within 30 feet of you to make a Wisdom saving throw. Any creature that can't be {@condition charmed} succeeds on this saving throw automatically. On a failed save, a creature lowers their guard. For the next minute, the creature has disadvantage on all skill contests, attack rolls, and {@action devour|lustvore} contests. The creature can repeat this saving throw at the end of each of its turns, ending the effect on itself on a success."
+			]
+		},
+		{
+			"name": "Belly Glow",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Matron",
+			"subclassSource": "LustVore",
+			"level": 7,
+			"entries": [
+				"At 7th level, you radiate your warm spirit when you have someone to protect.",
+				"While you have at least 1 capacity of creatures inside your belly, you and up to your Charisma modifier number of allies within 15 feet may roll an additional {@dice 1d4} on all ability checks, attack rolls, and saving throws. This improves to 30 feet at 18th level."
+			]
+		},
+		{
+			"name": "Protective Gulp",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Matron",
+			"subclassSource": "LustVore",
+			"level": 15,
+			"entries": [
+				"At 15th level, when a {@condition willing|lustvore} ally adjacent to you or within unarmed reach of you is targeted or effected by an attack, ability, or spell, you may spend your reaction to immediately succeed on a {@action devour|lustvore} check against them and gain 2 additional successes. If this results in a complete swallow, the attack, ability, or spell does not affect them."
+			]
+		},
+		{
+			"name": "Disarming Love",
+			"source": "LustVore",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Matron",
+			"subclassSource": "LustVore",
+			"level": 20,
+			"entries": [
+				"At 20th level, you can exude your motherly and protective spirit in an aura around you. As an action, you emit an aura of gentle light and sweet scents in a 30 feet range around you. When a creature attempts to attack you or start its turn in this aura, they must make a Charisma saving throw. On a failure, they suddenly treat you as a trusted friend, and regard you with a sudden almost devout love.",
+				"This aura lasts for one minute. During this time {@condition charmed} creatures will allow themselves to be {@condition willing|lustvore|willingly} consumed by you or your allies, and can be commanded to intentionally approach closer. All targets may attempt to roll to break out of the charm effect should they suffer damage, or see any allies be damaged or otherwise hurt. Devouring does not count as an attack for purposes of breaking the charm."
+			]
+		},
+		{
+			"name": "Natural Cycle Conclave",
+			"source": "LustVore",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Natural Cycle",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"In the natural world, there exists a cycle between beasts. The relationship between hunter and hunted, predator and prey, is one that has persisted since the world's most primal days. Members of the Natural Cycle Conclave train in one of two schools. Those of the Predator school learn to hunt with ruthless efficiency, while those in the Prey school learn to evade and counter those that would hunt them.",
+				"{@note Note: This class is meant to be used with the favored enemy feature, rather than favored foe feature.}",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Barbarian||Belly Smasher|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Natural Cycle Conclave Spells|Ranger||Natural Cycle|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Acquired Taste|Ranger||Natural Cycle|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "School of Predator and Prey|Ranger||Natural Cycle|LustVore|3"
+				}
+			]
+		},
+		{
+			"name": "Natural Cycle Conclave Spells",
+			"source": "LustVore",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Natural Cycle",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Predator Conclave Spells table. You either gain only the predator spells, or only the prey spells, depending on your chosen school. The spells counts as a ranger spells for you, but doesn't count against the number of ranger spells you know.",
+				{
+					"type": "table",
+					"caption": "Natural Cycle Conclave Spells",
+					"colLabels": [
+						"Ranger Level",
+						"Predator Spells",
+						"Prey Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-5 text-left",
+						"col-5 text-left"
+					],
+					"rows": [
+						["3rd","{@spell intensify hunger|lustvore}","{@spell entangle}"],
+						["5th","{@spell devouring smite|lustvore}","{@spell invisibility}"],
+						["9th","{@spell absorb power|lustvore}","{@spell slow}"],
+						["13th","{@spell leeching insides|lustvore}","{@spell dimension door}"],
+						["17th","{@spell bellyport|lustvore}","{@spell scrying}"]
+					]
+				}
+			]
+		},
+		{
+			"name": "Acquired Taste",
+			"source": "LustVore",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Natural Cycle",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"At 3rd level, you gain the ability to change your favored enemies (or favored food!). By spending 1 hour observing a creatures behavior, you can add the observed enemy type to your list of Favored Enemies. At the same time, you must choose one Favored Enemy to forget.",
+				"You gain the favored enemy bonuses to your new favored enemy, and lose all bonuses with your old enemy."
+			]
+		},
+		{
+			"name": "School of Predator and Prey",
+			"source": "LustVore",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Natural Cycle",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"At 3rd level, you choose a school of practice that informs your relationship on the food chain with your favored enemies. The Predator school dictates that Favored Enemies are creatures to stalk and prey upon, while the Prey school focuses on evading and outmaneuvering their favored enemies. Depending on your school, you gain the following benefits:",
+				"{@b {@i Predator.}} Your favored enemy becomes your favored meal, as well. {@action Devour|lustvore} attacks made against your Favored Enemies are made with advantage, and your digestion damage is doubled against these foes.",
+				"{@b {@i Prey.}} Your favored enemy is a predator that you've studied to thwart. You have advantage on Strength({@skill Athletics}) and Dexterity({@skill Acrobatics}) checks to resist {@action devour|lustvore} checks and {@action grapple} checks, and Advantage on attacks made to favored enemy creatures you are inside of. You have resistance to the digestion damage dealt by your Favored Enemies. You also gain your Wisdom modifier in additional damage on all damage rolls vs your favored enemies."
+			]
+		},
+		{
+			"name": "Counterattack",
+			"source": "LustVore",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Natural Cycle",
+			"subclassSource": "LustVore",
+			"level": 7,
+			"entries": [
+				"At 7th level, you can turn your enemy's effort's against them. When you escape a creature's {@action grapple}, or a creature fails to {@action devour|lustvore} you or {@action grapple} you, you can use your Reaction to make an immediate attack or attempt a {@action grapple} or {@action devour|lustvore} attack, even if you are not grappling that creature. The target must be within your reach."
+			]
+		},
+		{
+			"name": "Instinct of Predator and Prey",
+			"source": "LustVore",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Natural Cycle",
+			"subclassSource": "LustVore",
+			"level": 11,
+			"entries": [
+				"At 11th level, your speed and ferocity takes your enemies by surprise- whether they are predator or prey. You gain one of the following benefits, depending on your School:",
+				"{@b {@i Predator.}} If they are your Favored Enemy, you may attempt to {@action Devour|lustvore} enemies without grappling them first.",
+				"{@b {@i Prey.}} While conscious, you cannot be {@status surprised}. Additionally, when you roll initiative, you may move up to your move speed without provoking attacks of opportunity, and may make a single weapon attack. If the target of this attack is a Favored Enemy and the attack hits, the attack becomes a critical hit."
+			]
+		},
+		{
+			"name": "Master of the Food Chain",
+			"source": "LustVore",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Natural Cycle",
+			"subclassSource": "LustVore",
+			"level": 15,
+			"entries": [
+				"At 15th level, your adaptability and deadliness put you at the top of the food chain, allowing you to efficiently fight any enemy.",
+				"As an action, you may mark an enemy type you can see as your Favored Enemy for the next hour. Once you use this feature, you cannot use it again until after a long rest."
+			]
+		},
+		{
+			"name": "Doppelganger",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Doppelganger",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"Perhaps some of the most terrifying predators are the ones you never suspect. Your friends, your family, your trusted partners. It was only a matter of time until enterprising predators found how to use those bonds of trust to more easily acquire meals, and leaving none the wiser it was them all along…",
+				"Rogues that become Doppelgangers often learn the art from some obscure means. Perhaps a enterprising mage, a alchemical accident, or being taught by assassin schools in order to more easily reach their targets. But whatever the initial intention, predatory doppelgangers often use their skills of changing forms and identities to more easily reached their desired meal. Perhaps for a cause, or simply for hunger…",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Barbarian||Belly Smasher|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Identity Theft|Rogue||Doppelganger|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fearsome Falsehood|Rogue||Doppelganger|LustVore|3"
+				}
+			]
+		},
+		{
+			"name": "Identity Theft",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Doppelganger",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"Starting at 3rd level, when you fully digest a creature that is within 1 size category of your normal size, you may learn their form as a {@i Disguise}. Once known, you may use an action to alter your appearance into that {@i Disguise}, and may revert to your original form as an action.",
+				"While in your {@i Disguise} of another creature, you gain access to all information that the creature would freely share with a casual acquaintance. Such information includes general details on its obvious personal ticks, background and personal life, but doesn't include secrets. The information is enough that you can pass yourself off as the person by drawing on its memories.",
+				"You have a mental wardrobe of {@i Disguises} equal to your Rogue level + Charisma modifier. These disguises are reusable an infinite number of times, and you may forget a known disguise to replace it with a new one.",
+				"In addition, while you have a creature inside of you, you may also disguise yourself as them as an action per the rules above, but you may not add them to your wardrobe of known {@i Disguise}s. Should they leave your body, you instantly lose your disguise and revert to your original appearance."
+			]
+		},
+		{
+			"name": "Fearsome Falsehood",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Doppelganger",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"At 3rd level, you are able to use the bonds between creatures to your own advantage, tricking their minds into following your will.",
+				"While you are in a {@i Disguise} through identity theft, you may attempt to fool another creature who can see and hear you within 30 feet, and was allied or friendly with your Disguised creature. This could be something like a friend, family member, fellow soldier, partner in crime, etc. If the target does not have that friendly or allied bond to your disguised creature, the ability fails, or they gain advantage on the test, DM’s discretion on the nature of the relationship.",
+				"As a cunning action, you may force them to roll a Wisdom saving throw vs 8 + Charisma modifier + Proficiency Bonus. On a failure, you magically influence their mind through that false bond and may force them to do one of the following:",
+				{
+					"type": "list",
+					"items": [
+						"{@b {@i Command.}} Your firm demands coming from a friendly voice break through their mental suspicions. You may use the false bond to issue a short command to them, no longer than one short sentence of 10 words. If this command is something clearly suicidal or goes against their nature (such as attacking their other allies), it will instantly fail. Otherwise they will attempt to follow this command until it is completed or until one minute passes. They may roll the saving throw again on the end of their turn to break out of this commanded state. If they are the target of a hostile action by you or your allies, the commanded state also breaks.",
+						"{@b {@i Deceive.}} Your honeyed words cause their eyes to be clouded and truly believe you are their old friend, regardless of other evidence. For one minute, they are {@condition charmed} and consider you an ally, and will not attack you and may even aid you if you or your allies are under attack. However, should you or your other allies take any hostile action against them, the charm instantly breaks. They may reroll the saving throw at the end of their turns to snap out of the {@condition charmed} state.",
+						"{@b {@i Taunt.}} You taunt the target through their friend’s voice, causing them to suffer the {@condition frightened} condition for one minute. They may roll the saving throw again on the end of their turn to negate this condition."
+					]
+				},
+				"Once a creature passes a saving throw from Fearsome Falsehood, they gain advantage against all future attempts from that same Disguise."
+			]
+		},
+		{
+			"name": "Body Manipulation",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Doppelganger",
+			"subclassSource": "LustVore",
+			"level": 9,
+			"entries": [
+				"At 9th level, your doppelganger abilities give you a limited ability over your own natural appearance. You are now able to alter your body as per the {@spell alter self} spell a unlimited number of times, the duration is now permanent, and it does not require {@status concentration}."
+			]
+		},
+		{
+			"name": "False Hydra",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Doppelganger",
+			"subclassSource": "LustVore",
+			"level": 13,
+			"entries": [
+				"At 13th level, you gain the ability to affect others minds, be it through pheromones, magic, or simple confusing charms. This functions as per the effects of the spell {@spell modify memory}, but the DC is 8 + your Charisma mod + your Proficiency Bonus. This ability is considered non-magical, but it may still be removed in the normal manners."
+			]
+		},
+		{
+			"name": "Life Possession",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Doppelganger",
+			"subclassSource": "LustVore",
+			"level": 17,
+			"entries": [
+				"At 17th level, your prey belongs to you completely, body and soul. Upon using the identity theft feature, you ransack their mind and gain access to all their knowledge, secrets, quirks, fears, etc. You know everything there is to know about them and can easily access that information whenever you are in your {@i Disguise} as them. When you use your Identity Theft feature to add a {@i Disguise} to your wardrobe, their soul becomes trapped inside your body until you forget the disguise. Now whenever you use that {@i Disguise}, you appear in every magical and non-magical regard as if you were that creature, such as for {@spell scrying} tests and other spells that judge your truthfulness or track creatures. You gain advantage on all social tests to convince people that you are the person you appear to be should you ever rouse suspicion, and in most cases may not be required to roll at all.",
+				"In addition, due to being able to recreate the creature perfectly and having their soul trapped inside your body, you are also able to reform the creature whom your disguised as by digesting a meal of equal size, at the end of which you may reform them in your belly. However, when you use this feature you lose the disguise and will revert to your original form."
+			]
+		},
+		{
+			"name": "Gut Smuggler",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Gut Smuggler",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"Where there is contraband, there will always be smugglers. And there are no greater smugglers than those of the infamous gut smugglers:",
+				"The method was famed to have been invented by the infamous pirate, Captain Desire, but has since spread like wildfire across much of the coastlines, oceans, and even made its way inland to some degree. By creating an extradimensional space linked to their stomachs, gut smugglers are able to easily store hundreds of pounds of material and people with scarcely a hint of its presence and smuggle them across borders and through checkpoints.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Barbarian||Belly Smasher|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Smugglers Gut|Rogue||Gut Smuggler|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Tricks of the Trade|Rogue||Gut Smuggler|LustVore|3"
+				}
+			]
+		},
+		{
+			"name": "Smugglers Gut",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Gut Smuggler",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"At 3rd level, you gain a new separate extradimensional stomach known as your Smugglers Gut. This Smugglers Gut has a capacity of 16 and increases in capacity by 8 every time your sneak attack increases in damage. If you ever take the {@feat stomach of holding|lustvore} feat, this adds on 8 more capacity onto your smugglers gut, and you may choose to take the {@feat stomach of holding|lustvore} feat multiple times.",
+				"At the end of your turn, instead of dealing digestion damage you can push an object, a {@condition willing|lustvore} creature or a creature at 0 hit points from your body into your Smugglers Gut and can do so separately for each individual creature or object you have {@condition swallowed|lustvore}.",
+				"Any creatures inside your Smugglers Gut do not appear as bulges (unless you want them to), and cannot be heard unless a creature's ear is directly against your belly or pass an active DC 25 {@skill Perception} check (and even then only barely!). You are still able to feel the creatures in your Smugglers Gut.",
+				"While inside your Smugglers Gut, creatures can act normally per {@condition swallowed|lustvore} rules.",
+				"Your Smugglers Gut is affected by features that affect your stomach and body, although excluding any that reduce or increase your capacity. (However it is affected by such features that do not affect your capacity stat but influence it in indirect ways, such as the {@feat compress belly|lustvore} that reduces the size of creatures in your gut!)"
+			]
+		},
+		{
+			"name": "Tricks of the Trade",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Gut Smuggler",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"At 3rd level, you have learned how to use your dimensional stomach to give yourself an edge in life and on the battlefield. You are able to use the following abilities:",
+				{
+					"type": "list",
+					"items": [
+						"You can use any non-magic item inside your Smuggler's Gut as a bonus action as if it were equipped or in your hands. This does not include armor, shields, or weapons.",
+						"You can attune to magic items in your Smuggler's Gut, and you can use any magic item inside your gut as if it were equipped or in your hands. If it requires attunement, you must be attuned to it first. If it is a weapon, shield, armor, or something that needs to be in your hands (or on your body), you can spit it out and equip it or cause it to materialize from your Smuggler's Gut as a bonus action.",
+						"As a bonus action, you can regurgitate any small size or smaller object or creature from your Smugglers Gut. Medium size and larger may take an action.",
+						"In place of an attack, you can spit out any small sized or smaller objects or creatures from your Smugglers Gut at high velocity. This is considered an attack with a ranged weapon that you are proficient in, with 30/90 feet range, and deals {@damage 1d10} + Dexterity modifier piercing, bludgeoning, or slashing damage depending on the object (or creature!). If a creature is spit out, they take the same damage as the target on a hit. This attack may have additional effects depending on what is used.",
+						"As a bonus action, you can use the {@action devour|lustvore} action to swallow any object or {@condition willing|lustvore} creature that is small size or smaller. Anything larger may require an action or multiple turns. If the object is being worn by another creature, you must make an opposed {@action devour|lustvore} check, and successfully swallow the object on a successful check. If the target is an attuned magic item, the opposing creature has advantage to resist.",
+						"An ally within 30 feet may call out for an item, or request aid either verbally or nonverbally. You can use your reaction to spit out a small sized item or creature that was in your Smugglers Gut to them, which they can catch with a DC 10 {@skill Acrobatics} or {@skill Sleight of Hand} check as a free action."
+					]
+				}
+			]
+		},
+		{
+			"name": "Magical Guts",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Gut Smuggler",
+			"subclassSource": "LustVore",
+			"level": 9,
+			"entries": [
+				"At 9th level, your smugglers gut grows in magical strength and gains the following abilities:",
+				{
+					"type": "list",
+					"items": [
+						"As a bonus action, you can unattune to one of your magic items and attune to a different magic item inside your Smugglers Gut. This feature can be used a number of times equal to your Proficiency Bonus per long rest.",
+						"{@spell Scrying}, and other such divination abilities that normally allow others to locate creatures and objects, or contact creatures and objects, do not work on targets inside your Smuggler's Gut. Similarly, any divination, communication, or teleportation actions from creatures inside your Smugglers Gut to targets or locations outside of your Smugglers Gut and vis versa instantly fail unless you choose to allow them.",
+						"Whenever you are the target of an ability to see your alignment, your thoughts, or other information about you, you can shift the target to any creature or object inside your Smuggler's Gut.",
+						"Your belly growls and rumbles as it detects valuables in a 30 foot radius, with the volume and vibration increasing according to the value and amount of the treasure, with magic items making a deafening roar. You can activate and suppress this ability as a bonus action."
+					]
+				}
+			]
+		},
+		{
+			"name": "Permanent Imprisonment",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Gut Smuggler",
+			"subclassSource": "LustVore",
+			"level": 13,
+			"entries": [
+				"At 13th level, your gut becomes infinitely harder to escape from. As an action, you can clench your muscles and make your Smugglers Gut impossible to escape from. When you do so, you can no longer deal any damage to those inside your Smugglers Gut, nor digest them, and all creatures in your Smugglers Gut cannot take any prey actions, as the stomach walls squish and harden and deflect all attempts at attacking or escaping.",
+				"You can end this effect anytime as an action."
+			]
+		},
+		{
+			"name": "Smugglers Den",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Gut Smuggler",
+			"subclassSource": "LustVore",
+			"level": 17,
+			"entries": [
+				"At 17th level, your Smuggler's Gut has grown so large and powerful that it becomes its own mini demiplane, and upgrades into a Smugglers Den. Your Smugglers' Den now doubles its capacity, and whenever it gains or loses capacity, it gains or loses double the amount. Your Smugglers Den may take on any appearance and structure that you desire, although anything created in this way cannot be removed from your Smugglers Gut.",
+				"In addition, you can swallow inanimate objects and {@condition willing|lustvore} creatures of any size (so long as you are able to lift them or otherwise reasonably move it into your gullet) as a bonus action."
+			]
+		},
+		{
+			"name": "Parasite",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Parasite",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"There are those that, perhaps due to fear or experience, have learned that the best place to strike at a gluttonous predator is from within. Those that choose to cultivate these skills become a feared target for predators, as they are masters of giving indigestion and even completely defeating a predator from the inside out, leaving them unconscious and vulnerable to their enemies!",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Barbarian||Belly Smasher|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Hidden Form|Rogue||Parasite|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Invasion|Rogue||Parasite|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Stomach Parasite|Rogue||Parasite|LustVore|3"
+				}
+			]
+		},
+		{
+			"name": "Hidden Form",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Parasite",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"Starting at 3rd level, when you are inside another creature larger than you, you may choose not to leave a visible impression on the outside of the predator. You still take up space within their stomach."
+			]
+		},
+		{
+			"name": "Invasion",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Parasite",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"Starting at 3rd level, you learn how to enter into other creatures, {@condition willing|lustvore} or unwilling. As an action, you may attempt to force your way inside another creature of equal or larger size. If they are unwilling, roll an {@skill Athletics} or {@skill Acrobatics} test vs their {@skill Athletics} or {@skill Acrobatics}. This roll is done with advantage if you are hidden from the creature. If you succeed, you are fully {@condition swallowed|lustvore}. You do not need to roll against a {@condition willing|lustvore} target and are considered to auto-succeed.",
+				"If the creature is {@condition willing|lustvore}, you can escape their body as a bonus action as if they regurgitated you, or use your bonus action to partially escape and attack a target as if you were attacking from the predator's position. Doing so opens you up to attacks and being targeted until you use your action to squeeze back inside, and if you are {@condition grappled} or {@condition swallowed|lustvore|devoured} you are instantly pulled out of the predator's body."
+			]
+		},
+		{
+			"name": "Stomach Parasite",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Parasite",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"At 3rd level, While you are inside another creature, you are no longer restrained. Instead, all attacks against you gain advantage, and your speed is 0 as you are still trapped within a belly, even if you are able to move around a bit more freely!",
+				"In addition, while you are inside another creature, you do not need advantage in order to use your sneak attack, allowing you to make sneak attacks against your predator. All other rules for sneak attack still apply to you.",
+				"In addition, when a predator attempts to regurgitate you and you do not wish to be spit out, they must roll a Constitution saving throw vs 8 + Strength or Dexterity modifier (whichever skill you chose) + Proficiency Bonus. On a failure, you remain in their belly."
+			]
+		},
+		{
+			"name": "Stealthy Entry",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Parasite",
+			"subclassSource": "LustVore",
+			"level": 9,
+			"entries": [
+				"At 9th level, when you attempt to use your invasion feature against a creature larger than yourself, you may instead use your {@skill Stealth} vs their {@skill Perception}. If you succeed, you manage to worm your way into their body without them noticing. You remain undetected so long as you do not deal damage to them, or they pass a {@skill Perception} contest vs your {@skill Stealth}. They may not attempt to digest you directly until they notice you, but you may still be subject to digestion damage if you are inside an organ that they are attempting to digest something else in (such as food, or other prey)"
+			]
+		},
+		{
+			"name": "Greater Parasite",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Parasite",
+			"subclassSource": "LustVore",
+			"level": 13,
+			"entries": [
+				"Starting at 13th level, You roll all attacks with advantage while you are inside another creature."
+			]
+		},
+		{
+			"name": "Master Parasite",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Parasite",
+			"subclassSource": "LustVore",
+			"level": 17,
+			"entries": [
+				"Starting at 17th level, creatures cannot regurgitate you without your permission, and you are able to use all your abilities against any size creatures."
+			]
+		},
+		{
+			"name": "Silent Python",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Silent Python",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"While some predators would choose to face their potential prey head on, silent python rogues prefer an easy meal in catching their prey unaware. It is those predators that become like the python, sneaking through city streets and forest groves with equal ease, patiently slithering until they lunge for that fateful and inescapable gulp…",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Barbarian||Belly Smasher|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Pythons Gulp|Rogue||Silent Python|LustVore|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Focused Acids|Rogue||Silent Python|LustVore|3"
+				}
+			]
+		},
+		{
+			"name": "Pythons Gulp",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Silent Python",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"Starting at 3rd level, you may attempt to {@action Devour|lustvore} without needing to grapple them if you are hidden from them or eligible for a sneak attack. Upon a successful {@action devour|lustvore}, this counts as using your sneak attack for your turn. If you have advantage, you gain one additional success."
+			]
+		},
+		{
+			"name": "Focused Acids",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Silent Python",
+			"subclassSource": "LustVore",
+			"level": 3,
+			"entries": [
+				"Also starting at 3rd level, you may use an action to deal additional digestion damage equal to your sneak attack damage."
+			]
+		},
+		{
+			"name": "Powerful Swallow",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Silent Python",
+			"subclassSource": "LustVore",
+			"level": 9,
+			"entries": [
+				"At 9th level, You gain one additional success upon a successful {@action devour|lustvore} attempt when you are eligible for a sneak attack against that creature."
+			]
+		},
+		{
+			"name": "Acid Blast",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Silent Python",
+			"subclassSource": "LustVore",
+			"level": 13,
+			"entries": [
+				"Starting at 13th level, you may use the action granted by Focused Acids as a bonus action."
+			]
+		},
+		{
+			"name": "Assassins Gulp",
+			"source": "LustVore",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Silent Python",
+			"subclassSource": "LustVore",
+			"level": 17,
+			"entries": [
+				"Starting at 17th level, whenever you attempt to {@action devour|lustvore} a creature while you remain hidden from them, on a success you instantly gain an additional number of successes needed to {@action devour|lustvore} them completely."
+			]
+		},
+		{
+			"name": "Flesh-Bonded Soul",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Flesh-Bonded",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"entries": [
+				"As vore became more integrated into society, so too did people better understand how to use it to their advantage. Mages in particular grew quite interested in this new field, and it wasn’t long until wizards and warlocks were spending generations inside a single belly host. From the unions of these belly mages came the Flesh-Bonded sorcerers: Born with an innate magical symbiosis that causes them to link with willing host predators, they are able to use their magical strength without ever leaving the comfort of their belly homes.",
+				"These sorcerers often spend the majority of their lives within other creatures, and as such often develop adversity to light, or in some cases, even blindness. After all, they do not require sight when they use their predator's eyes. But if anything, this simply makes their magical abilities even stronger.",
+				"These flesh tankers are incredibly prized and valuable due to their malleability to work with any predator who they reside within, and it's not uncommon for kings and barons to spend entire vaults of gold for their chance to get ahold of one of these rare sorcerers in the hope of starting their own bloodline under their control.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Flesh-Bonded Soul Spells|Sorcerer||Flesh-Bonded|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Symbiotic Bond|Sorcerer||Flesh-Bonded|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Shared Sensations|Sorcerer||Flesh-Bonded|LustVore|1"
+				},
+				"{@b Optional Class Feature: No need for Eyes}",
+				"At any time you level up or initially take this class, you may elect to be a flesh bonded soul that has spent so long in a belly that they no longer require their natural sight and has become extremely sensitive to sunlight, bright lights, or is completely blind! If so, gain the following effects:",
+				{
+					"type": "list",
+					"items": [
+						"{@b {@i Sunlight Sensitivity.}} You have disadvantage on attack rolls and on Wisdom({@skill Perception}) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight. This penalty does not apply when you are looking through your bonded creatures eyes.",
+						"{@b {@i Blindsight.}} While inside another creature, you are considered to have {@sense blindsight}: 30 feet. This extends through your predator's body."
+					]
+				}
+			]
+		},
+		{
+			"name": "Flesh-Bonded Soul Spells",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Flesh-Bonded",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"You learn additional spells when you reach certain levels in this class, as shown on the Flesh-Bonded Magic table below. Each of these spells counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.",
+				"Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or enchantment spell from the sorcerer, warlock, or wizard spell list.",
+				{
+					"type": "table",
+					"caption": "Flesh-Bonded Soul Spells",
+					"colLabels": [
+						"Sorcerer Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10 text-left"
+					],
+					"rows": [
+						["1st","{@spell absorb elements|xge}, {@spell shield}"],
+						["3rd","{@spell enlarge/reduce}, {@spell disrobe|lustvore}"],
+						["5th","{@spell compress|lustvore}, {@spell medicinal acids|lustvore}"],
+						["7th","{@spell leeching insides|lustvore}, {@spell vitriolic sphere|xge}"],
+						["9th","{@spell cloudkill}, {@spell maximize/minimize|lustvore}"]
+					]
+				}
+			]
+		},
+		{
+			"name": "Symbiotic Bond",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Flesh-Bonded",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"You find yourself most comfortable when surrounded by flesh, and the bond you and your predator share is transcendent. Starting at 1st level, you can spend a short rest inside a predator to create a magical bond with a non-hostile and {@condition willing|lustvore} predator. Upon forming the bond and while the bond remains active, you gain the following benefits while inside their body:",
+				{
+					"type": "list",
+					"items": [
+						"You are not {@condition restrained} or {@condition blinded}, but your speed remains 0 as you are still trapped inside a belly!",
+						"You are able to see anything that your predator can see, and are able to cast spells as if you were in the predators square.",
+						"Any spells that have a range of self can now target your predator instead. Conditions that specify “you” may now read as “your predator” instead.",
+						"You are now able to communicate with one another telepathically.",
+						"You no longer need to take {@status concentration} checks for being inside their belly, although you do need to take it when you or your predator takes damage.",
+						"You are immune to any digestion damage dealt by your predator, and your predator's features that reduce or negate immunity do not work on you.",
+						"If you are digested by your predator while they have this bond, you are not killed. Instead, you are absorbed as if the predator had the {@feat soul absorption|lustvore} feat."
+					]
+				},
+				"A predator you are bonded with is constantly aware of this bond, and as an action may cancel the bond at any time. You may only have one bond at a time, and upon trying to form the bond with another creature, your prior bond disappears."
+			]
+		},
+		{
+			"name": "Shared Sensations",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Flesh-Bonded",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"At 1st level, you are able to share the burden of pain with your host. When your bonded host is attacked, you may use your reaction to give them resistance against one instance of damage. You take an equal amount of damage. You may use this ability a number of times equal to your Proficiency Bonus per long rest."
+			]
+		},
+		{
+			"name": "Rooted Blasting",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Flesh-Bonded",
+			"subclassSource": "LustVore",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Starting at 6th level, when you cast a damaging spell from inside a bonded creature, you may add your Charisma modifier to the damage."
+			]
+		},
+		{
+			"name": "Soothe the Flesh",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Flesh-Bonded",
+			"subclassSource": "LustVore",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Starting at 14th level, while inside of your bonded creature, you may expend between 1 up to 5 sorcery points as an action. For each sorcery point expended this way, your bonded creature gains {@dice 1d10} + your Charisma modifier of hit points."
+			]
+		},
+		{
+			"name": "Mana Surge",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Flesh-Bonded",
+			"subclassSource": "LustVore",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"Starting at 18th level, while inside of a bonded creature, whenever you use Metamagic, you may pick 2 options instead of 1. You only pay sorcery points for whichever option had a higher cost."
+			]
+		},
+		{
+			"name": "Succubus Bloodline",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Succubus",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"entries": [
+				"Long ago your bloodline was mingled with that of the infamous succubi, granting your bloodline incredible seductive appeal. Your beauty was always apparent from birth, and even without your magic powers suitors begged for your hand or to simply lie with you. But your innate bloodline magic allows you to seduce even the most stony hearted object of your affection… And often convince them to be your next meal.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Cleric||Gluttony|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Succubus Bloodline Spells|Sorcerer||Succubus|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Sinful Whispers|Sorcerer||Succubus|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Hypnotizing Charmer|Sorcerer||Succubus|LustVore|1"
+				}
+			]
+		},
+		{
+			"name": "Succubus Bloodline Spells",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Succubus",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"You learn additional spells when you reach certain levels in this class, as shown on the Succubus Bloodline Spells table. Each of these spells counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.",
+				"Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an Enchantment or Illusion spell from the sorcerer, warlock, or wizard spell list.",
+				{
+					"type": "table",
+					"caption": "Succubus Bloodline Spells",
+					"colLabels": [
+						"Sorcerer Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10 text-left"
+					],
+					"rows": [
+						["1st","{@spell charm person}, {@spell erotic dance|lustvore}"],
+						["3rd","{@spell disrobe|lustvore}, {@spell enthrall}"],
+						["5th","{@spell hypnotic pattern}, {@spell promise of pleasure|lustvore}"],
+						["7th","{@spell charm monster|xge}, {@spell compulsion}"],
+						["9th","{@spell bellyport|lustvore}, {@spell mislead}"]
+					]
+				}
+			]
+		},
+		{
+			"name": "Sinful Whispers",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Succubus",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"At 1st level, you have learned exactly how to pluck at the heartstrings of those around you.",
+				"You learn the ability to lace shifts in tone and body language with subtle enchantments to lull others into complacency. If you speak with or touch a single non-hostile humanoid that can understand you without interruptions for at least 1 minute, you can tempt them into submission. At the end of the duration, as an action you may make a Charisma({@skill Persuasion}) check vs the target's Wisdom({@skill Insight}). If they fail, they are {@condition charmed}. The {@condition charmed} creature regards you with lustful infatuation. This test automatically fails if they or their allies are fighting you or otherwise hostile towards you, and automatically passes if they are already {@condition charmed} towards you.",
+				"The effect ends when you or your allies take a hostile action against them or their allies, or after 1 hour of being more than 30 feet away.",
+				"This effect remains active if they are in your belly so long as they do not take digestion damage. If you have an ongoing effect that makes digestion more pleasurable, or harder to break free of charms, the effect does not instantly end, but rather gives them another chance to roll {@skill Insight} vs your {@skill Persuasion} to break free of the charm every time they take damage.",
+				"If the target passes their save, you cannot attempt to use this ability against them for the next hour."
+			]
+		},
+		{
+			"name": "Hypnotizing Charmer",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Succubus",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"At 1st level, while a creature is {@condition charmed} by you, the {@condition charmed} creature is pliable to your advances and often regards you with lustful infatuation on top of other {@condition charmed} effects. A creature {@condition charmed} by you has disadvantage on any saving throws and skill checks from your spells and abilities, and you have advantage on all attacks against them.",
+				"In addition, for purposes of breaking the {@condition charmed} effect, creatures do not consider being {@condition grappled} or {@condition swallowed|lustvore|devoured} as a hostile action (for themselves or for their allies!). However, depending on circumstances they still may not want to be {@condition swallowed|lustvore|devoured}/{@condition grappled} even if they don’t regard it as hostile and may choose to resist!"
+			]
+		},
+		{
+			"name": "Snake Charming",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Succubus",
+			"subclassSource": "LustVore",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, your motions become fluid and hypnotizing to those that observe you.",
+				"As a bonus action, you may spend 2 sorcery points to move and gaze at a creature with hypnotic seduction. When you do, choose one creature you can see within 60 feet. Any {@action Attack} that creature makes against you has disadvantage until the end of your next turn, and any spells they cast targeting you require a {@status concentration} roll equal to your spell save DC. In addition, that creature has disadvantage on saving throws against the next spell or ability you target it with that would charm it before the end of your next turn."
+			]
+		},
+		{
+			"name": "Manipulative Fortitude",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Succubus",
+			"subclassSource": "LustVore",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"By 14th level, your imposing psyche and mastery of subjugation makes you highly resilient to others’ petty attempts at control, and are more apt at controlling others.",
+				"You are immune to the {@condition charmed} condition, and magic cannot put you to sleep.",
+				"In addition, creatures {@condition charmed} by you are considered to be {@condition willing|lustvore} for the purposes of being {@condition swallowed|lustvore|devoured} (but not digested!)"
+			]
+		},
+		{
+			"name": "Total Domination",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Succubus",
+			"subclassSource": "LustVore",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"At 18th level, you can impose your hypnotic will upon others with ease. You may spend 3 sorcery points to cast {@spell Dominate Person}, or spend 5 sorcery points to cast {@spell Dominate Monster}.",
+				"In addition, if a creature is already {@condition charmed} by you, they automatically fail any saving throw against any spell you cast or ability you use that inflicts the {@condition charmed} condition."
+			]
+		},
+		{
+			"name": "Tarrasque Bloodline",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Tarrasque",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"entries": [
+				"Not all creatures are born equally. Some beasts tower above others, wielding unimaginable strength and bursting with magical potential. The ever living Tarrasque is one such entity- a being of both epic strength and epic hunger. Through dark ritual or some twist of fate, your ancestors partook of the flesh of the Tarrasque- forever tainting your bloodline with great power and a haunting desire to consume.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Cleric||Gluttony|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Tarrasque Bloodline Spells|Sorcerer||Tarrasque|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Ever-living Blood|Sorcerer||Tarrasque|LustVore|1"
+				}
+			]
+		},
+		{
+			"name": "Tarrasque Bloodline Spells",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Tarrasque",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"You learn additional spells when you reach certain levels in this class, as shown on the Tarrasque Magic table below. Each of these spells counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.",
+				"Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or abjuration spell from the sorcerer, warlock, or wizard spell list.",
+				{
+					"type": "table",
+					"caption": "Tarrasque Bloodline Spells",
+					"colLabels": [
+						"Sorcerer Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10 text-left"
+					],
+					"rows": [
+						["1st","{@spell arcane digestion|lustvore}, {@spell intensify hunger|lustvore}"],
+						["3rd","{@spell devouring smite|lustvore}, {@spell troll's blood|lustvore}"],
+						["5th","{@spell amplify acids|lustvore}, {@spell fear}"],
+						["7th","{@spell freedom of movement}, {@spell leeching insides|lustvore}"],
+						["9th","{@spell empower body|lustvore}, {@spell inhale|lustvore}"]
+					]
+				}
+			]
+		},
+		{
+			"name": "Ever-living Blood",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Tarrasque",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"The still-living blood of the Tarrasque hums in your veins, bursting with regenerative power. At 1st level, your hit point maximum increases by 1 and increases by 1 again whenever you gain a level in this class.",
+				"Additionally, your body is tougher than before, and oftentimes grows tarrasque-like features such as scales. You gain a natural armor AC of 13 + your Constitution modifier whenever you are not wearing any armor."
+			]
+		},
+		{
+			"name": "Monstrous Form",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Tarrasque",
+			"subclassSource": "LustVore",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, your affinity for the Tarrasque begins to bleed into your physical form. You learn the spell {@spell enlarge/reduce}, and can cast it without using a spell slot. When you cast the spell using this feature, you may choose only the 'Enlarge' option, and may only target yourself. You no longer have to make {@status concentration} checks when taking damage using this spell, and the spell's duration continues so long as you are able to otherwise maintain {@status concentration} on it."
+			]
+		},
+		{
+			"name": "Arcane Absorption",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Tarrasque",
+			"subclassSource": "LustVore",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Your gullet draws energy from creatures inside you, storing it as magical energy. Starting at 14th level, as an action you can leech off the energy of all those within your gut. You then regain Sorcery Points equal to the bulk of all creatures inside of you, with spellcasters counting for double. Any sorcery points you gain over maximum are instead given to you as temporary hit points.",
+				"You may use this ability once per long rest."
+			]
+		},
+		{
+			"name": "Titan's Grasp",
+			"source": "LustVore",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Tarrasque",
+			"subclassSource": "LustVore",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"At 18th level, your appetite truly echoes that of the mighty Tarrasque. You may now cast {@spell maximize/minimize|lustvore} at will. When you do this, you may only choose the 'Maximize' option, and may only target yourself. You no longer have to make {@status concentration} checks when taking damage using this spell, and the spell's duration continues so long as you are able to otherwise maintain {@status concentration} on it.",
+				"In addition, whenever you make a successful melee spell attack or unarmed attack against a creature, you can use your bonus action to take the {@action Devour|lustvore} action, targeting the creature you just hit. On a success and if they were of smaller size, you may instantly swallow the creature."
+			]
+		},
+		{
+			"name": "The Great Chaos Witch",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Chaos Witch",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"entries": [
+				"The chaos witch is, perhaps, the oldest and most powerful wizard alive. It is rumored that she could become a true omnipotent god, but simply chooses not to. Yet she might as well be omnipotent, for there is little the witch does not know.",
+				"Strangely enough, the Chaos Witch seems to have a soft spot for arcane studies and scholarly pursuits, and runs her own extradimensional arcane university. She is known to grant a tiny fraction of those that attend immense magical prowess, becoming her favored students and “teachers pets” and learning a few of her most powerful secrets. However such magic is unreliable by design, as the Chaos Witch loves to see the wild shenanigans her students can get into through unchecked power. But such a gift is not without its cost, and her costs are often steep as she requires ever more arcane energy in order to conduct her magical machinations…",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Cleric||Gluttony|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "The Great Chaos Witch Spells|Warlock||Chaos Witch|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Chaos Magic|Warlock||Chaos Witch|LustVore|1"
+				}
+			]
+		},
+		{
+			"name": "The Great Chaos Witch Spells",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Chaos Witch",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"The Great Chaos Witch lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
+				{
+					"type": "table",
+					"caption": "The Great Chaos Witch Expanded Spells",
+					"colLabels": [
+						"Spell Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10 text-left"
+					],
+					"rows": [
+						["1st","{@spell chaos bolt}, {@spell find familiar}"],
+						["2nd","{@spell blur}, {@spell enlarge/reduce}"],
+						["3rd","{@spell blink}, {@spell fireball}"],
+						["4th","{@spell confusion}, {@spell polymorph}"],
+						["5th","{@spell animate objects}, {@spell wall of force}"]
+					]
+				}
+			]
+		},
+		{
+			"name": "Chaos Magic",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Chaos Witch",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"At 1st level, you are imbued with the magic of the Great Chaos Witch, whom promises overwhelming power with just a hair of risk… You gain a number of uses of Chaos Magic equal to your Charisma modifier + Proficiency Bonus, and regain all expended uses on a short or long rest.",
+				"You may expend these uses of chaos magic on later abilities, and the following:",
+				"Whenever you cast a spell or a cantrip, you may use your bonus action and a use of Chaos Magic to empower the spell attack roll or DC by an additional {@dice 1d6}. Afterwards you must roll on the {@table chaos magic table|lustvore}.",
+				"In addition, whenever you or someone else rolls on the {@table chaos magic table|lustvore} within 60 feet, you can expend one of your uses of Chaos Magic to roll an additional time and pick which result you want. If you roll the same result on 2 or more dice and pick that result, you regain all expended uses of Chaos Magic.",
+				"{@note Note: There exists {@table petra's chaos magic table|lustvore|alternative chaos magic table}.}",
+				{
+					"type": "inset",
+					"name": "Chaos Magic Table Note",
+					"entries": [
+						"When you or someone else forced by you rolls on the {@table chaos magic table|lustvore}, all spells should be done at your highest spell slot level. If you roll a result that casts a spell higher than what your highest spell slot level, cast the spell at their normal spell slot level."
+					]
+				}
+			]
+		},
+		{
+			"name": "Chaos Spell Transmutation",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Chaos Witch",
+			"subclassSource": "LustVore",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, whenever a spell is cast within 60 feet of you, you may use your reaction and a use of Chaos Magic to warp the magic. If the spell is of a higher level than your highest level warlock spell, you must make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, instead of the caster casting the intended spell, the caster expends the spell slot and rolls on the {@table chaos magic table|lustvore} instead."
+			]
+		},
+		{
+			"name": "Witches Bargain",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Chaos Witch",
+			"subclassSource": "LustVore",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"At 10th level, whenever you would fail any roll you make, such as attack roll, saving throw, ability check, etc. you may expend a use of Chaos Magic to reroll with the same modifiers, and roll on the {@table chaos magic table|lustvore}."
+			]
+		},
+		{
+			"name": "Master of Chaos",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Chaos Witch",
+			"subclassSource": "LustVore",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"At 14th level, whenever anyone (including yourself) within 60 feet rolls on the {@table chaos magic table|lustvore}, you roll twice, rather than once, and you pick which result you want."
+			]
+		},
+		{
+			"name": "The Great Devourer",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Devourer",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"entries": [
+				"Before there was time, there was hunger. From this hunger was born the Great Devourer. Few know her identity, and even fewer wish to, for the Great Devourer is the primordial embodiment of hunger and gluttony. She cares for nothing but to consume all life, and to even attempt to contact her is to risk being consumed yourself. What she does with her consumed prey is up to some debate. Some think of her as a misunderstood creator, who wishes to form a new utopia within her guts out of the essence of the planes. Some think of her as a cruel and capricious tormenter, who wishes to entrap and digest everything for all eternity.",
+				"However the great devourer speaks little beyond the language of consumption, and as such all agree that she desires living prey the most. She is often called upon by predators seeking quick powers to sate their voracious desires, often unaware that to worship the Great Devourer is to sacrifice all for the sake of your next squirming meal…",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Cleric||Gluttony|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "The Great Devourer Spells|Warlock||Devourer|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Jaws of the Devourer|Warlock||Devourer|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Consuming Pact|Warlock||Devourer|LustVore|1"
+				}
+			]
+		},
+		{
+			"name": "The Great Devourer Spells",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Devourer",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"The Great Devourer lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
+				{
+					"type": "table",
+					"caption": "The Great Devourer Expanded Spells",
+					"colLabels": [
+						"Spell Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10 text-left"
+					],
+					"rows": [
+						["1st","{@spell acidify|lustvore}, {@spell hoard gullet|lustvore}"],
+						["2nd","{@spell devouring smite|lustvore}, {@spell disrobe|lustvore}"],
+						["3rd","{@spell compress|lustvore}, {@spell sleet storm}"],
+						["4th","{@spell freedom of movement}, {@spell leeching insides|lustvore}"],
+						["5th","{@spell bigby's hand}, {@spell inhale|lustvore}"]
+					]
+				}
+			]
+		},
+		{
+			"name": "Jaws of the Devourer",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Devourer",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"At 1st level, you learn the {@spell arcane jaws|lustvore} cantrip, which counts as a warlock cantrip for you."
+			]
+		},
+		{
+			"name": "Consuming Pact",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Devourer",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"At 1st level, whenever you make a successful {@action devour|lustvore} check as predator, you may cast a cantrip of your choice as a bonus action if you have not already casted a cantrip this turn, or make a single {@action devour|lustvore} attack as a bonus action."
+			]
+		},
+		{
+			"name": "Mark of Prey",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Devourer",
+			"subclassSource": "LustVore",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, the Great Devourers hunger begins to seep into your personality, making you view others as mere prey. As a bonus action, you may look upon a creature within 30 feet and grant it the Prey Mark. This often takes the form of a sensory effect, such as breath down the back of its neck, a delicious scent, a slight glow, and so on. When the target see’s you, the target instinctively knows you put the mark upon them as they are filled with fear.",
+				"While marked, you always know where the target creature is so long as they remain on the same plane, and the target has disadvantage on all tests to resist your {@action grapple||grapples}, {@action devour|lustvore|devours}, and disadvantage on all prey actions while inside you.",
+				"This mark lasts until your next long rest. If you do not consume them by then, you are considered starving upon the end of your long rest. You may do this a number of times equal to your proficiency bonus per long rest."
+			]
+		},
+		{
+			"name": "Gluttonous Surge",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Devourer",
+			"subclassSource": "LustVore",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"At 10th level, the Great Devourer rewards you with power for every prey you consume. Whenever you bring a creature to 0 hit points through digestion damage, you regain one spell slot. You may use this feature a number of times equal to your proficiency bonus per long rest."
+			]
+		},
+		{
+			"name": "Aspect of the Great Devourer",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Devourer",
+			"subclassSource": "LustVore",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"At 14th level, you are able to channel the Great Devourer’s impossible hunger into yourself, granting you temporary insatiable voracity and power. As an action, you may use this ability to grant yourself the following effects for one minute:",
+				{
+					"type": "list",
+					"items": [
+						"All {@action devour|lustvore} attacks and contests are done at advantage, and any spell attacks that involve {@condition devouring|lustvore} creatures are also done with advantage. If a spell that involves {@condition devouring|lustvore} a creature requires a saving throw, the enemy does so at a disadvantage.",
+						"Your digestion damage is doubled."
+					]
+				},
+				"You may use this feature once per long rest."
+			]
+		},
+		{
+			"name": "The Great Lewd One",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Lewd One",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"entries": [
+				"Most eldritch deities are often focused around their one principle desire. Hunger, Power, Slime, Returning… The Great Lewd One is no different, though she is often regarded as the most benign of all of the forgotten gods. For the great lewd one gains their strength through sexuality, and through the pleasure that only sentient creatures can create. Because of this, worshippers of the great lewd one are often quite open about their desires to make all creatures as lewd and pleasured as they are. Though many towns and nations with more puritan values oftentimes ban the worship entirely, as to allow worship of the Great Lewd One is often synonymous with dirt-cheap brothels and public indecency charges.",
+				"Those that worship the great lewd one often form contracts with the deity to spread debauched behavior and orgasms wherever they go, and often have to personally orgasm a certain number of times every day in order to keep their powers.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Cleric||Gluttony|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "The Great Lewd One Spells|Warlock||Lewd One|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Amorous Grasp|Warlock||Lewd One|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Curse of Corruption|Warlock||Lewd One|LustVore|1"
+				}
+			]
+		},
+		{
+			"name": "The Great Lewd One Spells",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Lewd One",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"The Great Lewd One lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
+				{
+					"type": "table",
+					"caption": "The Great Lewd One Expanded Spells",
+					"colLabels": [
+						"Spell Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10 text-left"
+					],
+					"rows": [
+						["1st","{@spell enhance/reduce assetslustvore}, {@spell divine mark|lustvore}"],
+						["2nd","{@spell disrobe|lustvore}, {@spell genderbend|lustvore}"],
+						["3rd","{@spell fast friends|ai}, {@spell meal of the phoenix|lustvore}"],
+						["4th","{@spell aura of lust|lustvore}, {@spell evard's black tentacles}"],
+						["5th","{@spell come to me|lustvore}, {@spell dominate person}"]
+					]
+				}
+			]
+		},
+		{
+			"name": "Amorous Grasp",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Lewd One",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"Starting at 1st level, the taboo knowledge of your patron guides you on exactly where and how to squeeze and caress the resistance out of those that oppose you. Your unarmed lewd attack now deals {@damage 1d8} + Charisma modifier lewd damage.",
+				"In addition, you can choose to replace any damage from spells, attacks, or other sources with an equal amount of lewd damage."
+			]
+		},
+		{
+			"name": "Curse of Corruption",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Lewd One",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"At lvl 1, you have learned how to apply the Great Lewd Ones corruption influence to others. The Great Lewd Ones influence is a corrupting curse that causes those affected to be sent into the throes of continual ecstasy. When dealing lewd damage, you may choose to apply a Corruption Curse to one creature of your choice damaged by the attack or spell. They must take a Wisdom saving throw or be Corrupted for one minute.",
+				"While Corrupted, they take your Charisma modifier in lewd damage at the start of their turns. In addition, whenever you cast a Warlock spell, you may expend the mark from them to increase your attack bonus or saving throw by your Charisma modifier for the casting of the spell for that turn.",
+				"Corrupted creatures may reroll this saving throw by using their action to cleanse themselves of horny thoughts.",
+				"You may use this feature a number of times equal to your proficiency bonus per short or long rest."
+			]
+		},
+		{
+			"name": "Corrupted Influence",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Lewd One",
+			"subclassSource": "LustVore",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, the pleasurable corruption of the Lewd One seeps into your targets, making it difficult to have any thoughts but those of pleasure. Whenever a target affected by your Corruption attempts to do an {@action attack} or {@action cast a spell} that does not deal lewd damage, they must make a Wisdom saving throw. On a failure, they cannot take any {@action attack} or {@action cast a spell||cast any spells} that does not deal lewd damage until their next turn.",
+				"In addition, you have resistance to lewd damage from Corrupted targets, and have advantage to {@action grapple} and {@action devour|lustvore} targets affected by Corruption."
+			]
+		},
+		{
+			"name": "Cycle of Corruption",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Lewd One",
+			"subclassSource": "LustVore",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"At 10th level, the lewd acts of those Corrupted by your influence are rewarded by your patron. When a target affected by Corruption deals lewd damage, or falls to 0 hit points through lewd damage, you may use your reaction to restore a use of your Curse of Corruption.",
+				"You may use this feature a number of times equal to your proficiency bonus per long rest."
+			]
+		},
+		{
+			"name": "Corrupted Aura",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Lewd One",
+			"subclassSource": "LustVore",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"At 14th level, The Great Lewd One’s corrupted influence flows through you, and extends its pleasurable influence to all those nearby.",
+				"At the start of your turn, you deal your Charisma modifier of lewd damage to all creatures of your choice within 15 feet of you (min 1). Any creatures damaged by this aura must roll a Wisdom saving throw or be affected by Corruption."
+			]
+		},
+		{
+			"name": "The Great Ooze",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Ooze",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"entries": [
+				"The Great Ooze (sometimes referred to as “mama ooze”) is a primordial and powerful entity who cares only for one thing: To expand its ooze endlessly until everything has become slime, and everything has become one in blissful slime harmony. In this end, patrons of this deity feel the same desire to cover and devour, and often provide their worshippers with the tools to spread their slime love across the world.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Cleric||Gluttony|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "The Great Ooze Spells|Warlock||Ooze|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Ooze Form|Warlock||Ooze|LustVore|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Chosen Slime|Warlock||Ooze|LustVore|1"
+				}
+			]
+		},
+		{
+			"name": "The Great Ooze Spells",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Ooze",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"The Great Ooze lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
+				{
+					"type": "table",
+					"caption": "The Great Ooze Expanded Spells",
+					"colLabels": [
+						"Spell Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10 text-left"
+					],
+					"rows": [
+						["1st","{@spell body pouch|lustvore}, {@spell grease}"],
+						["2nd","{@spell disrobe|lustvore}, {@spell enlarge/reduce|lustvore}"],
+						["3rd","{@spell compress|lustvore}, {@spell medicinal acids|lustvore}"],
+						["4th","{@spell leeching insides|lustvore}, {@spell vitriolic sphere|xge}"],
+						["5th","{@spell cloudkill}, {@spell maximize/minimize|lustvore}"]
+					]
+				}
+			]
+		},
+		{
+			"name": "Ooze Form",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Ooze",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"At 1st level, you can use an action to enter a proper ooze-like form. While in your Ooze Form, you can move through a space as narrow as 1 inch wide without squeezing, and you climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+				"While in this form, you have advantage on ability checks to avoid being {@condition grappled}, and disadvantage on ability checks to avoid being {@condition swallowed|lustvore|devoured}. If you have a creature inside of you, you may not move through small spaces that could not reasonably fit them as well.",
+				"You may use your action to leave your Ooze Form."
+			]
+		},
+		{
+			"name": "Chosen Slime",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Ooze",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"It's only natural that the Great Ooze prefers their children. If a {@race slime|lustvore} takes this class, you replace Ooze Form with the following ability:",
+				"{@i {@b Greater Slime:} All class features that affect the Ooze Form now affect your natural racial Ooze Body. You may use your bonus action to enter or leave your Ooze Form, rather than an action.}"
+			]
+		},
+		{
+			"name": "Engulf",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Ooze",
+			"subclassSource": "LustVore",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Starting at 6th level, you may completely engulf your foes, drawing them into your body. While you are in your Ooze Form, you may attempt to {@action devour|lustvore} creatures without grappling them first. If you have only 1 creature inside of you, you may adopt the appearance of that creature, though you do not gain any of their abilities and do not change your size."
+			]
+		},
+		{
+			"name": "Viscous Body",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Ooze",
+			"subclassSource": "LustVore",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Starting at 10th level, you master the art of slime-shifting, able to shift between your solid and ooze forms at will. You are always treated as being in your Ooze Form, and no longer suffer disadvantage to avoid being {@condition swallowed|lustvore|devoured} while in your Ooze Form."
+			]
+		},
+		{
+			"name": "Shlick",
+			"source": "LustVore",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Ooze",
+			"subclassSource": "LustVore",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Starting at 14th level, when you are hit with a melee weapon attack or unarmed strike, you may attempt to {@action devour|lustvore} the attacking creature as a reaction."
+			]
+		},
+		{
+			"name": "School of Belly Arcanist",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Belly Arcanist",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"entries": [
+				"Make yourself at home inside of another creature, and buff them in combat.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Arcane Belly|Wizard||Belly Arcanist|LustVore|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Buffing Savant|Wizard||Belly Arcanist|LustVore|2"
+				}
+			]
+		},
+		{
+			"name": "Arcane Belly",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Belly Arcanist",
+			"subclassSource": "LustVore",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"Starting at 2nd level, while inside a friendly or otherwise {@condition willing|lustvore} creature, you can spend an action to inscribe the inside of the belly with magical runes and make it your {@i Arcane Belly}. When you do such, you gain the following benefits for as long as you remain inside them:",
+				{
+					"type": "list",
+					"items": [
+						"You are not {@condition restrained} or {@condition blinded} while inside your Arcane Belly.",
+						"You are able to see anything that your predator can see, and are able to cast spells as if you were in the predator's square.",
+						"Any spells that have a range of self can now target your predator instead. Conditions that specify “you” may now read as “your predator” instead.",
+						"You are now able to communicate with your Arcane Belly predator telepathically.",
+						"You no longer need to take {@status concentration} checks for being inside their belly, although you do need to take it when your predator takes damage.",
+						"You are immune to any digestion damage dealt by your predator, and your predator’s features that reduce or negate immunity do not work on you."
+					]
+				},
+				"Your Arcane Belly dissipates if you leave the creature, or if the predator breaks the bond by using their action."
+			]
+		},
+		{
+			"name": "Buffing Savant",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Belly Arcanist",
+			"subclassSource": "LustVore",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"Starting at 2nd level, you may learn and prepare spells and cantrips from any spell list, as long as the spell or cantrip has a range of self. It counts as a Wizard spell for you."
+			]
+		},
+		{
+			"name": "Enhanced Concentration",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Belly Arcanist",
+			"subclassSource": "LustVore",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Starting at 6th level, you have advantage on all saving throws while inside of your Arcane Belly, including {@status concentration} saving throws."
+			]
+		},
+		{
+			"name": "Bellyport Self",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Belly Arcanist",
+			"subclassSource": "LustVore",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Starting at 10th level, you can quickly hop into the nearest friendly belly at a moment’s notice. As an action, you may select one creature you can see within 60 feet. If you are not {@condition restrained} or otherwise have speed 0, you instantly teleport into that creature’s body (usually stomach!). When you use this ability on a {@condition willing|lustvore} creature, you may instantly form your Arcane Belly within them as part of this ability. You do not need line of sight for this ability.",
+				"You may use this ability a number of times equal to your proficiency bonus per long rest."
+			]
+		},
+		{
+			"name": "Shared Burden",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Belly Arcanist",
+			"subclassSource": "LustVore",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Starting at 14th level, when you cast a spell that requires {@status concentration}, the creature you are inside of can concentrate on it for you if they are {@condition willing|lustvore}. Both you and that creature may concentrate on spells independently, meaning you can have two {@status concentration} spells going.",
+				"When the creature you are inside of takes damage while they, you, or both of you are concentrating on spells, roll only a single {@status concentration} check, using your ability and bonuses. On a failure, both {@status concentration} spells fail."
+			]
+		},
+		{
+			"name": "School of Belly Summoner",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Belly Summoner",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"entries": [
+				"There are those conjurers and summoners that decide to entirely specialize upon the summoning of creatures. To this end, many quickly realize the most efficient way to summon them is to summon them within themselves.",
+				"Belly Summoners are often maternal and possessive wizards, who love and care for their summons as if they were their own children or cherished pets. After all, in being magically linked, they are intrinsically able to feel their presence, including their pleasure and pain. Many Belly Summoners even treat their friends and companions as their pets, and even go so far as to gulp them down and bind them permanently.",
+				"Due to their resurrection abilities, skilled belly summoners can often find easy and high paying work as being rest-stops for adventuring parties, not even needing to be in the same continent in order to reform them after a fatal misstep… And due to their control, only the foolish would dare insult or threaten the belly summoner that will have the decision over whether to reform them or not…",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Druid||Chimera|LustVore|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bind and Summon|Wizard||Belly Summoner|LustVore|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Optional Feature: Permanently Bound|Wizard||Belly Summoner|LustVore|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Optional Feature: Belly Pets|Wizard||Belly Summoner|LustVore|2"
+				}
+			]
+		},
+		{
+			"name": "Bind and Summon",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Belly Summoner",
+			"subclassSource": "LustVore",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"At 2nd level you learn how to store the essence of creatures you’ve digested inside your body to summon again at will.",
+				"Upon digesting a creature, you can choose to bind it as your pet. The creature’s essence now is stored inside your body, and you are aware of its presence at all times. You may also communicate with the creature telepathically, and it with you and other creatures that you have bound. This link is permanent unless broken by some high level magic, such as a {@spell wish} spell.",
+				"As an action, you can summon your bonded pet to a spot adjacent to you by expending a Wizard spell slot with a level equal to ½ of the creature’s CR/level (rounded up). This is a {@status concentration} spell and lasts for one hour. However, you do not need to make {@status concentration} checks when you are damaged. While summoned, the creature regards you and your companions as an ally regardless of its prior temperament and acts according to your commands, and shares your initiative count but acts immediately after you.",
+				"In addition, you are able to permanently summon and reform your bound pet by digesting a meal of equal size and reforming your pet at the end of the meal’s digestion. Once reformed, the creature is independent and able to act on its own and is no longer bound to you.",
+				"You can have a number of creatures bound to you equal to your Intelligence modifier + Wizard level and may dismiss a bind you have as an action."
+			]
+		},
+		{
+			"name": "Optional Feature: Permanently Bound",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Belly Summoner",
+			"subclassSource": "LustVore",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"Upon permanently summoning a pet, you retain your bind upon them, although they still remain independent. Should the creature die, its soul returns to your body so long as it died on the same plane of existence and is able to return. Once it does, the creature is able to be summoned or reformed again."
+			]
+		},
+		{
+			"name": "Optional Feature: Belly Pets",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Belly Summoner",
+			"subclassSource": "LustVore",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"You can now summon and keep any number of your bonded pets within your body without expending the spellslot cost and ignoring the {@status concentration} requirement. However, they may not leave your body.",
+				"If for any reason a creature left your body and you were not concentrating on it or had expended the spellslot cost, the creature instantly disappears and their soul returns to your body."
+			]
+		},
+		{
+			"name": "Summoning Ward",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Belly Summoner",
+			"subclassSource": "LustVore",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, you learn how to use your summoning magic to protect yourself. Whenever you summon a bonded creature, you gain 1 temporary hit point for every CR/level of the creature summoned."
+			]
+		},
+		{
+			"name": "Full of Pets",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Belly Summoner",
+			"subclassSource": "LustVore",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"At 10th level, your constant stretching of your belly has increased your natural capacity and skills. You count your capacity as one size larger.",
+				"In addition, your swollen belly now gains magical properties as you bond with more pets. You gain the following abilities:",
+				{
+					"type": "list",
+					"items": [
+						"When you are attacked, your bonded pets attempt to protect you as a reaction. You gain +2 to your AC for one attack, potentially causing it to miss.",
+						"When you need to make a saving throw, your bonded pets attempt to aid you as a reaction, granting you +2 towards your roll. This may be done after you know the result."
+					]
+				},
+				"You may use these abilities a number of times equal to your proficiency bonus per long rest."
+			]
+		},
+		{
+			"name": "Master Belly Summoner",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Belly Summoner",
+			"subclassSource": "LustVore",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"At 14th level, you are a master of binding and summoning your pets. When you expend a spell slot to summon a creature, you may now expend any number of additional spell slots in order to reach the necessary amount to summon it.",
+				"{@note (Example: You attempt to summon a CR 20 creature. You must expend 10 spell slot levels, so you could expend two 4th level slots and one 2nd level slot, or three 3rd level slots and one 1st level slot, and so on.)}"
+			]
+		},
+		{
+			"name": "School of Witch",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Witch",
+			"subclassSource": "LustVore",
+			"level": 1,
+			"entries": [
+				"Use the mastery of your hex’s to control the fate of those who cross you.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Body Expertise|Druid||Chimera|LustVore|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Witch's Hex|Wizard||Witch|LustVore|2"
+				}
+			]
+		},
+		{
+			"name": "Witch's Hex",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Witch",
+			"subclassSource": "LustVore",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"At 2nd level, as a bonus action, you can cast a Witch's Hex upon a creature you can see within 60 feet, including yourself. Alternatively you may target a location, creating a Hex Mark that takes up to a 5 feet in diameter circle on the ground (or whatever surface you target).",
+				"While a Witch's Hex is upon a creature and you can see said creature, you may cast spells that have a target of self or touch upon that creature. All spells you cast are considered to have a range able to reach the creature, regardless of their distance stated on the spell itself, and do not require you to see the hexed creature. If the Witch's Hex is upon a target or location to make a Hex Mark, you can cast any spell as if you were touching the Hex Mark or touching anything that is also touching the Hex Mark. Any spells with range may cast through a Hex Mark placed upon a surface as if you were standing on the Hex Mark, and may target any creature the Hex Mark and you can see. ",
+				"If your Hex Mark is ever farther than 300 feet away from you, it disappears.",
+				"If a spell or ability {@action devour|lustvore|devours} a creature, they are teleported to you only on a full swallow.",
+				"You can only have a number of Hex’s active equal to your proficiency bonus, and the Hex remains indefinitely so long as you don’t recast the Hex on a different target. If you place your Hex on a different target, the Hex disappears from the prior target. You may also remove the Hex as a free action."
+			]
+		},
+		{
+			"name": "Magical Transformations",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Witch",
+			"subclassSource": "LustVore",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6nd level, you become a master in changing appearances, molding yourself and those around you into forms that more suit your tastes…",
+				"You are now able to cast {@spell alter self} and {@spell genderbend|lustvore} on yourself without using a spell slot. When you cast {@spell alter self} to change appearance, or cast {@spell genderbend|lustvore}, the duration is now set to permanent, and it no longer requires {@status concentration}.",
+				"In addition, the target of your Witch's Hex may also be a target for the change appearance option of {@spell alter self}, and {@spell genderbend|lustvore}, and do not require a spell slot or {@status concentration}. If they are {@condition willing|lustvore}, the effects are permanent. Otherwise the effects end once the Witch's Hex is removed off of them."
+			]
+		},
+		{
+			"name": "Witch's Curse",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Witch",
+			"subclassSource": "LustVore",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"At 10th level, you learn how to place long lasting curses over your foes. When you {@action cast a spell} on a creature under the effects of your Witch's Hex that has no positive benefits, has a duration of one minute or longer, and is not already under the effect of a Witch's Curse, you may have your casted spell become a Witch's Curse.",
+				"This Witch's Curse spell has an infinite duration so long as you have your Witch's Hex upon them.",
+				"While a target has a Witch's Curse upon them, the Hex no longer breaks from distance, and you may continue the spell even if they break line of sight. If the Witch's Hex is ever removed from a target that has an ongoing Witch's Curse, the Witch's Curse immediately ends. Regardless of spell text, the Witch's Curse ends should you ever fall to 0 hit points or less.",
+				"{@note (Note: Spells that have multiple options may be used as a curse if the option selected has no positive benefits. Example: The reduce option of {@spell enlarge/reduce} is allowed to be the curse, but not the enlarge option.)}"
+			]
+		},
+		{
+			"name": "Witch's Boon",
+			"source": "LustVore",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Witch",
+			"subclassSource": "LustVore",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"At 14th level, your curses can become blessings to your friends. You may now cast spells with your Witch's Curse that have a positive benefit. Any spells slots used this way cannot be restored to you through any means, until the Hex Mark and spell are lifted. At which point they can be restored through any normal means."
+			]
 		}
 	],
 	"optionalfeature": [
@@ -9292,6 +12513,535 @@
 			"entries": [
 				"When you hit a creature with a weapon attack or unarmed strike, you can expend one superiority die to attempt to charm the target. You add the superiority die to the attack's damage roll. The target must make a Charisma saving throw or become {@condition charmed} to you until the end of your next turn. Regardless of whether the creature succeeds or fails this save, when you use this maneuver you can deal lewd damage instead of the attack’s normal damage type when you use this maneuver."
 			]
+		},
+		{
+			"name": "Pact of the Chaos",
+			"source": "LustVore",
+			"featureType": [
+				"PB"
+			],
+			"entries": [
+				"You are given a tiny mote of pure magical chaos by your patron that resonates with arcane energy. This mote can be stored in a container, worn as a necklace, etc, and will always return to your side upon a short rest if it should ever be lost.",
+				"You may use the chaotic energy within to imbue your spells and body with unstable power. Whenever you roll damage, you may add any number of {@dice d6}’s to your roll, up to a maximum of your Proficiency Bonus.",
+				"If you roll a 1 on any of these extra dice, you deal no extra damage, instead taking force damage equal to double the number of 1’s you rolled through this feature, and immediately roll on the {@table chaos magic table|lustvore}. If you do not roll any 1’s, you deal the appropriate amount of extra damage, using the same damage type.",
+				"You may use this feature up to a number of times equal to your Proficiency Bonus per long rest."
+			]
+		},
+		{
+			"name": "Pact of the Voracity",
+			"source": "LustVore",
+			"featureType": [
+				"PB"
+			],
+			"entries": [
+				"Your patron gifts (or curses) you with the Mark of Voracity, a physical mark that often takes the form of a tattoo. This mark grants you an insatiable hunger for living creatures. You gain the following effects:",
+				{
+					"type": "list",
+					"items": [
+						"You increase your capacity as if you were one size larger.",
+						"You may attempt to devour creatures without grappling them first."
+					]
+				}
+			]
+		},
+		{
+			"name": "Pact of the Tentacles",
+			"source": "LustVore",
+			"featureType": [
+				"PB"
+			],
+			"entries": [
+				"Your patron grants you a long, slender and wet tentacle, with the knowledge that you must ingest it. Upon ingesting the tentacle, it molds with your body and becomes a malleable appendage that your body can create at will. You can now mold various parts of your body to have a tentacle.",
+				"This tentacle grants you the following effects:",
+				{
+					"type": "list",
+					"items": [
+						"Your tentacles can be formed from any orifice: ass, nethers, breasts, cock, mouth, etc. They can also be formed anywhere inside your own body (stomach, womb, etc.). These tentacles can reach a maximum length of your natural reach.",
+						"You are always assumed to have another hand capable of grappling, so long as you are not wearing restrictive clothing.",
+						"All lewd damage you deal to creatures inside your body, while you are inside another creature, or while you are {@condition grappled||grappling} or {@condition restrained||restraining} them, gain your proficiency bonus in additional lewd damage."
+					]
+				}
+			]
+		},
+		{
+			"name": "Pact of the Slime",
+			"source": "LustVore",
+			"featureType": [
+				"PB"
+			],
+			"entries": [
+				"The Great Ooze provides you with a ball of their own slime that magically clings to your person, rests inside of you, or is in some way attached to you. Your body begins to take on some properties of your Ooze Patron:",
+				{
+					"type": "list",
+					"items": [
+						"Your skin is now always slightly slimy.",
+						"You gain {@spell slime tricks|lustvore} as a cantrip. This does not count against your known cantrips.",
+						"Slime created from various spells and abilities last forever, although any magical or special properties it might have only last for as long as the spell or ability states. In addition, any slime you create can have any sensory properties you desire (such as taste, smell, feel, look, etc.). However, it always is clearly slime, and retains the basic slimy gelatinous qualities of it.",
+						"The Great Ooze’s slime manifests itself to stick to your foes and impede their actions. Whenever you deal damage, or an enemy fails a saving throw from one of your spells or abilities, you may expend your bonus action to cause them to suffer disadvantage upon their next attack or ability check. You may use this feature up to your proficiency mod per short or long rest."
+					]
+				}
+			]
+		},
+		{
+			"name": "Chaos Shield",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"As a reaction, whenever a creature you can see within 60 feet is the target of an attack or attack roll only targeting them, you may expend a use of your Chaos Magic to fling up a warbling chaotic shield that gives disadvantage to the attack. If the attack hits, roll on the {@table chaos magic table|lustvore} and apply the result to either the attacker or the target."
+			],
+			"prerequisite": [
+				{
+					"pact": "Pact of the Chaos"
+				}
+			]
+		},
+		{
+			"name": "Chaotic Transfer",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"As a reaction, whenever a creature you can see within 60 feet deals damage to anything, you may expend a use of your Chaos Magic to have them roll on your Pact of the Chaos with a number of d6’s of your choosing."
+			],
+			"prerequisite": [
+				{
+					"pact": "Pact of the Chaos"
+				}
+			]
+		},
+		{
+			"name": "Chaotic Resurgence",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"As an action, you may expend a use of Chaos Magic and regain one expended spellslot and roll on the {@table chaos magic table|lustvore}.",
+				"You may use this feature once per long rest."
+			],
+			"prerequisite": [
+				{
+					"pact": "Pact of the Chaos"
+				}
+			]
+		},
+		{
+			"name": "Call upon The Great Chaos Witch",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"You are granted a special connection with the Great Chaos Witch, who may consider you a favorite student or plaything of hers. Once per week (or session!), you may spend a short rest communing with the Great Chaos Witch for advice and to answer your questions. She will bring you (and any allies involved in the ritual) into her extradimensional university, and answer {@dice 1d6} questions depending on her mood (rolled secretly by the GM). For particularly intensive or valuable answers she may elicit a cost. Such a cost is usually doing a task for her. Often this involves gathering magic items, spellcasters, or finding victims for (or being the victim of!) her dangerous and often lewd experiments. Such a task is rarely easy or pleasant as the witch often likes to push her students for her own amusement.",
+				"She may also grant small favors, although will almost certainly require a cost for doing so."
+			],
+			"prerequisite": [
+				{
+					"level": 10,
+					"pact": "Pact of the Chaos"
+				}
+			]
+		},
+		{
+			"name": "Chaos for Life",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"As an action, you may expend one use of Chaos Magic and roll up to three d6 dice, and regain that many hit points. If you roll doubles on any dice, you instead take that amount of damage."
+			],
+			"prerequisite": [
+				{
+					"pact": "Pact of the Chaos"
+				}
+			]
+		},
+		{
+			"name": "Life for Chaos",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"As a bonus action, you may take {@damage 3d6} force damage to yourself, and regain one use of your Chaos Magic ability."
+			],
+			"prerequisite": [
+				{
+					"pact": "Pact of the Chaos"
+				}
+			]
+		},
+		{
+			"name": "Energy Sacrifice",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"When you or someone within 60 feet makes a spell attack roll or a spell with a saving throw, you may expend a use of Chaos Magic to empower the spell as if it were your own, and have them roll on the {@table chaos magic table|lustvore}."
+			],
+			"prerequisite": [
+				{
+					"pact": "Pact of the Chaos"
+				}
+			]
+		},
+		{
+			"name": "Tenuous Control",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"When you cast a 1st or higher level spell, you now roll a {@dice 1d20}. On a roll of 1 through 1 + your maximum spell slot level, your spell fails and you roll on the {@table chaos magic table|lustvore} instead. For example, a Warlock with 5th level spell slots would cause the spell to fail on rolls of 1 - 6.",
+				"When your spell fails and you are forced to roll on the {@table chaos magic table|lustvore} through this invocation, your spell slot is not expended."
+			],
+			"prerequisite": [
+				{
+					"pact": "Pact of the Chaos"
+				}
+			]
+		},
+		{
+			"name": "Aura of Chaos",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"Whenever a spell is cast within 30 feet of you, roll a {@dice 1d20}. On a roll of 1, the spell fails, the spell slot is expended, and instead the spellcaster rolls on the {@table chaos magic table|lustvore}. If you have {@optionalfeature tenuous control|lustvore}, these rolls improve to rolls of 1 + your maximum spell slot level.",
+				"As a reaction when an ally casts a spell but before they roll, you may suppress your Chaos Magic to prevent an allied creature's spell from being affected by this feature. As a bonus action during your turn, you may may choose to disable this effect. On a subsequent turn, you may use another bonus action to re-enable it. This aura continues as long as you are conscious."
+			],
+			"prerequisite": [
+				{
+					"pact": "Pact of the Chaos"
+				}
+			]
+		},
+		{
+			"name": "Bubble of Chaos",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"By expending a use of Chaos Magic as an action, you can pick a point within 60 feet. For one minute, Tiny rifts open up within a 30 feet radius sphere around the point, disrupting magic.",
+				"Any spells cast through, draw line of sight through, or cast inside the bubble must roll a {@dice 1d20}. On a rolls of 1 - 10, the spell fails and dissipates, and the caster rolls on the {@table chaos magic table|lustvore}. On a 11 - 20, the spell passes through normally."
+			],
+			"prerequisite": [
+				{
+					"pact": "Pact of the Chaos"
+				}
+			]
+		},
+		{
+			"name": "Focus Energy",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"Whenever you or someone else rolls on the {@table chaos magic table|lustvore}, as a bonus action or reaction (if it’s not your turn), you can choose to expend a spell slot and a use of your Chaos Magic to have the target caster cast {@spell chaos bolt} at the expended spell slot level instead of taking the result."
+			],
+			"prerequisite": [
+				{
+					"level": 10,
+					"pact": "Pact of the Chaos"
+				}
+			]
+		},
+		{
+			"name": "Explode Familiar",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"As an action, you can command your familiar to detonate with chaotic energy. At the end of your familiars next turn, they must roll on the chaos magic table. Immediately after the result and regardless of the result, your familiar explodes in a magical detonation, causing them to instantly perish. All creatures within 30 feet of your familiar must make a Dexterity saving throw vs your Spell save DC or suffer {@damage 4d6} force damage on a failure, or half as much on a success."
+			],
+			"prerequisite": [
+				{
+					"other": "Ability to summon familiar"
+				}
+			]
+		},
+		{
+			"name": "Chaos Blast",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"Whenever you cast {@spell eldritch blast}, roll {@dice 2d8} and choose one of the d8s. The number rolled on that die determines the attacks damage type for all of your beams, as shown below. If you roll the same on both d8’s, may expend a use of your Chaos Magic to gain an additional beam, and roll another d8. If this result is the same, you may gain another beam without expending another use of Chaos Magic. Repeat this process until you roll a different number.",
+				{
+					"type": "table",
+					"colLables": [
+						"d8",
+						"Damage Type"
+					],
+					"colStyles": [
+						"col-3 text-center",
+						"col-9 text-left"
+					],
+					"rows": [
+						["1","acid"],
+						["2","cold"],
+						["3","fire"],
+						["4","force"],
+						["5","lightning"],
+						["6","lewd"],
+						["7","psychic"],
+						["8","thunder"]
+					]
+				}
+			],
+			"prerequisite": [
+				{
+					"pact": "Pact of the Chaos",
+					"spell": [
+						"eldritch blast"
+					]
+				}
+			]
+		},
+		{
+			"name": "Predatory Familiar",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"Your familiar is now imbued with the devourer's hunger. It becomes a small size monstergirl version of its normal race, gains additional hit points equal to your number of hit dice, and has a capacity of Medium. In addition, it shares your proficiency in {@skill Athletics} and {@skill Acrobatics}, and if you have Expertise in either skill, it gains Expertise in that skill."
+			],
+			"prerequisite": [
+				{
+					"other": "Ability to summon familiar"
+				}
+			]
+		},
+		{
+			"name": "Independent Familiar",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"Your familiar is now able to act on their hunger of their own desires. It may now take {@action attack actions} on its turns, including {@action grapple} and {@action devour|lustvore} checks."
+			],
+			"prerequisite": [
+				{
+					"level": 5,
+					"other": "Ability to summon familiar"
+				}
+			]
+		},
+		{
+			"name": "Powerful Tongue",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"{@spell Tongue Lash|lustvore} now has an extended range of 30 feet, and can pull targets up to 25 feet."
+			],
+			"prerequisite": [
+				{
+					"spell": [
+						"tongue lash|lustvore"
+					]
+				}
+			]
+		},
+		{
+			"name": "Powerful Belch",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"{@spell Belch|lustvore} now can affect up to two additional creatures adjacent to your target."
+			],
+			"prerequisite": [
+				{
+					"spell": [
+						"belch|lustvore"
+					]
+				}
+			]
+		},
+		{
+			"name": "Devourers Lick",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"If a target is {@condition grappled} when you cast {@spell lick|lustvore}, you may immediately take a devour check with the advantage provided by the spell as a bonus action."
+			],
+			"prerequisite": [
+				{
+					"spell": [
+						"lick|lustvore"
+					]
+				}
+			]
+		},
+		{
+			"name": "Ravenous Gulp",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"Whenever you take the {@action attack} action, you may take one additional {@action devour|lustvore} attack."
+			],
+			"prerequisite": [
+				{
+					"level": 5,
+					"pact": "Pact of the Voracity"
+				}
+			]
+		},
+		{
+			"name": "Trapping Gulp",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"Whenever you are able to take an {@action opportunity attack||attack of opportunity} against a target, you may instead take a {@action devour|lustvore} attack against said target."
+			],
+			"prerequisite": [
+				{
+					"pact": "Pact of the Voracity"
+				}
+			]
+		},
+		{
+			"name": "Lurching Jaws",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"You may now cast arcane jaws against a creature up to 15 feet away with this spell. On a hit, {@spell arcane jaws|lustvore} now pulls them 15 feet towards you."
+			],
+			"prerequisite": [
+				{
+					"spell": [
+						"arcane jaws|lustvore"
+					]
+				}
+			]
+		},
+		{
+			"name": "Summon Maw of the Devourer",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"At 15th level, you are able to call upon a fragment of the great devourers true hunger. Choose a point on the ground within 30 feet. The ground momentarily parts to reveal a massive open maw, with a powerful wind that sucks in all prey in a 20 feet radius. All creatures that start their turn in the wind or enter it for the first time on a turn must make a Dexterity saving throw. On a fail, a creature suffers {@damage 10d10} bludgeoning damage. On a success, they suffer half as much.",
+				"Any creature that falls to 0 hit points is instantly {@condition swallowed|lustvore|devoured} by the maw, and disappears into its gullet, likely never to be seen again.",
+				"The mouth persists so long as it devours at least 1 creature since the end of your last turn. Upon no longer consuming anything, the mouth closes and the ground reforms to its original shape.",
+				"This feature may be used once per long rest."
+			],
+			"prerequisite": [
+				{
+					"level": 15,
+					"pact": "Pact of the Voracity"
+				}
+			]
+		},
+		{
+			"name": "Effortless Seduction",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"You learn the {@spell charm person} spell and can cast it at 1st level without using a spell slot or material components. It doesn’t count against your number of spells known."
+			],
+			"prerequisite": [
+				{
+					"level": 11,
+					"pact": "Pact of the Tentacles"
+				}
+			]
+		},
+		{
+			"name": "Orgasmic Blast",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"Your {@spell eldritch blast} transforms to become a beam of pleasure, causing orgasmic sensations to ripple across anyone it touches.",
+				"Your {@spell eldritch blast} now only deals lewd damage. In addition, when you critical with orgasmic blast, the target suffers an instant orgasm and takes an additional {@damage 2d10} lewd damage that is not doubled."
+			],
+			"prerequisite": [
+				{
+					"pact": "Pact of the Tentacles",
+					"spell": [
+						"eldritch blast"
+					]
+				}
+			]
+		},
+		{
+			"name": "Fury of Lewd",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"You may now attack twice, rather than once, when you attack with an unarmed strike, lewd strike, or a weapon that deals lewd damage."
+			],
+			"prerequisite": [
+				{
+					"level": 5,
+					"pact": "Pact of the Tentacles"
+				}
+			]
+		},
+		{
+			"name": "Slime Beam",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"Your {@spell eldritch blast} is now a large stretchy tentacle of slippery gooey slime. Your beam now deals lewd damage or force damage, chosen when you cast the castrip.",
+				"Instead of dealing damage, you can choose to {@action grapple} a creature. The {@spell eldritch blast} does all other non-damaging effects to the target every round they remain {@condition grappled}, and can be moved closer using your movement (at ½, per normal grappling rules). They do not count as adjacent for the purposes of {@status concentration} checks or ranged or melee attacks."
+			],
+			"prerequisite": [
+				{
+					"pact": "Pact of the Slime",
+					"spell": [
+						"eldritch blast"
+					]
+				}
+			]
+		},
+		{
+			"name": "Slime Companion",
+			"source": "LustVore",
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"You are now able to call upon the great ooze to provide you with slime companions to aid you. Once per long rest, you can cast {@spell summon slimegirl|lustvore} without expending a spellslot."
+			],
+			"prerequisite": [
+				{
+					"level": 5,
+					"pact": "Pact of the Slime"
+				}
+			]
 		}
 	],
 	"feat": [
@@ -9478,7 +13228,7 @@
 					"items": [
 						"While inside a belly, you gain advantage on all {@status concentration} checks, and you do not need to make {@status concentration} checks to cast a spell if you have not suffered damage since the end of your last turn.",
 						"While inside a belly, you do not have disadvantage on spell attacks vs your predator.",
-						"While inside a belly, you add your proficiency modifier to all spell damage, and to all healing spells."
+						"While inside a belly, you add your proficiency bonus to all spell damage, and to all healing spells."
 					]
 				}
 			]
@@ -9833,7 +13583,7 @@
 			"category": "LV",
 			"entries": [
 				"What you eat is yours, and yours alone! It'd take an army to get you to spit up a good meal.",
-				"You have advantage on saves against effects that would make you spit up your prey, and can give yourself advantage to keep prey down as a reaction up to a number of times equal to your proficiency modifier per long rest, but you are unable to willingly regurgitate prey."
+				"You have advantage on saves against effects that would make you spit up your prey, and can give yourself advantage to keep prey down as a reaction up to a number of times equal to your proficiency bonus per long rest, but you are unable to willingly regurgitate prey."
 			]
 		},
 		{
@@ -9921,7 +13671,7 @@
 			"category": "LV",
 			"entries": [
 				"Increases your size to Huge permanently, lowers your AC by 2, and you have disadvantage to all Dexterity checks and saving throws.",
-				"Your increased size makes daily life difficult. Your size (and often appetite) draws unwanted attention, and many will regard you with suspicion and restained hostility. In addition, most civilizations do not have accommodations for your size, and it is difficult to find weapons, armor, and gear for your size, and you have disadvantage on using equipment not meant for your tremendous size."
+				"Your increased size makes daily life difficult. Your size (and often appetite) draws unwanted attention, and many will regard you with suspicion and restrained hostility. In addition, most civilizations do not have accommodations for your size, and it is difficult to find weapons, armor, and gear for your size, and you have disadvantage on using equipment not meant for your tremendous size."
 			],
 			"prerequisite": [
 				{
@@ -9981,7 +13731,7 @@
 					"items": [
 						"Your body now digests wood, stone, metal and other such non organic substances, and can even gain sustenance from it. In general, you need 5x times more mass of non-organic items to get the same amount of food as normal meals. However you cannot digest magical items.",
 						"Creatures that would otherwise be immune to your digestion damage are considered resistant, and creatures that would otherwise be considered resistant take full damage.",
-						"You add your proficiency modifier in additional digestion damage."
+						"You add your proficiency bonus in additional digestion damage."
 					]
 				}
 			]
@@ -10048,7 +13798,7 @@
 			"category": "LV",
 			"entries": [
 				"Having been on the receiving- and giving- ends of lewds many times before, you are not as easily flustered as a novice.",
-				"As a reaction on taking lewd damage, you may give yourself resistance to lewd damage that lasts till the start of your next turn, up to a number of times equal to your proficiency modifier per long rest."
+				"As a reaction on taking lewd damage, you may give yourself resistance to lewd damage that lasts till the start of your next turn, up to a number of times equal to your proficiency bonus per long rest."
 			]
 		},
 		{
@@ -10177,8 +13927,8 @@
 					"type": "list",
 					"items": [
 						"When you are grappling a creature, you can move at full speed.",
-						"Your speed is no longer reduced to 0 when you are {@condition restained} while {@condition devouring|lustvore} a creature.",
-						"You no longer suffer the movement speed penalties for being {@condition restained} when over capacity or max capacity, although you still do suffer all other effects. While over max capacity, you move at ¼  your speed."
+						"Your speed is no longer reduced to 0 when you are {@condition restrained} while {@condition devouring|lustvore} a creature.",
+						"You no longer suffer the movement speed penalties for being {@condition restrained} when over capacity or max capacity, although you still do suffer all other effects. While over max capacity, you move at ¼  your speed."
 					]
 				}
 			]
@@ -17124,7 +20874,7 @@
 				],
 				[
 				  "19",
-				  "{@b Molestation:} A swarm of {@spell Mage Hands} appears all over your body and starts to lewdly grope you. You aren't {@condition restained}by them, however for the next 24 hours they will attempt to randomly distract and pleasure you usually at most inconvenient moments.",
+				  "{@b Molestation:} A swarm of {@spell Mage Hands} appears all over your body and starts to lewdly grope you. You aren't {@condition restrained} by them, however for the next 24 hours they will attempt to randomly distract and pleasure you usually at most inconvenient moments.",
 				  "Creatures have disadvantage on saving throws against the next spell you cast in the next minute that involves a saving throw"
 				],
 				[
@@ -17338,7 +21088,7 @@
 				],
 				[
 				  "57",
-				  "{@b Body Part TF:} Your body melts into any body part of your nearest ally of your choice. As that body part you can be targeted and your AC is equal to 10 + your Constitution modifier + your proficiency modifier. The spell ends after 10 minutes or after taking 20 points of damage. While acting as another creatures body part you have full control of it and you retain all of your class abilities that do not relate to movement. Your turn occurs at the same time as the one of the creature you have melted into. Let's see some real cooperation!",
+				  "{@b Body Part TF:} Your body melts into any body part of your nearest ally of your choice. As that body part you can be targeted and your AC is equal to 10 + your Constitution modifier + your proficiency bonus. The spell ends after 10 minutes or after taking 20 points of damage. While acting as another creatures body part you have full control of it and you retain all of your class abilities that do not relate to movement. Your turn occurs at the same time as the one of the creature you have melted into. Let's see some real cooperation!",
 				  "Creature of your choice must target you with their next attack."
 				],
 				[
@@ -17453,7 +21203,7 @@
 				],
 				[
 				  "80",
-				  "{@b Slime TF:} Your body becomes transparent and vividly colored as it turns into runny oozing slime. In the slime state you cannot wear armor and your AC is equal to 10 + your Dexterity modifier + your proficiency modifier. You can enter any area regardless of your size and can Engulf enemies without grappling them first. You are also very easy to eat and preds trying to devour you require one less devour success.",
+				  "{@b Slime TF:} Your body becomes transparent and vividly colored as it turns into runny oozing slime. In the slime state you cannot wear armor and your AC is equal to 10 + your Dexterity modifier + your proficiency bonus. You can enter any area regardless of your size and can Engulf enemies without grappling them first. You are also very easy to eat and preds trying to devour you require one less devour success.",
 				  "A {@item barrier tattoo (large)|TCE|Large Barrier Tattoo} appears on your skin. The tattoo lasts a minute and you don't need to be attuned to this tattoo to gain its benefits."
 				],
 				[
